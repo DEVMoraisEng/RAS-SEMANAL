@@ -25,4 +25,5 @@ jobs:
           git config user.email "ras-bot@morais"
           git add dist/*.json
           git commit -m "RAS: atualizar dados" || echo "sem mudanças"
+          git pull --rebase -X theirs origin main
           git push
