@@ -1,8 +1,8 @@
 {
-  "geradoEm": "2026-08-06T13:12:57",
+  "geradoEm": "2026-08-06T15:10:04",
   "obras": [
     {
-      "id": "seed-o1",
+      "id": "3b4c5ab5-32d3-8182-beeb-d3f091c753f8",
       "nome": "52 · QD 81 · LT 09",
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
@@ -13,7 +13,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o2",
+      "id": "3b4c5ab5-32d3-81ac-a81c-fb64945aa8b4",
       "nome": "52 · QD 81 · LT 11",
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
@@ -24,7 +24,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o3",
+      "id": "3b4c5ab5-32d3-818e-b654-c32762bdd280",
       "nome": "SV 13 · QD 40 · LT 20",
       "cidade": "Goiânia",
       "setor": "Solar Ville",
@@ -35,7 +35,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o4",
+      "id": "3b4c5ab5-32d3-8152-a8a3-c93ed180fd2e",
       "nome": "SV 13 · QD 40 · LT 19",
       "cidade": "Goiânia",
       "setor": "Solar Ville",
@@ -46,7 +46,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o5",
+      "id": "3b4c5ab5-32d3-8186-8c71-ec0012ec7f40",
       "nome": "SV 13 · QD 40 · LT 18",
       "cidade": "Goiânia",
       "setor": "Solar Ville",
@@ -57,7 +57,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o6",
+      "id": "3b4c5ab5-32d3-81cb-8819-f55951bb1732",
       "nome": "RR 03 · QD 03 · LT 05",
       "cidade": "Senador Canedo",
       "setor": "Ravena",
@@ -68,7 +68,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o7",
+      "id": "3b4c5ab5-32d3-8180-ba47-f8e62a0f368c",
       "nome": "TB 21 · QD 50 · LT 34",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
@@ -79,7 +79,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o8",
+      "id": "3b4c5ab5-32d3-81ce-ba14-cb7fe8107758",
       "nome": "TB 19 · QD 51 · LT 20",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
@@ -90,7 +90,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o9",
+      "id": "3b4c5ab5-32d3-817e-a85d-d5a5f19330a3",
       "nome": "TB 19 · QD 51 · LT 19",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
@@ -101,7 +101,7 @@
       "obs": ""
     },
     {
-      "id": "seed-o10",
+      "id": "3b4c5ab5-32d3-81d9-a63e-c729d33f056b",
       "nome": "TB 21 · QD 51 · LT 40",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
