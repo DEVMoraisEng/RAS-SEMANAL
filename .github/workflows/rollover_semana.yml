@@ -1,0 +1,38 @@
+name: RAS - rollover semanal + atualizar dados
+
+on:
+  schedule:
+    # 04:00 UTC de segunda-feira = 01:00 (horário de Brasília) de segunda
+    - cron: "0 4 * * 1"
+  workflow_dispatch: {}   # também pode rodar manualmente pelo GitHub
+
+jobs:
+  rollover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Empurrar atividades não concluídas para a semana atual
+        run: python3 rollover_semana.py
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          RAS_ATIVIDADES_DB_ID: ${{ secrets.RAS_ATIVIDADES_DB_ID }}
+
+      - name: Gerar JSON atualizado para o site
+        run: python3 fetch_ras.py
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          RAS_ATIVIDADES_DB_ID: ${{ secrets.RAS_ATIVIDADES_DB_ID }}
+          RAS_OBRAS_DB_ID: ${{ secrets.RAS_OBRAS_DB_ID }}
+
+      - name: Publicar os JSON atualizados
+        run: |
+          git config user.name "ras-bot"
+          git config user.email "ras-bot@morais"
+          git add dist/*.json
+          git commit -m "RAS: rollover semanal + atualização de dados" || echo "sem mudanças"
+          git push
