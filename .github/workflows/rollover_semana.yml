@@ -2,8 +2,10 @@ name: RAS - rollover semanal + atualizar dados
 
 on:
   schedule:
-    # 04:00 UTC de segunda-feira = 01:00 (horário de Brasília) de segunda
-    - cron: "0 4 * * 1"
+    # 02:00 UTC de segunda = 23:00 (horário de Brasília) de DOMINGO.
+    # Roda no fim da noite de domingo; o script joga as pendências
+    # para a segunda-feira que começa no dia seguinte.
+    - cron: "0 2 * * 1"
   workflow_dispatch: {}   # também pode rodar manualmente pelo GitHub
 
 jobs:

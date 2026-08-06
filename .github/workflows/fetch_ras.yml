@@ -2,7 +2,7 @@ name: RAS - atualizar dados (leitura)
 
 on:
   schedule:
-    - cron: "0 */2 * * *"    # a cada 2 horas
+    - cron: "0 * * * *"    # a cada 1 hora (no minuto 0)
   workflow_dispatch: {}
 
 jobs:
