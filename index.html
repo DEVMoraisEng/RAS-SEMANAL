@@ -17,6 +17,7 @@
   --concluido:#81C9C0; --concluido-t:#0E3B37;
   --pendente:#EE9C90; --pendente-t:#6B1410;
   --alta:#F8D3CE; --alta-t:#9B1C1C; --media:#FDECC8; --media-t:#8A5A00; --baixa:#DCEFE0; --baixa-t:#2F6B3B;
+  --continua:#E3D4F5; --continua-t:#4B2E83;
 
   --dep-diretoria:#2A285F; --dep-comercial:#1B5173; --dep-financeiro:#2C6E86;
   --dep-compras:#1E8F82; --dep-projetos:#4B4870;
@@ -95,6 +96,9 @@ main{padding:72px 0 60px;position:relative}
 .dtbl tr:last-child td{border-bottom:0}
 .dtbl tr:hover td{background:#FAFCFB}
 .dtbl .c-atv{min-width:280px}
+.dtbl .c-obra-nome{min-width:240px;white-space:normal}
+.dtbl tr.prioritaria td{background:#FFF6E0}
+.dtbl tr.prioritaria td:first-child{border-left:3px solid #E0A100}
 .dtbl .c-atv.done{text-decoration:line-through;color:var(--muted)}
 .dtbl .c-resp{white-space:nowrap;color:var(--ink);font-weight:600;font-size:12.5px}
 .dtbl .c-obs input{width:100%;border:1px solid transparent;background:transparent;font:inherit;padding:5px 6px;border-radius:6px}
@@ -237,7 +241,7 @@ main{padding:72px 0 60px;position:relative}
       </div>
       <div class="field">
         <label>Status</label>
-        <select id="o_status"><option>Planejada</option><option>Em Andamento</option><option>Entregue</option><option>Atrasada</option></select>
+        <select id="o_status"><option>Em Andamento</option><option>Finalizada</option></select>
       </div>
     </div>
     <div class="row2">
@@ -284,15 +288,23 @@ const RESP_LOCK = {
   "Projetos e Desenvolvimento": ["Felipe"]
 };
 const STCOL = {"A Fazer":["var(--afazer)","var(--afazer-t)"],"Em Andamento":["var(--andamento)","var(--andamento-t)"],
-               "Concluído":["var(--concluido)","var(--concluido-t)"],"Pendente":["var(--pendente)","var(--pendente-t)"]};
+               "Concluído":["var(--concluido)","var(--concluido-t)"],"Pendente":["var(--pendente)","var(--pendente-t)"],
+               "Continuidade da Semana Anterior":["var(--continua)","var(--continua-t)"]};
 const PRCOL = {"Alta":["var(--alta)","var(--alta-t)"],"Média":["var(--media)","var(--media-t)"],"Baixa":["var(--baixa)","var(--baixa-t)"]};
-const OPEN = ["A Fazer","Em Andamento","Pendente"];
-const OBRA_STCOL = {"Entregue":["var(--concluido)","var(--concluido-t)"],"Em Andamento":["var(--andamento)","var(--andamento-t)"],
-                    "Atrasada":["var(--pendente)","var(--pendente-t)"],"Planejada":["var(--afazer)","var(--afazer-t)"]};
+const OPEN = ["A Fazer","Em Andamento","Pendente","Continuidade da Semana Anterior"];
+const OBRA_STCOL = {"Finalizada":["var(--concluido)","var(--concluido-t)"],"Em Andamento":["var(--andamento)","var(--andamento-t)"]};
 
 let ATIV=[], OBRAS=[], addSetor=null;
 
 function fmtBR(d){ if(!d) return "—"; const p=d.slice(0,10).split("-"); return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:d; }
+function segundaAtual(){
+  const d = new Date();
+  const dow = d.getDay(); // 0=domingo..6=sábado
+  const diff = dow===0 ? -6 : 1-dow; // volta até a segunda-feira
+  const seg = new Date(d.getFullYear(), d.getMonth(), d.getDate()+diff);
+  const p = n => String(n).padStart(2,"0");
+  return `${seg.getFullYear()}-${p(seg.getMonth()+1)}-${p(seg.getDate())}`;
+}
 function isSeedData(){ return ATIV.length && String(ATIV[0].id).startsWith("seed"); }
 
 async function boot(){
@@ -392,7 +404,7 @@ function renderDepartamentos(){
     let trs = r.map(a=>{
       const [sb,st] = STCOL[a.status]||["#eee","#333"];
       const [pb,pt] = PRCOL[a.prioridade]||["#eee","#333"];
-      const stOpts = ["A Fazer","Em Andamento","Concluído"].map(o=>`<option ${o===a.status?"selected":""}>${o}</option>`).join("");
+      const stOpts = ["A Fazer","Em Andamento","Concluído","Continuidade da Semana Anterior"].map(o=>`<option ${o===a.status?"selected":""}>${o}</option>`).join("");
       const prOpts = ["Alta","Média","Baixa"].map(o=>`<option ${o===a.prioridade?"selected":""}>${o}</option>`).join("");
       let respCell;
       if(locked.length>1){
@@ -443,8 +455,8 @@ function renderObras(){
   function linhaObra(o){
     const [sb,st] = OBRA_STCOL[o.status]||["#eee","#333"];
     const stSel = Object.keys(OBRA_STCOL).map(s=>`<option ${s===o.status?"selected":""}>${s}</option>`).join("");
-    return `<tr>
-      <td>${escapeHtml(o.nome)}</td>
+    return `<tr class="${o.prioritaria==='Sim'?'prioritaria':''}">
+      <td class="c-obra-nome">${escapeHtml(o.nome)}</td>
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
       <td><input type="date" value="${escapeAttr((o.entrega||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','entrega',this.value)"></td>
       <td style="text-align:center"><input type="checkbox" ${o.prioritaria==="Sim"?"checked":""} onchange="changeFieldObra('${o.id}','prioritaria', this.checked?'Sim':'Não')" title="Obra prioritária"></td>
@@ -498,7 +510,7 @@ function changeField(id, field, value){
 
 function openModal(setor){
   addSetor=setor;
-  document.getElementById("modalSub").textContent = `Departamento ${setor} · semana ${fmtBR(currentWeek())}`;
+  document.getElementById("modalSub").textContent = `Departamento ${setor} · semana atual · ${fmtBR(segundaAtual())}`;
   document.getElementById("f_atv").value="";
   document.getElementById("f_obs").value="";
   document.getElementById("f_status").value="A Fazer";
@@ -532,7 +544,7 @@ function saveAtividade(){
     responsavel:getRespFromModal(),
     prioridade:document.getElementById("f_prio").value,
     status:document.getElementById("f_status").value,
-    semana:currentWeek(),
+    semana:segundaAtual(),
     obs:document.getElementById("f_obs").value.trim()
   };
   ATIV.push({id:"local-"+Date.now(), nome, setor:dados.setor, responsavel:dados.responsavel,
@@ -551,7 +563,7 @@ function openModalObra(){
   document.getElementById("dl_meses").innerHTML = meses.map(c=>`<option value="${escapeAttr(c)}">`).join("");
   ["o_nome","o_cidade","o_setor","o_entrega","o_obs"].forEach(id=>document.getElementById(id).value="");
   document.getElementById("o_mes").value = window._obraMes || (meses[meses.length-1]||"");
-  document.getElementById("o_status").value="Planejada";
+  document.getElementById("o_status").value="Em Andamento";
   document.getElementById("o_prio").checked=true;
   document.getElementById("modalObra").classList.add("open");
   document.getElementById("o_nome").focus();
