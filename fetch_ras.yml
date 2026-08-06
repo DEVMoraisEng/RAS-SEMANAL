@@ -1,0 +1,26 @@
+name: RAS - atualizar dados (leitura)
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"    # a cada 2 horas
+  workflow_dispatch: {}
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python3 fetch_ras.py
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          RAS_ATIVIDADES_DB_ID: ${{ secrets.RAS_ATIVIDADES_DB_ID }}
+          RAS_OBRAS_DB_ID: ${{ secrets.RAS_OBRAS_DB_ID }}
+      - run: |
+          git config user.name "ras-bot"
+          git config user.email "ras-bot@morais"
+          git add dist/*.json
+          git commit -m "RAS: atualizar dados" || echo "sem mudanças"
+          git push

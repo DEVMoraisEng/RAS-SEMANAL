@@ -1,0 +1,115 @@
+{
+  "geradoEm": "2026-08-06T13:12:57",
+  "obras": [
+    {
+      "id": "seed-o1",
+      "nome": "52 · QD 81 · LT 09",
+      "cidade": "Goiânia",
+      "setor": "Cond. Esmeraldas",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o2",
+      "nome": "52 · QD 81 · LT 11",
+      "cidade": "Goiânia",
+      "setor": "Cond. Esmeraldas",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o3",
+      "nome": "SV 13 · QD 40 · LT 20",
+      "cidade": "Goiânia",
+      "setor": "Solar Ville",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o4",
+      "nome": "SV 13 · QD 40 · LT 19",
+      "cidade": "Goiânia",
+      "setor": "Solar Ville",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o5",
+      "nome": "SV 13 · QD 40 · LT 18",
+      "cidade": "Goiânia",
+      "setor": "Solar Ville",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o6",
+      "nome": "RR 03 · QD 03 · LT 05",
+      "cidade": "Senador Canedo",
+      "setor": "Ravena",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o7",
+      "nome": "TB 21 · QD 50 · LT 34",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o8",
+      "nome": "TB 19 · QD 51 · LT 20",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o9",
+      "nome": "TB 19 · QD 51 · LT 19",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "seed-o10",
+      "nome": "TB 21 · QD 51 · LT 40",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Planejada",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    }
+  ]
+}
