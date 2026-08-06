@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-06T15:14:15",
+  "geradoEm": "2026-08-06T15:32:54",
   "obras": [
     {
       "id": "3b4c5ab5-32d3-8182-beeb-d3f091c753f8",
@@ -7,7 +7,7 @@
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -18,7 +18,7 @@
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -29,7 +29,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -40,7 +40,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -51,7 +51,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -62,7 +62,7 @@
       "cidade": "Senador Canedo",
       "setor": "Ravena",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -73,7 +73,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -84,7 +84,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -95,7 +95,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -106,7 +106,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Planejada",
+      "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
