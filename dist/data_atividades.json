@@ -1,0 +1,325 @@
+{
+  "geradoEm": "2026-08-06T13:12:57",
+  "atividades": [
+    {
+      "id": "seed-a1",
+      "nome": "Definir a estrutura da Reunião de Alinhamento Mensal",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a2",
+      "nome": "Fechar render do condomínio e definir layout do decorado com a arquiteta",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a3",
+      "nome": "Negociar e fechar as áreas do Amim Camargo e Jardim Petrópolis",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a4",
+      "nome": "Definir SCP do Jardim Florença",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a5",
+      "nome": "Criar solicitações QD 49 LT 10, 11, 14 e 15",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a6",
+      "nome": "Otimização e testes do WhatsApp",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a7",
+      "nome": "Reunião com fiscais da prefeitura para questão fiscal (ISSQN)",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a8",
+      "nome": "Conferir alteração de projetos Reserva dos Ipês (Caixa e Prefeitura)",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a9",
+      "nome": "Desenhar fluxos de pagamento de lançamento",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "Concluído",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a10",
+      "nome": "Reuniões para orçamento de marketing",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "Concluído",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a11",
+      "nome": "Implementar processo comercial (alguns com Felipe, aos poucos)",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a12",
+      "nome": "Limpar todas as casas modelo para vídeos e visitas",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a13",
+      "nome": "Ativar comercial (grupos, visitas, suporte)",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a14",
+      "nome": "Deixar o WhatsApp funcionando na operação",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a15",
+      "nome": "Otimizar baixas de pessoa física",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a16",
+      "nome": "Enviar fechamentos PF à contabilidade",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a17",
+      "nome": "Controlar, junto com a Ana, as planilhas de contas de água",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a18",
+      "nome": "Formalizar rotina diária de Ana e Lohany",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Baixa",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a19",
+      "nome": "Conferência de todas as unidades consumidoras diretamente no site",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a20",
+      "nome": "Liberar acesso à conta bancária Moura Dantas",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a21",
+      "nome": "Finalizar orçamentos com projetos finalizados (prioridade p/ obras da próx. semana)",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a22",
+      "nome": "Conferir e editar orçamento Reserva dos Ipês com os projetos alterados",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a23",
+      "nome": "Apresentar outros modelos de pisos e revestimentos p/ o Reserva dos Ipês",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a24",
+      "nome": "Alinhar com Juliana retorno das transferências de UC junto ao cliente",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a25",
+      "nome": "Criar novo processo de cobrança das transferências de energia e água",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a26",
+      "nome": "Verificar com o pessoal do MC quantidade e inatividade de usuários",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Baixa",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a27",
+      "nome": "Finalizar os projetos de casas de rua em aberto",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a28",
+      "nome": "Rever quantitativo do Cond. Reserva dos Ipês",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a29",
+      "nome": "Fazer projeto do Corpo de Bombeiros do Cond. Reserva dos Jacarandás",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a30",
+      "nome": "Reunir com Hudson para entender o novo processo de vendas",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Baixa",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a31",
+      "nome": "Rever e estudar a segurança dos sites internos",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    },
+    {
+      "id": "seed-a32",
+      "nome": "Testes diários do WhatsApp",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-03",
+      "obs": ""
+    }
+  ]
+}
