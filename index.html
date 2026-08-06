@@ -44,7 +44,8 @@ header::after{content:"";display:block;height:4px;background:linear-gradient(90d
 .tab:hover{color:#fff}
 .tab.active{color:#fff;border-bottom-color:var(--verde)}
 
-main{padding:72px 0 60px;position:relative}
+main{position:relative}
+main.wrap{padding:40px 22px 60px}
 .view{display:none} .view.active{display:block}
 
 /* ===== hero / skyline signature ===== */
@@ -310,8 +311,8 @@ function isSeedData(){ return ATIV.length && String(ATIV[0].id).startsWith("seed
 async function boot(){
   try{
     const [a,o] = await Promise.all([
-      fetch("data_atividades.json").then(r=>{if(!r.ok)throw 0;return r.json()}),
-      fetch("data_obras.json").then(r=>{if(!r.ok)throw 0;return r.json()})
+      fetch("dist/data_atividades.json").then(r=>{if(!r.ok)throw 0;return r.json()}),
+      fetch("dist/data_obras.json").then(r=>{if(!r.ok)throw 0;return r.json()})
     ]);
     ATIV = a.atividades||[]; OBRAS = o.obras||[];
   }catch(e){ ATIV = SEED_ATIV.slice(); OBRAS = SEED_OBRAS.slice(); }
