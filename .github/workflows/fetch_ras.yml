@@ -8,6 +8,8 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # necessário para o git push no final do job
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

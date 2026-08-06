@@ -9,6 +9,8 @@ on:
 jobs:
   rollover:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # necessário para o git push no final do job
     steps:
       - uses: actions/checkout@v4
 
