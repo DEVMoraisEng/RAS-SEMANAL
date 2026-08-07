@@ -1,16 +1,6 @@
 {
-  "geradoEm": "2026-08-07T16:45:01",
+  "geradoEm": "2026-08-07T17:10:35",
   "atividades": [
-    {
-      "id": "3b5c5ab5-32d3-81b5-b0b1-edd57660bcd7",
-      "nome": "teste",
-      "setor": "Projetos e Desenvolvimento",
-      "responsavel": "felipe berçan",
-      "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
-      "obs": ""
-    },
     {
       "id": "3b4c5ab5-32d3-81f7-a7c5-fc2a7151df34",
       "nome": "teste escrita",
