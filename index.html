@@ -35,6 +35,7 @@ header::after{content:"";display:block;height:4px;background:linear-gradient(90d
 .logo-chip{background:#fff;border-radius:10px;padding:6px 12px;display:inline-flex;align-items:center;box-shadow:0 1px 4px rgba(0,0,0,.18)}
 .htitle{font-weight:700;font-size:19px;letter-spacing:.1px;color:#fff}
 .hsub{color:rgba(255,255,255,.72);font-size:12px;margin-top:1px}
+.hupd{color:rgba(255,255,255,.6);font-size:11.5px;text-align:right;margin-top:6px}
 .hspace{flex:1}
 .weekpick{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);padding:7px 12px;border-radius:10px}
 .weekpick label{font-size:11px;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
@@ -174,6 +175,7 @@ main.wrap{padding:40px 22px 60px}
         <select id="week" onchange="render()"></select>
       </div>
     </div>
+    <div class="hupd" id="hupd"></div>
     <div class="tabs">
       <button class="tab active" data-v="relatorio" onclick="tab('relatorio')">Relatório</button>
       <button class="tab" data-v="departamentos" onclick="tab('departamentos')">Departamentos</button>
@@ -348,6 +350,7 @@ async function boot(){
       fetch("dist/data_obras.json").then(r=>{if(!r.ok)throw 0;return r.json()})
     ]);
     ATIV = a.atividades||[]; OBRAS = o.obras||[];
+    window._geradoEm = a.geradoEm || o.geradoEm || "";
   }catch(e){ ATIV = SEED_ATIV.slice(); OBRAS = SEED_OBRAS.slice(); }
   const SEG = segundaAtual();
   const ANT = segundaAnterior();
@@ -356,7 +359,22 @@ async function boot(){
   const weeks = [...new Set([...ATIV.map(x=>x.semana).filter(Boolean), SEG, ANT])].sort().reverse();
   const sel = document.getElementById("week");
   sel.innerHTML = weeks.map(w=>`<option value="${w}" ${w===SEG?"selected":""}>${fmtBR(w)}${w===SEG?" (atual)":""}</option>`).join("") || `<option>—</option>`;
+  mostrarUltimaAtualizacao();
   render();
+}
+
+// Mostra data/hora do último fetch. O geradoEm vem do fetch_ras.py rodando no
+// GitHub Actions, que grava datetime.now() SEM fuso — e o runner está em UTC.
+// Brasília = UTC-3, então convertemos subtraindo 3h para exibir certo.
+function mostrarUltimaAtualizacao(){
+  const el = document.getElementById("hupd");
+  const iso = window._geradoEm;
+  if(!el) return;
+  if(!iso){ el.textContent = ""; return; }
+  let d = new Date(iso + (/[zZ]|[+-]\d\d:?\d\d$/.test(iso) ? "" : "Z")); // trata como UTC se não tiver fuso
+  if(isNaN(d)){ el.textContent = ""; return; }
+  const s = d.toLocaleString("pt-BR", {timeZone:"America/Sao_Paulo", day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"});
+  el.textContent = `Última atualização: ${s}`;
 }
 
 function currentWeek(){ return document.getElementById("week").value; }
