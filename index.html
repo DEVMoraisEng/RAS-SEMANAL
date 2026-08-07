@@ -112,6 +112,9 @@ main.wrap{padding:40px 22px 60px}
 .wknav button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:6px;width:22px;height:22px;line-height:1;padding:0;cursor:pointer;font-size:11px}
 .wknav button:hover{background:var(--menta,#CCE8E6)}
 .wknav span{font-size:12px;font-weight:700;min-width:38px;text-align:center}
+.delbtn{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:6px;width:26px;height:26px;line-height:1;padding:0;cursor:pointer;font-size:13px}
+.delbtn:hover{background:#FCE8E8;color:#B3261E;border-color:#F1B8B8}
+.c-del{text-align:center;width:34px}
 .empty-row td{color:var(--muted);font-size:12px;text-align:center;padding:16px 0}
 
 /* ===== obras ===== */
@@ -358,6 +361,22 @@ async function boot(){
 
 function currentWeek(){ return document.getElementById("week").value; }
 function weekList(){ return [...document.getElementById("week").options].map(o=>o.value); }
+
+// Se alguém mover uma atividade pra uma semana que ainda não está no seletor
+// (ex.: empurrar pra semana seguinte), cria a opção na hora — sem precisar
+// esperar o próximo fetch_ras.py (1x/hora) nem recarregar a página.
+// Mantém a mesma ordem decrescente usada no boot() (mais recente primeiro).
+function garantirSemanaSelecionavel(iso){
+  if(!iso) return;
+  const sel = document.getElementById("week");
+  if([...sel.options].some(o=>o.value===iso)) return; // já existe
+  const opt = document.createElement("option");
+  opt.value = iso;
+  opt.textContent = fmtBR(iso) + (iso===segundaAtual() ? " (atual)" : "");
+  const proxMenor = [...sel.options].find(o=>o.value < iso);
+  if(proxMenor) sel.insertBefore(opt, proxMenor); else sel.appendChild(opt);
+}
+
 function tab(v){
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.v===v));
   document.querySelectorAll(".view").forEach(s=>s.classList.toggle("active",s.id===v));
@@ -456,16 +475,17 @@ function renderDepartamentos(){
           <button title="Avançar uma semana" onclick="moverSemana('${a.id}',1)">▶</button>
         </div></td>
         <td class="c-obs"><input value="${escapeAttr(a.obs||'')}" placeholder="—" onblur="changeField('${a.id}','obs',this.value)"></td>
+        <td class="c-del"><button class="delbtn" title="Excluir atividade" onclick="excluirAtividade('${a.id}')">🗑</button></td>
       </tr>`;
     }).join("");
-    if(!r.length) trs = `<tr class="empty-row"><td colspan="6">Sem atividades nesta semana.</td></tr>`;
+    if(!r.length) trs = `<tr class="empty-row"><td colspan="7">Sem atividades nesta semana.</td></tr>`;
     html += `<div class="board">
       <div class="bhead" style="background:${DEPCOLOR[s]}">
         <div><div class="bt">${s}</div><div class="bmeta">${SUBT[s]} · ${open} em aberto</div></div>
         <button class="addbtn" onclick="openModal('${s}')">+ Nova atividade</button>
       </div>
       <div class="dtbl-wrap"><table class="dtbl">
-        <thead><tr><th>Atividade</th><th>Responsável</th><th>Prioridade</th><th>Status</th><th>Semana</th><th>Observações</th></tr></thead>
+        <thead><tr><th>Atividade</th><th>Responsável</th><th>Prioridade</th><th>Status</th><th>Semana</th><th>Observações</th><th></th></tr></thead>
         <tbody>${trs}</tbody>
       </table></div>
     </div>`;
@@ -503,19 +523,20 @@ function renderObras(){
       <td><input type="date" value="${escapeAttr((o.entrega||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','entrega',this.value)"></td>
       <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','prioritaria',this.value)" title="Obra prioritária">${prSel}</select></td>
       <td class="c-obs"><input value="${escapeAttr(o.obs||'')}" placeholder="—" onblur="changeFieldObra('${o.id}','obs',this.value)"></td>
+      <td class="c-del"><button class="delbtn" title="Excluir obra" onclick="excluirObra('${o.id}')">🗑</button></td>
     </tr>`;
   }
 
   let html = filter;
   if(!cidades.length){
-    html += `<div class="city-board"><table class="dtbl"><tbody><tr class="empty-row"><td>Nenhuma obra neste mês.</td></tr></tbody></table></div>`;
+    html += `<div class="city-board"><table class="dtbl"><tbody><tr class="empty-row"><td colspan="6">Nenhuma obra neste mês.</td></tr></tbody></table></div>`;
   }
   cidades.forEach(cidade=>{
     const rowsCidade = filtered.filter(o=>o.cidade===cidade);
     const setores = [...new Set(rowsCidade.map(o=>o.setor).filter(Boolean))].sort();
     let body="";
     setores.forEach(setor=>{
-      body += `<tr class="setor-row"><td colspan="5">${escapeHtml(setor)}</td></tr>`;
+      body += `<tr class="setor-row"><td colspan="6">${escapeHtml(setor)}</td></tr>`;
       rowsCidade.filter(o=>o.setor===setor).forEach(o=>{ body += linhaObra(o); });
     });
     const semSetor = rowsCidade.filter(o=>!o.setor);
@@ -523,7 +544,7 @@ function renderObras(){
     html += `<div class="city-board">
       <div class="chead"><span>${cidade}</span><span class="cmeta">${rowsCidade.length} obra(s)</span></div>
       <div class="dtbl-wrap"><table class="dtbl">
-        <thead><tr><th>Obra</th><th>Status</th><th>Entrega prevista</th><th>Prior.</th><th>Obs</th></tr></thead>
+        <thead><tr><th>Obra</th><th>Status</th><th>Entrega prevista</th><th>Prior.</th><th>Obs</th><th></th></tr></thead>
         <tbody>${body}</tbody>
       </table></div>
     </div>`;
@@ -538,6 +559,14 @@ function changeFieldObra(id, field, value){
   if(WRITE_ENDPOINT){ post({action:"update_obra", id, field, value}); }
 }
 
+function excluirObra(id){
+  const o = OBRAS.find(x=>x.id===id); if(!o) return;
+  if(!confirm(`Excluir a obra "${o.nome}"?\n\nEla vai para a lixeira do Notion (dá pra recuperar por lá se for engano).`)) return;
+  OBRAS = OBRAS.filter(x=>x.id!==id); render();
+  if(WRITE_ENDPOINT){ post({action:"delete_obra", id}); toast("Obra excluída."); }
+  else { toast("Excluída (modo teste — só na tela)."); }
+}
+
 function renderFoot(){
   const src = isSeedData() ? "dados de exemplo" : "dados do Notion";
   document.getElementById("foot").textContent =
@@ -548,6 +577,15 @@ function changeField(id, field, value){
   const a = ATIV.find(x=>x.id===id); if(!a) return;
   a[field] = value; render();
   if(WRITE_ENDPOINT){ post({action:"update", id, field, value}); }
+  if(field==="semana") garantirSemanaSelecionavel(value);
+}
+
+function excluirAtividade(id){
+  const a = ATIV.find(x=>x.id===id); if(!a) return;
+  if(!confirm(`Excluir a atividade "${a.nome}"?\n\nEla vai para a lixeira do Notion (dá pra recuperar por lá se for engano).`)) return;
+  ATIV = ATIV.filter(x=>x.id!==id); render();
+  if(WRITE_ENDPOINT){ post({action:"delete", id}); toast("Atividade excluída."); }
+  else { toast("Excluída (modo teste — só na tela)."); }
 }
 
 // Soma/subtrai N semanas e SEMPRE devolve uma segunda-feira (movimento
