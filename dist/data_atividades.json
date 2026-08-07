@@ -1,36 +1,6 @@
 {
-  "geradoEm": "2026-08-07T12:46:15",
+  "geradoEm": "2026-08-07T12:58:44",
   "atividades": [
-    {
-      "id": "3b5c5ab5-32d3-8117-92a9-dba10df98909",
-      "nome": "teste copart",
-      "setor": "Compras",
-      "responsavel": "Paula Morais",
-      "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
-      "obs": "wf"
-    },
-    {
-      "id": "3b5c5ab5-32d3-812e-b340-e7536a924166",
-      "nome": "teste copart",
-      "setor": "Projetos e Desenvolvimento",
-      "responsavel": "felipe berçan",
-      "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
-      "obs": "wf"
-    },
-    {
-      "id": "3b5c5ab5-32d3-8167-a890-d84b198a03e3",
-      "nome": "teste automação",
-      "setor": "Projetos e Desenvolvimento",
-      "responsavel": "felipe berçan",
-      "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
-      "obs": "fsf"
-    },
     {
       "id": "3b4c5ab5-32d3-81f7-a7c5-fc2a7151df34",
       "nome": "teste escrita",
@@ -67,7 +37,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -77,7 +47,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -97,7 +67,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -107,7 +77,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -117,7 +87,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": ""
     },
