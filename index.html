@@ -312,11 +312,12 @@ const PRCOL = {"Alta":["var(--alta)","var(--alta-t)"],"Média":["var(--media)","
 const OPEN = ["A Fazer","Em Andamento","Pendente","Continuidade da Semana Anterior"];
 const OBRA_STCOL = {"Em Andamento":["var(--andamento)","var(--andamento-t)"],
                     "Paralisada":["var(--pendente)","var(--pendente-t)"],
-                    "Finalizada":["var(--concluido)","var(--concluido-t)"]};
+                    "Finalizada":["var(--concluido)","var(--concluido-t)"],
+                    "Projeto Finalizado":["var(--continua)","var(--continua-t)"]};
 // Status base das obras. As opções mostradas = base + os status que existem nos
 // dados + o valor atual da linha. Assim nenhum status "fantasma" (ex.: Planejada,
 // já removido) aparece, e status reais do Notion aparecem sozinhos.
-const OBRA_STATUS_BASE = ["Em Andamento","Finalizada"];
+const OBRA_STATUS_BASE = ["Em Andamento","Finalizada","Projeto Finalizado"];
 function obraStatusOpcoes(atual){
   return [...new Set([...OBRA_STATUS_BASE, ...OBRAS.map(o=>o.status), atual].filter(Boolean))];
 }
