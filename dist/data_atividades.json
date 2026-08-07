@@ -1,9 +1,9 @@
 {
-  "geradoEm": "2026-08-07T14:57:08",
+  "geradoEm": "2026-08-07T15:49:19",
   "atividades": [
     {
-      "id": "3b5c5ab5-32d3-8100-9d7e-d199bee00e81",
-      "nome": "teste excluir",
+      "id": "3b5c5ab5-32d3-81b5-b0b1-edd57660bcd7",
+      "nome": "teste",
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
@@ -47,7 +47,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
       "obs": ""
     },
