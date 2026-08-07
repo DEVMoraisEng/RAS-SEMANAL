@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-07T18:48:24",
+  "geradoEm": "2026-08-07T19:41:35",
   "atividades": [
     {
       "id": "3b4c5ab5-32d3-81f7-a7c5-fc2a7151df34",
@@ -37,7 +37,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "Pendente",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -47,7 +47,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -77,7 +77,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Alta",
-      "status": "Concluído",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -87,9 +87,9 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Baixa",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "Cadastro novo da Lohany criado e o antigo esta como inativado, bastar inativar um e criar um novo"
     },
     {
       "id": "3b4c5ab5-32d3-811b-ba80-dca7d7959902",
@@ -117,9 +117,9 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
-      "obs": "Continuidade"
+      "obs": "Nova busca pois não foram aprovados os que buscamos "
     },
     {
       "id": "3b4c5ab5-32d3-8121-9897-db042065b201",
@@ -137,7 +137,7 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
       "obs": "Prioridade da semana"
     },
