@@ -362,19 +362,21 @@ async function boot(){
 function currentWeek(){ return document.getElementById("week").value; }
 function weekList(){ return [...document.getElementById("week").options].map(o=>o.value); }
 
-// Se alguém mover uma atividade pra uma semana que ainda não está no seletor
-// (ex.: empurrar pra semana seguinte), cria a opção na hora — sem precisar
-// esperar o próximo fetch_ras.py (1x/hora) nem recarregar a página.
-// Mantém a mesma ordem decrescente usada no boot() (mais recente primeiro).
-function garantirSemanaSelecionavel(iso){
-  if(!iso) return;
+// Reconstrói o seletor de semanas do zero a partir do estado atual de ATIV
+// (mesma regra do boot(): semana atual + anterior sempre presentes, mais
+// qualquer semana que tenha pelo menos uma atividade). Chamado sempre que
+// uma atividade muda de semana, é criada ou é excluída — assim uma semana
+// que ficou vazia (e não é a atual/anterior) desaparece sozinha do seletor,
+// e uma semana nova (ex.: empurrada pra frente) aparece na hora.
+function recomputarSeletorSemanas(){
+  const SEG = segundaAtual(), ANT = segundaAnterior();
+  const selecionadaAntes = currentWeek();
+  const weeks = [...new Set([...ATIV.map(x=>x.semana).filter(Boolean), SEG, ANT])].sort().reverse();
   const sel = document.getElementById("week");
-  if([...sel.options].some(o=>o.value===iso)) return; // já existe
-  const opt = document.createElement("option");
-  opt.value = iso;
-  opt.textContent = fmtBR(iso) + (iso===segundaAtual() ? " (atual)" : "");
-  const proxMenor = [...sel.options].find(o=>o.value < iso);
-  if(proxMenor) sel.insertBefore(opt, proxMenor); else sel.appendChild(opt);
+  sel.innerHTML = weeks.map(w=>`<option value="${w}" ${w===selecionadaAntes?"selected":""}>${fmtBR(w)}${w===SEG?" (atual)":""}</option>`).join("") || `<option>—</option>`;
+  // Se a semana que estava sendo vista sumiu da lista (ficou vazia e não é
+  // atual/anterior), volta a visualização pra semana atual.
+  if(![...sel.options].some(o=>o.value===selecionadaAntes)) sel.value = SEG;
 }
 
 function tab(v){
@@ -563,6 +565,10 @@ function excluirObra(id){
   const o = OBRAS.find(x=>x.id===id); if(!o) return;
   if(!confirm(`Excluir a obra "${o.nome}"?\n\nEla vai para a lixeira do Notion (dá pra recuperar por lá se for engano).`)) return;
   OBRAS = OBRAS.filter(x=>x.id!==id); render();
+  if(String(id).startsWith("local-")){
+    toast("Removida da tela. Ainda não tinha sincronizado com o Notion.");
+    return;
+  }
   if(WRITE_ENDPOINT){ post({action:"delete_obra", id}); toast("Obra excluída."); }
   else { toast("Excluída (modo teste — só na tela)."); }
 }
@@ -575,15 +581,23 @@ function renderFoot(){
 
 function changeField(id, field, value){
   const a = ATIV.find(x=>x.id===id); if(!a) return;
-  a[field] = value; render();
+  a[field] = value;
+  if(field==="semana") recomputarSeletorSemanas();
+  render();
   if(WRITE_ENDPOINT){ post({action:"update", id, field, value}); }
-  if(field==="semana") garantirSemanaSelecionavel(value);
 }
 
 function excluirAtividade(id){
   const a = ATIV.find(x=>x.id===id); if(!a) return;
   if(!confirm(`Excluir a atividade "${a.nome}"?\n\nEla vai para a lixeira do Notion (dá pra recuperar por lá se for engano).`)) return;
-  ATIV = ATIV.filter(x=>x.id!==id); render();
+  ATIV = ATIV.filter(x=>x.id!==id);
+  recomputarSeletorSemanas(); render();
+  if(String(id).startsWith("local-")){
+    // Ainda não sincronizou com o Notion (criada nesta sessão, antes do
+    // próximo fetch_ras.py) — não existe página real pra excluir lá.
+    toast("Removida da tela. Ainda não tinha sincronizado com o Notion.");
+    return;
+  }
   if(WRITE_ENDPOINT){ post({action:"delete", id}); toast("Atividade excluída."); }
   else { toast("Excluída (modo teste — só na tela)."); }
 }
