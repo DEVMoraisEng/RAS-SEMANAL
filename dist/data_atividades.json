@@ -1,6 +1,16 @@
 {
-  "geradoEm": "2026-08-07T13:57:38",
+  "geradoEm": "2026-08-07T14:01:50",
   "atividades": [
+    {
+      "id": "3b5c5ab5-32d3-81cc-9665-fb22f43f9595",
+      "nome": "teste notiom",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "felipe berçan",
+      "prioridade": "Alta",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
     {
       "id": "3b4c5ab5-32d3-81f7-a7c5-fc2a7151df34",
       "nome": "teste escrita",
@@ -17,8 +27,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-07-27",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": "sfdhchhbhhhhhh"
     },
     {
@@ -47,8 +57,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -57,8 +67,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "felipe berçan",
       "prioridade": "Baixa",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -97,8 +107,8 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Baixa",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -107,8 +117,8 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -127,8 +137,8 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": "Continuidade"
     },
     {
@@ -147,8 +157,8 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": "Prioridade da semana"
     },
     {
@@ -157,8 +167,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -167,8 +177,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -177,8 +187,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Baixa",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -187,8 +197,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": "Com Ana"
     },
     {
@@ -197,8 +207,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -207,8 +217,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -217,8 +227,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -227,8 +237,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": "Continuidade"
     },
     {
@@ -237,8 +247,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": "Foi solicitado"
     },
     {
@@ -247,8 +257,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": "Em conjunto com Engenharia"
     },
     {
@@ -277,8 +287,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vítor Cabral",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -287,8 +297,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -297,8 +307,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -307,8 +317,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -317,8 +327,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -327,8 +337,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -337,8 +347,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vítor Cabral",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -347,8 +357,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vítor Cabral",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-10",
       "obs": ""
     }
   ]
