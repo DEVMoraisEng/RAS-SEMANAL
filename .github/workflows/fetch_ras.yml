@@ -2,8 +2,15 @@ name: RAS - atualizar dados (leitura)
 
 on:
   schedule:
-    - cron: "0 * * * *"    # a cada 1 hora (no minuto 0)
+    - cron: "0 */3 * * *"   # rede de segurança: a cada 3h (pega edições feitas direto no Notion, caso não haja webhook)
   workflow_dispatch: {}
+  repository_dispatch:
+    types: [ras_update]     # disparado pelo Apps Script (throttle de 15 min) quando o site altera o Notion
+
+# Se dois eventos chegarem quase juntos, roda um de cada vez (não cancela o que já começou).
+concurrency:
+  group: ras-fetch
+  cancel-in-progress: false
 
 jobs:
   fetch:
