@@ -108,6 +108,10 @@ main.wrap{padding:40px 22px 60px}
 .pill{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;display:inline-block}
 .st-select,.pr-select,.resp-select{font:inherit;font-size:11.5px;font-weight:700;border:0;border-radius:20px;padding:4px 8px;cursor:pointer}
 .resp-fixed{font-size:12.5px;color:var(--ink);font-weight:600}
+.wknav{display:flex;align-items:center;gap:5px;justify-content:center;white-space:nowrap}
+.wknav button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:6px;width:22px;height:22px;line-height:1;padding:0;cursor:pointer;font-size:11px}
+.wknav button:hover{background:var(--menta,#CCE8E6)}
+.wknav span{font-size:12px;font-weight:700;min-width:38px;text-align:center}
 .empty-row td{color:var(--muted);font-size:12px;text-align:center;padding:16px 0}
 
 /* ===== obras ===== */
@@ -199,12 +203,25 @@ main.wrap{padding:40px 22px 60px}
       </div>
       <div class="field">
         <label>Status inicial</label>
-        <select id="f_status"><option selected>A Fazer</option><option>Em Andamento</option></select>
+        <select id="f_status"><option selected>A Fazer</option><option>Em Andamento</option><option>Pendente</option></select>
       </div>
     </div>
     <div class="field">
       <label>Observações (opcional)</label>
       <textarea id="f_obs" placeholder="Contexto adicional"></textarea>
+    </div>
+    <div class="field">
+      <label class="chk"><input type="checkbox" id="f_copart" onchange="toggleCopart()"> Coparticipação — criar também para outra pessoa/setor</label>
+    </div>
+    <div class="row2" id="f_copart_wrap" style="display:none">
+      <div class="field">
+        <label>Setor coparticipante</label>
+        <select id="f_copart_setor" onchange="fillCopartResp()"></select>
+      </div>
+      <div class="field">
+        <label>Responsável coparticipante</label>
+        <select id="f_copart_resp"></select>
+      </div>
     </div>
     <div class="actions">
       <button class="btn ghost" onclick="closeModal()">Cancelar</button>
@@ -217,9 +234,9 @@ main.wrap{padding:40px 22px 60px}
 <div class="modal" id="modalObra">
   <div class="sheet">
     <h3>Nova obra</h3>
-    <p class="sub">Cidade e Setor aceitam valores novos — é só digitar.</p>
+    <p class="sub">Cidade aceita valores novos — é só digitar. Em Setor, escolha um existente ou "➕ Criar novo setor".</p>
     <div class="field">
-      <label>Identificação (ex.: TB 21 · QD 51 · LT 40)</label>
+      <label>Identificação (ex.: TB 21 QD 02 LT 03)</label>
       <input id="o_nome" placeholder="Quadra / Lote / referência">
     </div>
     <div class="row2">
@@ -230,8 +247,8 @@ main.wrap{padding:40px 22px 60px}
       </div>
       <div class="field">
         <label>Setor / Empreendimento</label>
-        <input id="o_setor" list="dl_setores" placeholder="Ex.: Solar Ville">
-        <datalist id="dl_setores"></datalist>
+        <select id="o_setor_sel" onchange="onSetorSel()"></select>
+        <input id="o_setor_novo" placeholder="Nome do novo setor" style="display:none;margin-top:6px">
       </div>
     </div>
     <div class="row2">
@@ -242,7 +259,7 @@ main.wrap{padding:40px 22px 60px}
       </div>
       <div class="field">
         <label>Status</label>
-        <select id="o_status"><option>Em Andamento</option><option>Finalizada</option></select>
+        <select id="o_status"></select>
       </div>
     </div>
     <div class="row2">
@@ -274,7 +291,7 @@ main.wrap{padding:40px 22px 60px}
 const WRITE_ENDPOINT = "https://script.google.com/macros/s/AKfycbxZM2jwwTlIHjSvgu-N4Z46S-grGv2YWzThEmJfUG0LqYkql40Cai4ND5WpRB7Cc-in/exec";
 
 const SEED_ATIV  = [{"id": "seed-a1", "nome": "Definir a estrutura da Reunião de Alinhamento Mensal", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a2", "nome": "Fechar render do condomínio e definir layout do decorado com a arquiteta", "setor": "Diretoria", "responsavel": "João Vitor", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a3", "nome": "Negociar e fechar as áreas do Amim Camargo e Jardim Petrópolis", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Alta", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a4", "nome": "Definir SCP do Jardim Florença", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a5", "nome": "Criar solicitações QD 49 LT 10, 11, 14 e 15", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a6", "nome": "Otimização e testes do WhatsApp", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a7", "nome": "Reunião com fiscais da prefeitura para questão fiscal (ISSQN)", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a8", "nome": "Conferir alteração de projetos Reserva dos Ipês (Caixa e Prefeitura)", "setor": "Diretoria", "responsavel": "João Vitor", "prioridade": "Alta", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a9", "nome": "Desenhar fluxos de pagamento de lançamento", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Concluído", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a10", "nome": "Reuniões para orçamento de marketing", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Concluído", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a11", "nome": "Implementar processo comercial (alguns com Felipe, aos poucos)", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a12", "nome": "Limpar todas as casas modelo para vídeos e visitas", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a13", "nome": "Ativar comercial (grupos, visitas, suporte)", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a14", "nome": "Deixar o WhatsApp funcionando na operação", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a15", "nome": "Otimizar baixas de pessoa física", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a16", "nome": "Enviar fechamentos PF à contabilidade", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a17", "nome": "Controlar, junto com a Ana, as planilhas de contas de água", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a18", "nome": "Formalizar rotina diária de Ana e Lohany", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Baixa", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a19", "nome": "Conferência de todas as unidades consumidoras diretamente no site", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a20", "nome": "Liberar acesso à conta bancária Moura Dantas", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a21", "nome": "Finalizar orçamentos com projetos finalizados (prioridade p/ obras da próx. semana)", "setor": "Compras", "responsavel": "Paula", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a22", "nome": "Conferir e editar orçamento Reserva dos Ipês com os projetos alterados", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a23", "nome": "Apresentar outros modelos de pisos e revestimentos p/ o Reserva dos Ipês", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a24", "nome": "Alinhar com Juliana retorno das transferências de UC junto ao cliente", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a25", "nome": "Criar novo processo de cobrança das transferências de energia e água", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a26", "nome": "Verificar com o pessoal do MC quantidade e inatividade de usuários", "setor": "Compras", "responsavel": "Paula", "prioridade": "Baixa", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a27", "nome": "Finalizar os projetos de casas de rua em aberto", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a28", "nome": "Rever quantitativo do Cond. Reserva dos Ipês", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a29", "nome": "Fazer projeto do Corpo de Bombeiros do Cond. Reserva dos Jacarandás", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a30", "nome": "Reunir com Hudson para entender o novo processo de vendas", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Baixa", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a31", "nome": "Rever e estudar a segurança dos sites internos", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a32", "nome": "Testes diários do WhatsApp", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}];
-const SEED_OBRAS = [{"id": "seed-o1", "nome": "52 · QD 81 · LT 09", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o2", "nome": "52 · QD 81 · LT 11", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o3", "nome": "SV 13 · QD 40 · LT 20", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o4", "nome": "SV 13 · QD 40 · LT 19", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o5", "nome": "SV 13 · QD 40 · LT 18", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o6", "nome": "RR 03 · QD 03 · LT 05", "cidade": "Senador Canedo", "setor": "Ravena", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o7", "nome": "TB 21 · QD 50 · LT 34", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o8", "nome": "TB 19 · QD 51 · LT 20", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o9", "nome": "TB 19 · QD 51 · LT 19", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o10", "nome": "TB 21 · QD 51 · LT 40", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Planejada", "entrega": "", "prioritaria": "Sim", "obs": ""}];
+const SEED_OBRAS = [{"id": "seed-o1", "nome": "52 · QD 81 · LT 09", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o2", "nome": "52 · QD 81 · LT 11", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o3", "nome": "SV 13 · QD 40 · LT 20", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o4", "nome": "SV 13 · QD 40 · LT 19", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o5", "nome": "SV 13 · QD 40 · LT 18", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o6", "nome": "RR 03 · QD 03 · LT 05", "cidade": "Senador Canedo", "setor": "Ravena", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o7", "nome": "TB 21 · QD 50 · LT 34", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o8", "nome": "TB 19 · QD 51 · LT 20", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o9", "nome": "TB 19 · QD 51 · LT 19", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o10", "nome": "TB 21 · QD 51 · LT 40", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}];
 
 const DEPARTAMENTOS = ["Diretoria","Comercial","Financeiro","Compras","Projetos e Desenvolvimento"];
 const SUBT = {Diretoria:"Júlio e João Vitor",Comercial:"Hudson",Financeiro:"Lohany",Compras:"Paula","Projetos e Desenvolvimento":"Felipe"};
@@ -293,19 +310,31 @@ const STCOL = {"A Fazer":["var(--afazer)","var(--afazer-t)"],"Em Andamento":["va
                "Continuidade da Semana Anterior":["var(--continua)","var(--continua-t)"]};
 const PRCOL = {"Alta":["var(--alta)","var(--alta-t)"],"Média":["var(--media)","var(--media-t)"],"Baixa":["var(--baixa)","var(--baixa-t)"]};
 const OPEN = ["A Fazer","Em Andamento","Pendente","Continuidade da Semana Anterior"];
-const OBRA_STCOL = {"Finalizada":["var(--concluido)","var(--concluido-t)"],"Em Andamento":["var(--andamento)","var(--andamento-t)"]};
+const OBRA_STCOL = {"Em Andamento":["var(--andamento)","var(--andamento-t)"],
+                    "Paralisada":["var(--pendente)","var(--pendente-t)"],
+                    "Finalizada":["var(--concluido)","var(--concluido-t)"]};
+// Status base das obras. As opções mostradas = base + os status que existem nos
+// dados + o valor atual da linha. Assim nenhum status "fantasma" (ex.: Planejada,
+// já removido) aparece, e status reais do Notion aparecem sozinhos.
+const OBRA_STATUS_BASE = ["Em Andamento","Finalizada"];
+function obraStatusOpcoes(atual){
+  return [...new Set([...OBRA_STATUS_BASE, ...OBRAS.map(o=>o.status), atual].filter(Boolean))];
+}
 
 let ATIV=[], OBRAS=[], addSetor=null;
 
 function fmtBR(d){ if(!d) return "—"; const p=d.slice(0,10).split("-"); return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:d; }
-function segundaAtual(){
-  const d = new Date();
+// Segunda-feira (YYYY-MM-DD) da semana que contém a data d.
+function isoMonday(d){
   const dow = d.getDay(); // 0=domingo..6=sábado
   const diff = dow===0 ? -6 : 1-dow; // volta até a segunda-feira
   const seg = new Date(d.getFullYear(), d.getMonth(), d.getDate()+diff);
   const p = n => String(n).padStart(2,"0");
   return `${seg.getFullYear()}-${p(seg.getMonth()+1)}-${p(seg.getDate())}`;
 }
+// A semana atual é SEMPRE a segunda da semana de HOJE — nunca a maior data dos dados.
+function segundaAtual(){ return isoMonday(new Date()); }
+function segundaAnterior(){ const d=new Date(); d.setDate(d.getDate()-7); return isoMonday(d); }
 function isSeedData(){ return ATIV.length && String(ATIV[0].id).startsWith("seed"); }
 
 async function boot(){
@@ -316,9 +345,13 @@ async function boot(){
     ]);
     ATIV = a.atividades||[]; OBRAS = o.obras||[];
   }catch(e){ ATIV = SEED_ATIV.slice(); OBRAS = SEED_OBRAS.slice(); }
-  const weeks = [...new Set(ATIV.map(x=>x.semana).filter(Boolean))].sort().reverse();
+  const SEG = segundaAtual();
+  const ANT = segundaAnterior();
+  // Junta as semanas dos dados com a semana atual e a anterior (mesmo que ainda
+  // não tenham atividades), para o seletor e os botões sempre funcionarem.
+  const weeks = [...new Set([...ATIV.map(x=>x.semana).filter(Boolean), SEG, ANT])].sort().reverse();
   const sel = document.getElementById("week");
-  sel.innerHTML = weeks.map((w,i)=>`<option value="${w}">${fmtBR(w)}${i===0?" (atual)":""}</option>`).join("") || `<option>—</option>`;
+  sel.innerHTML = weeks.map(w=>`<option value="${w}" ${w===SEG?"selected":""}>${fmtBR(w)}${w===SEG?" (atual)":""}</option>`).join("") || `<option>—</option>`;
   render();
 }
 
@@ -383,10 +416,8 @@ function renderRelatorio(){
 }
 
 function weekSwitchHTML(){
-  const weeks = weekList();
   const cur = currentWeek();
-  const idx = weeks.indexOf(cur);
-  const atualW = weeks[0], anteriorW = weeks[1];
+  const atualW = segundaAtual(), anteriorW = segundaAnterior();
   let html = `<div class="weekswitch">`;
   if(atualW) html += `<button class="wbtn ${cur===atualW?'on':''}" onclick="setWeek('${atualW}')">Semana atual · ${fmtBR(atualW)}</button>`;
   if(anteriorW) html += `<button class="wbtn ${cur===anteriorW?'on':''}" onclick="setWeek('${anteriorW}')">◀ Semana anterior · ${fmtBR(anteriorW)}</button>`;
@@ -405,7 +436,7 @@ function renderDepartamentos(){
     let trs = r.map(a=>{
       const [sb,st] = STCOL[a.status]||["#eee","#333"];
       const [pb,pt] = PRCOL[a.prioridade]||["#eee","#333"];
-      const stOpts = ["A Fazer","Em Andamento","Concluído","Continuidade da Semana Anterior"].map(o=>`<option ${o===a.status?"selected":""}>${o}</option>`).join("");
+      const stOpts = ["A Fazer","Em Andamento","Pendente","Concluído","Continuidade da Semana Anterior"].map(o=>`<option ${o===a.status?"selected":""}>${o}</option>`).join("");
       const prOpts = ["Alta","Média","Baixa"].map(o=>`<option ${o===a.prioridade?"selected":""}>${o}</option>`).join("");
       let respCell;
       if(locked.length>1){
@@ -418,17 +449,22 @@ function renderDepartamentos(){
         <td class="c-resp">${respCell}</td>
         <td><select class="pr-select" style="background:${pb};color:${pt}" onchange="changeField('${a.id}','prioridade',this.value)">${prOpts}</select></td>
         <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeField('${a.id}','status',this.value)">${stOpts}</select></td>
+        <td class="c-sem"><div class="wknav">
+          <button title="Voltar uma semana" onclick="moverSemana('${a.id}',-1)">◀</button>
+          <span>${fmtBR(a.semana).slice(0,5)}</span>
+          <button title="Avançar uma semana" onclick="moverSemana('${a.id}',1)">▶</button>
+        </div></td>
         <td class="c-obs"><input value="${escapeAttr(a.obs||'')}" placeholder="—" onblur="changeField('${a.id}','obs',this.value)"></td>
       </tr>`;
     }).join("");
-    if(!r.length) trs = `<tr class="empty-row"><td colspan="5">Sem atividades nesta semana.</td></tr>`;
+    if(!r.length) trs = `<tr class="empty-row"><td colspan="6">Sem atividades nesta semana.</td></tr>`;
     html += `<div class="board">
       <div class="bhead" style="background:${DEPCOLOR[s]}">
         <div><div class="bt">${s}</div><div class="bmeta">${SUBT[s]} · ${open} em aberto</div></div>
         <button class="addbtn" onclick="openModal('${s}')">+ Nova atividade</button>
       </div>
       <div class="dtbl-wrap"><table class="dtbl">
-        <thead><tr><th>Atividade</th><th>Responsável</th><th>Prioridade</th><th>Status</th><th>Observações</th></tr></thead>
+        <thead><tr><th>Atividade</th><th>Responsável</th><th>Prioridade</th><th>Status</th><th>Semana</th><th>Observações</th></tr></thead>
         <tbody>${trs}</tbody>
       </table></div>
     </div>`;
@@ -455,12 +491,16 @@ function renderObras(){
 
   function linhaObra(o){
     const [sb,st] = OBRA_STCOL[o.status]||["#eee","#333"];
-    const stSel = Object.keys(OBRA_STCOL).map(s=>`<option ${s===o.status?"selected":""}>${s}</option>`).join("");
+    // Garante que o valor atual da obra sempre exista no seletor, mesmo que não
+    // esteja na lista base (evita o status "sumir" da própria linha).
+    const opcoesSt = obraStatusOpcoes(o.status);
+    const stSel = opcoesSt.map(s=>`<option ${s===o.status?"selected":""}>${s}</option>`).join("");
+    const prSel = ["Sim","Não"].map(v=>`<option ${v===(o.prioritaria||"Não")?"selected":""}>${v}</option>`).join("");
     return `<tr class="${o.prioritaria==='Sim'?'prioritaria':''}">
       <td class="c-obra-nome">${escapeHtml(o.nome)}</td>
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
       <td><input type="date" value="${escapeAttr((o.entrega||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','entrega',this.value)"></td>
-      <td style="text-align:center"><input type="checkbox" ${o.prioritaria==="Sim"?"checked":""} onchange="changeFieldObra('${o.id}','prioritaria', this.checked?'Sim':'Não')" title="Obra prioritária"></td>
+      <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','prioritaria',this.value)" title="Obra prioritária">${prSel}</select></td>
       <td class="c-obs"><input value="${escapeAttr(o.obs||'')}" placeholder="—" onblur="changeFieldObra('${o.id}','obs',this.value)"></td>
     </tr>`;
   }
@@ -487,7 +527,7 @@ function renderObras(){
       </table></div>
     </div>`;
   });
-  html += `<div class="foot">Marque o check para obra prioritária.</div>`;
+  html += `<div class="foot">Selecione "Sim" na coluna Prior. para marcar a obra como prioritária.</div>`;
   document.getElementById("obras").innerHTML = html;
 }
 
@@ -509,12 +549,27 @@ function changeField(id, field, value){
   if(WRITE_ENDPOINT){ post({action:"update", id, field, value}); }
 }
 
+// Soma/subtrai N semanas e SEMPRE devolve uma segunda-feira (movimento
+// travado de segunda em segunda, para frente ou para trás).
+function addWeeks(iso, n){
+  const p = (iso || segundaAtual()).slice(0,10).split("-").map(Number);
+  const d = new Date(p[0], p[1]-1, p[2]);
+  d.setDate(d.getDate() + 7*n);
+  return isoMonday(d);
+}
+function moverSemana(id, n){
+  const a = ATIV.find(x=>x.id===id); if(!a) return;
+  changeField(id, "semana", addWeeks(a.semana, n));
+}
+
 function openModal(setor){
   addSetor=setor;
   document.getElementById("modalSub").textContent = `Departamento ${setor} · semana atual · ${fmtBR(segundaAtual())}`;
   document.getElementById("f_atv").value="";
   document.getElementById("f_obs").value="";
   document.getElementById("f_status").value="A Fazer";
+  document.getElementById("f_copart").checked=false;
+  document.getElementById("f_copart_wrap").style.display="none";
   const locked = RESP_LOCK[setor]||[];
   const wrap = document.getElementById("f_resp_wrap");
   if(locked.length>1){
@@ -537,22 +592,55 @@ function getRespFromModal(){
   return locked[0]||"";
 }
 
+function toggleCopart(){
+  const on = document.getElementById("f_copart").checked;
+  document.getElementById("f_copart_wrap").style.display = on ? "" : "none";
+  if(on) fillCopartSetores();
+}
+function fillCopartSetores(){
+  const sel = document.getElementById("f_copart_setor");
+  sel.innerHTML = DEPARTAMENTOS.map(s=>`<option>${s}</option>`).join("");
+  sel.value = DEPARTAMENTOS.find(s=>s!==addSetor) || DEPARTAMENTOS[0]; // sugere outro setor
+  fillCopartResp();
+}
+function fillCopartResp(){
+  const setor = document.getElementById("f_copart_setor").value;
+  const resp  = document.getElementById("f_copart_resp");
+  const locked = RESP_LOCK[setor]||[];
+  resp.innerHTML = locked.length ? locked.map(n=>`<option>${n}</option>`).join("") : `<option value=""></option>`;
+}
+
+function criarEntrada(nome, setor, resp, prioridade, status, semana, obs){
+  const dados = {action:"create", atividade:nome, setor, responsavel:resp, prioridade, status, semana, obs};
+  ATIV.push({id:"local-"+Date.now()+"-"+Math.random().toString(36).slice(2,6),
+             nome, setor, responsavel:resp, prioridade, status, semana, obs});
+  if(WRITE_ENDPOINT){ post(dados); }
+}
+
 function saveAtividade(){
   const nome = document.getElementById("f_atv").value.trim();
   if(!nome){ toast("Escreva a atividade."); return; }
-  const dados = {
-    action:"create", atividade:nome, setor:addSetor,
-    responsavel:getRespFromModal(),
-    prioridade:document.getElementById("f_prio").value,
-    status:document.getElementById("f_status").value,
-    semana:segundaAtual(),
-    obs:document.getElementById("f_obs").value.trim()
-  };
-  ATIV.push({id:"local-"+Date.now(), nome, setor:dados.setor, responsavel:dados.responsavel,
-             prioridade:dados.prioridade, status:dados.status, semana:dados.semana, obs:dados.obs});
+  const prioridade = document.getElementById("f_prio").value;
+  const status     = document.getElementById("f_status").value;
+  const semana     = segundaAtual();
+  const obs        = document.getElementById("f_obs").value.trim();
+  const respPrim   = getRespFromModal();
+
+  criarEntrada(nome, addSetor, respPrim, prioridade, status, semana, obs);
+  let dupla = false;
+
+  if(document.getElementById("f_copart").checked){
+    const cSetor = document.getElementById("f_copart_setor").value;
+    const cResp  = document.getElementById("f_copart_resp").value;
+    if(cSetor && cResp && !(cSetor===addSetor && cResp===respPrim)){
+      criarEntrada(nome, cSetor, cResp, prioridade, status, semana, obs);
+      dupla = true;
+    }
+  }
+
   closeModal(); render();
-  if(WRITE_ENDPOINT){ post(dados); toast("Atividade criada no Notion."); }
-  else { toast("Criada (modo teste — só na tela)."); }
+  const base = dupla ? "Atividade criada para os dois setores" : "Atividade criada";
+  toast(WRITE_ENDPOINT ? base+" no Notion." : base+" (modo teste — só na tela).");
 }
 
 function openModalObra(){
@@ -560,14 +648,30 @@ function openModalObra(){
   const setores=[...new Set(OBRAS.map(o=>o.setor).filter(Boolean))].sort();
   const meses=[...new Set(OBRAS.map(o=>o.mes).filter(Boolean))].sort();
   document.getElementById("dl_cidades").innerHTML = cidades.map(c=>`<option value="${escapeAttr(c)}">`).join("");
-  document.getElementById("dl_setores").innerHTML = setores.map(c=>`<option value="${escapeAttr(c)}">`).join("");
   document.getElementById("dl_meses").innerHTML = meses.map(c=>`<option value="${escapeAttr(c)}">`).join("");
-  ["o_nome","o_cidade","o_setor","o_entrega","o_obs"].forEach(id=>document.getElementById(id).value="");
+  // Setor: existentes + opção de criar novo
+  document.getElementById("o_setor_sel").innerHTML =
+    setores.map(s=>`<option value="${escapeAttr(s)}">${escapeHtml(s)}</option>`).join("") +
+    `<option value="__novo__">➕ Criar novo setor…</option>`;
+  document.getElementById("o_setor_novo").value=""; document.getElementById("o_setor_novo").style.display="none";
+  // Status: base + status reais dos dados
+  document.getElementById("o_status").innerHTML =
+    obraStatusOpcoes().map(s=>`<option ${s==="Em Andamento"?"selected":""}>${s}</option>`).join("");
+  ["o_nome","o_cidade","o_entrega","o_obs"].forEach(id=>document.getElementById(id).value="");
   document.getElementById("o_mes").value = window._obraMes || (meses[meses.length-1]||"");
-  document.getElementById("o_status").value="Em Andamento";
   document.getElementById("o_prio").checked=true;
   document.getElementById("modalObra").classList.add("open");
   document.getElementById("o_nome").focus();
+}
+function onSetorSel(){
+  const novo = document.getElementById("o_setor_sel").value==="__novo__";
+  const inp = document.getElementById("o_setor_novo");
+  inp.style.display = novo ? "" : "none";
+  if(novo) inp.focus();
+}
+function getSetorObra(){
+  const sel = document.getElementById("o_setor_sel").value;
+  return sel==="__novo__" ? document.getElementById("o_setor_novo").value.trim() : sel;
 }
 function closeModalObra(){ document.getElementById("modalObra").classList.remove("open"); }
 
@@ -577,7 +681,7 @@ function saveObra(){
   if(!nome || !cidade){ toast("Preencha ao menos Identificação e Cidade."); return; }
   const dados = {
     action:"create_obra", nome, cidade,
-    setor:document.getElementById("o_setor").value.trim(),
+    setor:getSetorObra(),
     mes:document.getElementById("o_mes").value.trim(),
     status:document.getElementById("o_status").value,
     entrega:document.getElementById("o_entrega").value,
