@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-08T23:15:19",
+  "geradoEm": "2026-08-08T23:36:07",
   "atividades": [
     {
       "id": "3b4c5ab5-32d3-81f7-a7c5-fc2a7151df34",
@@ -147,7 +147,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -157,7 +157,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -167,7 +167,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Baixa",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-03",
       "obs": ""
     },
@@ -177,19 +177,9 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": "Com Ana"
-    },
-    {
-      "id": "3b4c5ab5-32d3-81b7-9423-cdfed8adc4fb",
-      "nome": "Enviar fechamentos PF à contabilidade",
-      "setor": "Financeiro",
-      "responsavel": "Lohany Alves",
-      "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-03",
-      "obs": ""
     },
     {
       "id": "3b4c5ab5-32d3-81bd-a85e-d659bfa892ea",
@@ -197,7 +187,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-03",
       "obs": ""
     },
