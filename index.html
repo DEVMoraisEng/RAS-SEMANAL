@@ -104,6 +104,10 @@ main.wrap{padding:40px 22px 60px}
 .dtbl tr.prioritaria td{background:#FFF6E0}
 .dtbl tr.prioritaria td:first-child{border-left:3px solid #E0A100}
 .dtbl .c-atv.done{text-decoration:line-through;color:var(--muted)}
+.dtbl .c-atv .atv-edit{white-space:normal;line-height:1.35;outline:none;border-radius:6px;padding:3px 6px;margin:-3px -6px;cursor:text;transition:background .12s,box-shadow .12s}
+.dtbl .c-atv .atv-edit:hover{background:#EEF6F5}
+.dtbl .c-atv .atv-edit:focus{background:#fff;box-shadow:0 0 0 2px var(--verde)}
+.dtbl .c-atv.done .atv-edit{text-decoration:line-through;color:var(--muted)}
 .dtbl .c-resp{white-space:nowrap;color:var(--ink);font-weight:600;font-size:12.5px}
 .dtbl .c-obs input{width:100%;border:1px solid transparent;background:transparent;font:inherit;padding:5px 6px;border-radius:6px}
 .dtbl .c-obs input:hover{border-color:var(--line)}
@@ -522,7 +526,7 @@ function renderDepartamentos(){
         respCell = `<span class="resp-fixed">${escapeHtml(a.responsavel||locked[0]||"")}</span>`;
       }
       return `<tr>
-        <td class="c-atv ${a.status==='Concluído'?'done':''}">${escapeHtml(a.nome)}</td>
+        <td class="c-atv ${a.status==='Concluído'?'done':''}"><div class="atv-edit" contenteditable="true" spellcheck="false" title="Clique para editar o nome" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}" onblur="editarNome('${a.id}',this)">${escapeHtml(a.nome)}</div></td>
         <td class="c-resp">${respCell}</td>
         <td><select class="pr-select" style="background:${pb};color:${pt}" onchange="changeField('${a.id}','prioridade',this.value)">${prOpts}</select></td>
         <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeField('${a.id}','status',this.value)">${stOpts}</select></td>
@@ -640,6 +644,23 @@ function changeField(id, field, value){
   if(field==="semana") recomputarSeletorSemanas();
   render();
   if(WRITE_ENDPOINT){ post({action:"update", id, field, value}); }
+}
+
+// Edição do NOME da atividade direto na tabela (célula contenteditable).
+// Só grava se realmente mudou e não ficou vazio. No Notion o nome é o campo
+// TITLE: o Code.gs monta a propriedade pelo tipo lido no schema, então o
+// único requisito no backend é o mapa de campos reconhecer "nome" como a
+// coluna título (mesmo caminho de status/prioridade/obs).
+function editarNome(id, el){
+  const a = ATIV.find(x=>x.id===id); if(!a) return;
+  const novo = (el.innerText||"").replace(/\s+/g," ").trim();
+  if(!novo){                         // nome vazio não é permitido — reverte
+    el.innerText = a.nome;
+    toast("O nome da atividade não pode ficar vazio.");
+    return;
+  }
+  if(novo === a.nome) return;        // nada mudou; não posta à toa
+  changeField(id, "nome", novo);     // atualiza a tela + envia update ao Notion
 }
 
 function excluirAtividade(id){
