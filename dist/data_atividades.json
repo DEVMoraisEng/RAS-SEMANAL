@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T14:06:03",
+  "geradoEm": "2026-08-10T14:09:53",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -39,16 +39,6 @@
       "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe"
     },
     {
-      "id": "3b8c5ab5-32d3-8162-aab4-f6604d2e71a6",
-      "nome": "Finalizar segunda feira pesquisa IBGE",
-      "setor": "Financeiro",
-      "responsavel": "Lohany",
-      "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-10",
-      "obs": ""
-    },
-    {
       "id": "3b8c5ab5-32d3-813f-bd30-f26934d9807e",
       "nome": "liberar para vistoria marques de abreu b2, apolo lt 35 e 36, pathernon lt 26, tb 21 qd 51 lt 32 e 33, tb 18 lt 24 e 26",
       "setor": "Diretoria",
@@ -86,7 +76,7 @@
       "prioridade": "Alta",
       "status": "A Fazer",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "14 hs 11/08"
     },
     {
       "id": "3b8c5ab5-32d3-8126-9c79-d83e4889d29c",
