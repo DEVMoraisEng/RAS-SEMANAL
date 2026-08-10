@@ -1,6 +1,16 @@
 {
-  "geradoEm": "2026-08-10T12:25:27",
+  "geradoEm": "2026-08-10T12:37:46",
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-8126-9c79-d83e4889d29c",
+      "nome": "Finalizar apropriação dos custos com Ana Paula.",
+      "setor": "Financeiro",
+      "responsavel": "Lohany Alves",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
     {
       "id": "3b8c5ab5-32d3-8152-8b17-e4d0a8945bf2",
       "nome": "Reestruturar mapa de vendas",
@@ -157,7 +167,7 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": ""
     },
@@ -177,7 +187,7 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-10",
       "obs": "Nova busca pois não foram aprovados os que buscamos "
     },
@@ -197,7 +207,7 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-10",
       "obs": "Prioridade da semana"
     },
@@ -317,9 +327,9 @@
       "setor": "Diretoria",
       "responsavel": "João Vítor Cabral",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "Caixa já respondeu. Aguardando agora projeto do felipe para dar entrada na reaprovaçao na prefeitura"
     },
     {
       "id": "3b4c5ab5-32d3-81d3-99ba-e9004cf7b032",
@@ -327,9 +337,9 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "Aguardando agenda com fiscal"
     },
     {
       "id": "3b4c5ab5-32d3-811b-aa01-d6528914f3a1",
@@ -337,9 +347,9 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "Focar em fazer mais testes (todos)"
     },
     {
       "id": "3b4c5ab5-32d3-8180-b6ee-fea8034b574e",
@@ -347,7 +357,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": ""
     },
@@ -357,9 +367,9 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "Com a real ja solicitei - aguardando JUCEG e tbm quais investidores irão entrar"
     },
     {
       "id": "3b4c5ab5-32d3-81a8-8349-cc686de6af4a",
@@ -367,9 +377,9 @@
       "setor": "Diretoria",
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "Fechamento dependera de quanto precisaremos aportar pro Florença"
     },
     {
       "id": "3b4c5ab5-32d3-81fd-98aa-caa8b57afc20",
