@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T13:44:51",
+  "geradoEm": "2026-08-10T14:00:29",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,26 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-81fb-a472-ebd14c926b07",
+      "nome": "Definir Fluxo de pagamento que iremos seguir",
+      "setor": "Comercial",
+      "responsavel": "Hudson Ferreira",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe"
+    },
+    {
+      "id": "3b8c5ab5-32d3-81eb-a2f3-cd15d554323a",
+      "nome": "Definir Fluxo de pagamento que iremos seguir",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "felipe berçan",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe"
+    },
     {
       "id": "3b8c5ab5-32d3-8162-aab4-f6604d2e71a6",
       "nome": "Finalizar segunda feira pesquisa IBGE",
@@ -20,7 +40,7 @@
     },
     {
       "id": "3b8c5ab5-32d3-813f-bd30-f26934d9807e",
-      "nome": "liberar para vistoria marques de abreu b2, apolo lt 35 e 36, pathernon lt 24, tb 21 qd 51 lt 32 e 33, tb 18 lt 24 e 26",
+      "nome": "liberar para vistoria marques de abreu b2, apolo lt 35 e 36, pathernon lt 26, tb 21 qd 51 lt 32 e 33, tb 18 lt 24 e 26",
       "setor": "Diretoria",
       "responsavel": "João Vítor Cabral",
       "prioridade": "Média",
@@ -374,8 +394,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Média",
-      "status": "Concluído",
-      "semana": "2026-08-03",
+      "status": "Em Andamento",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -456,7 +476,7 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "Cobrar a Naue para voltarem a comparecer 1 x por semana ao escritorio"
     }
   ]
 }
