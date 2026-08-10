@@ -104,6 +104,31 @@ def build_obras():
         })
     return out
 
+def status_options(db, *col_names):
+    """Lê o schema do banco e devolve as opções da coluna Status na ORDEM
+    definida no Notion. Funciona tanto para coluna do tipo 'status' quanto
+    'select'. É isso que faz o dropdown do site espelhar o Notion: se você
+    criar/renomear/remover uma opção lá, ela aparece/some no site sozinha.
+    """
+    req = urllib.request.Request(
+        f"https://api.notion.com/v1/databases/{db}", method="GET")
+    req.add_header("Authorization", "Bearer " + TOKEN)
+    req.add_header("Notion-Version", NOTION_VERSION)
+    try:
+        with urllib.request.urlopen(req) as r:
+            schema = json.loads(r.read().decode("utf-8")).get("properties", {})
+    except urllib.error.HTTPError as e:
+        raise SystemExit(f"Erro Notion {e.code} (schema {db}): {e.read().decode('utf-8')[:400]}")
+    for n in col_names:
+        prop = schema.get(n)
+        if not prop:
+            continue
+        t = prop.get("type")
+        if t in ("status", "select"):
+            return [o["name"] for o in (prop.get(t) or {}).get("options", [])]
+    return []
+
+
 def main():
     if not TOKEN:
         raise SystemExit("Defina NOTION_TOKEN (o seu token do Notion).")
@@ -111,16 +136,18 @@ def main():
     now = datetime.datetime.now().isoformat(timespec="seconds")
 
     ativ = build_atividades()
-    json.dump({"geradoEm": now, "atividades": ativ},
+    ativ_status = status_options(DB_ATIV, "Status")
+    json.dump({"geradoEm": now, "statusOptions": ativ_status, "atividades": ativ},
               open("dist/data_atividades.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
-    print(f"data_atividades.json  -> {len(ativ)} atividades")
+    print(f"data_atividades.json  -> {len(ativ)} atividades | status: {ativ_status}")
 
     obras = build_obras()
-    json.dump({"geradoEm": now, "obras": obras},
+    obras_status = status_options(DB_OBRAS, "Status")
+    json.dump({"geradoEm": now, "statusOptions": obras_status, "obras": obras},
               open("dist/data_obras.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
-    print(f"data_obras.json       -> {len(obras)} obras")
+    print(f"data_obras.json       -> {len(obras)} obras | status: {obras_status}")
 
 if __name__ == "__main__":
     main()

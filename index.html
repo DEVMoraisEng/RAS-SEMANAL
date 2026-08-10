@@ -325,12 +325,21 @@ const OBRA_STCOL = {"Em Andamento":["var(--andamento)","var(--andamento-t)"],
                     "Paralisada":["var(--pendente)","var(--pendente-t)"],
                     "Finalizada":["var(--concluido)","var(--concluido-t)"],
                     "Projeto Finalizado":["var(--continua)","var(--continua-t)"]};
-// Status base das obras. As opções mostradas = base + os status que existem nos
-// dados + o valor atual da linha. Assim nenhum status "fantasma" (ex.: Planejada,
-// já removido) aparece, e status reais do Notion aparecem sozinhos.
+// Status base das obras (fallback só para o modo teste/seed, quando o JSON do
+// Notion ainda não carregou). Em produção a fonte de verdade é
+// OBRAS_STATUS_OPCOES, preenchido no boot() a partir do schema do Notion —
+// então criar/renomear/remover uma opção no Notion reflete no site sozinho.
 const OBRA_STATUS_BASE = ["Em Andamento","Finalizada","Projeto Finalizado"];
+let OBRAS_STATUS_OPCOES = [];   // vem de dist/data_obras.json (statusOptions)
 function obraStatusOpcoes(atual){
-  return [...new Set([...OBRA_STATUS_BASE, ...OBRAS.map(o=>o.status), atual].filter(Boolean))];
+  // Fonte de verdade = opções do Notion (na ordem definida lá). Sem elas
+  // (seed/teste), cai na base + o que existir nos dados. O valor atual da
+  // linha é sempre incluído para nunca "sumir" da própria linha, mesmo que
+  // essa opção tenha sido removida do Notion.
+  const base = OBRAS_STATUS_OPCOES.length
+    ? OBRAS_STATUS_OPCOES
+    : [...OBRA_STATUS_BASE, ...OBRAS.map(o=>o.status)];
+  return [...new Set([...base, atual].filter(Boolean))];
 }
 
 let ATIV=[], OBRAS=[], addSetor=null;
@@ -356,6 +365,7 @@ async function boot(){
       fetch("dist/data_obras.json").then(r=>{if(!r.ok)throw 0;return r.json()})
     ]);
     ATIV = a.atividades||[]; OBRAS = o.obras||[];
+    OBRAS_STATUS_OPCOES = o.statusOptions || [];
     window._geradoEm = a.geradoEm || o.geradoEm || "";
   }catch(e){ ATIV = SEED_ATIV.slice(); OBRAS = SEED_OBRAS.slice(); }
   const SEG = segundaAtual();
@@ -572,7 +582,7 @@ function renderObras(){
   </div>`;
 
   function linhaObra(o){
-    const [sb,st] = OBRA_STCOL[o.status]||["#eee","#333"];
+    const [sb,st] = OBRA_STCOL[o.status]||["var(--menta)","var(--petroleo)"];
     // Garante que o valor atual da obra sempre exista no seletor, mesmo que não
     // esteja na lista base (evita o status "sumir" da própria linha).
     const opcoesSt = obraStatusOpcoes(o.status);
