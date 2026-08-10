@@ -1,5 +1,12 @@
 {
-  "geradoEm": "2026-08-10T12:46:20",
+  "geradoEm": "2026-08-10T13:05:25",
+  "statusOptions": [
+    "Continuidade da Semana Anterior",
+    "A Fazer",
+    "Em Andamento",
+    "Concluído",
+    "Pendente"
+  ],
   "atividades": [
     {
       "id": "3b8c5ab5-32d3-8193-a4db-e7b096b33052",
@@ -95,7 +102,7 @@
       "id": "3b8c5ab5-32d3-81e9-bde6-e8be056ecaf3",
       "nome": "Contratação do marketing",
       "setor": "Diretoria",
-      "responsavel": "Júlio César Gomes de Morais Filho",
+      "responsavel": "João Vítor Cabral",
       "prioridade": "Alta",
       "status": "Em Andamento",
       "semana": "2026-08-10",
@@ -263,11 +270,11 @@
     },
     {
       "id": "3b4c5ab5-32d3-81e1-9461-cfb27bb25702",
-      "nome": "Formalizar rotina diária de Ana e Lohany",
+      "nome": "Formalizar rotina diária do financeiro",
       "setor": "Financeiro",
       "responsavel": "Lohany Alves",
       "prioridade": "Baixa",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-10",
       "obs": ""
     },
@@ -279,7 +286,7 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": "Com Ana"
+      "obs": ""
     },
     {
       "id": "3b4c5ab5-32d3-81bd-a85e-d659bfa892ea",
@@ -388,7 +395,7 @@
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
       "status": "Concluído",
-      "semana": "2026-08-10",
+      "semana": "2026-08-03",
       "obs": ""
     },
     {
