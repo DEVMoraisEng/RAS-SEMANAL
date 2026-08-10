@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T14:16:41",
+  "geradoEm": "2026-08-10T14:32:36",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,66 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-81c4-81d9-db34f527f633",
+      "nome": "Fazer levantamento de obra do decorado do Reserva do Ipês",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-819c-b314-cbc1bbe8d271",
+      "nome": "Finalizar manual de atividades gerais",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-81ce-a4f9-f1a8f354f7e5",
+      "nome": "Finalizar manual de atividades gerais",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-8170-ac56-fb6c443f7b61",
+      "nome": "Foco no Terra Bela",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-81e8-af55-d1d25557fd16",
+      "nome": "Alinhar com Caio sobre o processo de vistoria com os engenheiros",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-8185-a87c-fcce37cea2d3",
+      "nome": "Editar o card de vistoria com o cliente",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
     {
       "id": "3b8c5ab5-32d3-81a5-a811-dcffb9bd65a9",
       "nome": "Verificar com Álvaro se 20 dias é um prazo abusivo.",
@@ -86,7 +146,7 @@
       "prioridade": "Alta",
       "status": "A Fazer",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "11/08 - 14hs"
     },
     {
       "id": "3b8c5ab5-32d3-817d-82b0-e8b8c8bf2075",
