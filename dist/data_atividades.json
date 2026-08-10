@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T14:09:53",
+  "geradoEm": "2026-08-10T14:16:41",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,26 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-81a5-a811-dcffb9bd65a9",
+      "nome": "Verificar com Álvaro se 20 dias é um prazo abusivo.",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-8181-878b-ce4749ce7da1",
+      "nome": "Revisar cláusula do contrato referente a revistoria do imóvel",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
     {
       "id": "3b8c5ab5-32d3-816a-8679-e6ab81004311",
       "nome": "Finalizar pesquisa IBGE Morais Emp. Buritis",
@@ -345,7 +365,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Concluído",
-      "semana": "2026-08-10",
+      "semana": "2026-08-03",
       "obs": ""
     },
     {
@@ -355,7 +375,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Concluído",
-      "semana": "2026-08-10",
+      "semana": "2026-08-03",
       "obs": "Continuidade"
     },
     {
@@ -365,7 +385,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Concluído",
-      "semana": "2026-08-10",
+      "semana": "2026-08-03",
       "obs": "Foi solicitado"
     },
     {
@@ -375,7 +395,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Concluído",
-      "semana": "2026-08-10",
+      "semana": "2026-08-03",
       "obs": "Em conjunto com Engenharia"
     },
     {
