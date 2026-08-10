@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T13:38:04",
+  "geradoEm": "2026-08-10T13:44:51",
   "statusOptions": [
     "Em Andamento",
     "Projeto Finalizado",
@@ -35,7 +35,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Finalizada",
+      "status": "Orçamento Liberado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -46,7 +46,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Finalizada",
+      "status": "Orçamento Liberado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -57,7 +57,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Finalizada",
+      "status": "Orçamento Liberado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -90,7 +90,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Projeto Finalizado",
+      "status": "Orçamento Liberado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
