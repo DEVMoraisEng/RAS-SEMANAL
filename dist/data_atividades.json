@@ -1,6 +1,36 @@
 {
-  "geradoEm": "2026-08-10T09:03:27",
+  "geradoEm": "2026-08-10T10:29:42",
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-8147-8f4d-e41fd06783a2",
+      "nome": "Planejamento estratégico",
+      "setor": "Comercial",
+      "responsavel": "Hudson Ferreira",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-10",
+      "obs": "planejamento comercial junto com o marketing para o lançamento"
+    },
+    {
+      "id": "3b8c5ab5-32d3-8198-896b-c776533e2a90",
+      "nome": "Contratação do marketing",
+      "setor": "Comercial",
+      "responsavel": "Hudson Ferreira",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-10",
+      "obs": "escolher um dos orçamentos de marketing urgente."
+    },
+    {
+      "id": "3b8c5ab5-32d3-81e9-bde6-e8be056ecaf3",
+      "nome": "Contratação do marketing",
+      "setor": "Diretoria",
+      "responsavel": "Júlio César Gomes de Morais Filho",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-10",
+      "obs": "escolher um dos orçamentos de marketing urgente."
+    },
     {
       "id": "3b4c5ab5-32d3-81f7-a7c5-fc2a7151df34",
       "nome": "teste escrita",
