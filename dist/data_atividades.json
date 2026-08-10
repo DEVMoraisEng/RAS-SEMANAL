@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T13:05:25",
+  "geradoEm": "2026-08-10T13:27:17",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-813f-bd30-f26934d9807e",
+      "nome": "liberar para vistoria marques de abreu b2, apolo lt 35 e 36, pathernon lt 24, tb 21 qd 51 lt 32 e 33, tb 18 lt 24 e 26",
+      "setor": "Diretoria",
+      "responsavel": "João Vítor Cabral",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
     {
       "id": "3b8c5ab5-32d3-8193-a4db-e7b096b33052",
       "nome": "Dar continuidade nas cobranças das transferências de energia e água",
@@ -395,7 +405,7 @@
       "responsavel": "Júlio César Gomes de Morais Filho",
       "prioridade": "Média",
       "status": "Concluído",
-      "semana": "2026-08-03",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
