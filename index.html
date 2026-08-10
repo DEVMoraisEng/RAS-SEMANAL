@@ -155,6 +155,12 @@ main.wrap{padding:40px 22px 60px}
 .radiorow{display:flex;gap:10px}
 .radiorow label{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:8px 12px;border-radius:9px;cursor:pointer;flex:1}
 .radiorow input{width:auto}
+.copart-list{display:flex;flex-direction:column;gap:8px}
+.copart-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:9px;padding:8px 10px}
+.copart-item label.nm{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;flex:1;margin:0}
+.copart-item label.nm input{width:auto}
+.copart-item select{padding:6px 8px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:12px;max-width:140px}
+.copart-item select:disabled{background:#F4F7F8;color:var(--muted)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px}
 .btn{appearance:none;border:0;border-radius:9px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}
@@ -226,17 +232,11 @@ main.wrap{padding:40px 22px 60px}
       <textarea id="f_obs" placeholder="Contexto adicional"></textarea>
     </div>
     <div class="field">
-      <label class="chk"><input type="checkbox" id="f_copart" onchange="toggleCopart()"> Coparticipação — criar também para outra pessoa/setor</label>
+      <label class="chk"><input type="checkbox" id="f_copart" onchange="toggleCopart()"> Coparticipação — criar também para outros setores</label>
     </div>
-    <div class="row2" id="f_copart_wrap" style="display:none">
-      <div class="field">
-        <label>Setor coparticipante</label>
-        <select id="f_copart_setor" onchange="fillCopartResp()"></select>
-      </div>
-      <div class="field">
-        <label>Responsável coparticipante</label>
-        <select id="f_copart_resp"></select>
-      </div>
+    <div class="field" id="f_copart_wrap" style="display:none">
+      <label>Setores coparticipantes (marque um ou mais)</label>
+      <div class="copart-list" id="f_copart_list"></div>
     </div>
     <div class="actions">
       <button class="btn ghost" onclick="closeModal()">Cancelar</button>
@@ -755,16 +755,21 @@ function toggleCopart(){
   if(on) fillCopartSetores();
 }
 function fillCopartSetores(){
-  const sel = document.getElementById("f_copart_setor");
-  sel.innerHTML = DEPARTAMENTOS.map(s=>`<option>${s}</option>`).join("");
-  sel.value = DEPARTAMENTOS.find(s=>s!==addSetor) || DEPARTAMENTOS[0]; // sugere outro setor
-  fillCopartResp();
-}
-function fillCopartResp(){
-  const setor = document.getElementById("f_copart_setor").value;
-  const resp  = document.getElementById("f_copart_resp");
-  const locked = RESP_LOCK[setor]||[];
-  resp.innerHTML = locked.length ? locked.map(n=>`<option>${n}</option>`).join("") : `<option value=""></option>`;
+  // Um item por departamento (menos o setor principal). Cada item tem um
+  // checkbox e o responsável do setor: fixo (desabilitado) para a maioria,
+  // ou um seletor Júlio/João Vitor para a Diretoria.
+  const list = document.getElementById("f_copart_list");
+  const outros = DEPARTAMENTOS.filter(s=>s!==addSetor);
+  list.innerHTML = outros.map(s=>{
+    const locked = RESP_LOCK[s]||[];
+    const respCtrl = locked.length>1
+      ? `<select class="cp-resp" data-setor="${escapeAttr(s)}">${locked.map(n=>`<option>${escapeHtml(n)}</option>`).join("")}</select>`
+      : `<select class="cp-resp" data-setor="${escapeAttr(s)}" disabled><option>${escapeHtml(locked[0]||"")}</option></select>`;
+    return `<div class="copart-item">
+      <label class="nm"><input type="checkbox" class="cp-chk" value="${escapeAttr(s)}"> ${escapeHtml(s)}</label>
+      ${respCtrl}
+    </div>`;
+  }).join("");
 }
 
 function criarEntrada(nome, setor, resp, prioridade, status, semana, obs){
@@ -784,19 +789,25 @@ function saveAtividade(){
   const respPrim   = getRespFromModal();
 
   criarEntrada(nome, addSetor, respPrim, prioridade, status, semana, obs);
-  let dupla = false;
+  let criados = 0;
 
   if(document.getElementById("f_copart").checked){
-    const cSetor = document.getElementById("f_copart_setor").value;
-    const cResp  = document.getElementById("f_copart_resp").value;
-    if(cSetor && cResp && !(cSetor===addSetor && cResp===respPrim)){
-      criarEntrada(nome, cSetor, cResp, prioridade, status, semana, obs);
-      dupla = true;
-    }
+    document.querySelectorAll(".cp-chk:checked").forEach(chk=>{
+      const cSetor = chk.value;
+      const sel = document.querySelector('.cp-resp[data-setor="'+cSetor.replace(/"/g,'\\"')+'"]');
+      const cResp = sel ? sel.value : ((RESP_LOCK[cSetor]||[])[0] || "");
+      if(cSetor && cResp && !(cSetor===addSetor && cResp===respPrim)){
+        criarEntrada(nome, cSetor, cResp, prioridade, status, semana, obs);
+        criados++;
+      }
+    });
   }
 
   closeModal(); render();
-  const base = dupla ? "Atividade criada para os dois setores" : "Atividade criada";
+  let base;
+  if(criados===0)      base = "Atividade criada";
+  else if(criados===1) base = "Atividade criada para o setor principal + 1 coparticipante";
+  else                 base = `Atividade criada para o setor principal + ${criados} coparticipantes`;
   toast(WRITE_ENDPOINT ? base+" no Notion." : base+" (modo teste — só na tela).");
 }
 
