@@ -1,6 +1,36 @@
 {
-  "geradoEm": "2026-08-10T12:37:46",
+  "geradoEm": "2026-08-10T12:45:46",
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-8193-a4db-e7b096b33052",
+      "nome": "Dar continuidade nas cobranças das transferências de energia e água",
+      "setor": "Financeiro",
+      "responsavel": "Lohany Alves",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-8100-aa9c-e2ec311bb59c",
+      "nome": "Reunião com diretoria para tirar duvidas sobre Reserva dos Ipês",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "felipe berçan",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-817d-82b0-e8b8c8bf2075",
+      "nome": "Reunião com diretoria para tirar duvidas sobre Reserva dos Ipês",
+      "setor": "Compras",
+      "responsavel": "Paula Morais",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
     {
       "id": "3b8c5ab5-32d3-8126-9c79-d83e4889d29c",
       "nome": "Finalizar apropriação dos custos com Ana Paula.",
@@ -167,7 +197,7 @@
       "setor": "Compras",
       "responsavel": "Paula Morais",
       "prioridade": "Média",
-      "status": "Concluído",
+      "status": "Em Andamento",
       "semana": "2026-08-10",
       "obs": ""
     },
