@@ -16,7 +16,7 @@ NO GITHUB ACTIONS:
     o token vem de secret; os DB IDs já estão abaixo (pode sobrescrever por env).
 """
 
-import os, json, time, datetime, urllib.request, urllib.error
+import os, json, time, datetime, unicodedata, urllib.request, urllib.error
 
 TOKEN = os.environ.get("NOTION_TOKEN", "").strip()
 DB_ATIV  = os.environ.get("RAS_ATIVIDADES_DB_ID", "3b4c5ab532d380b2a5acd915bda9021c").strip()
@@ -71,15 +71,43 @@ def g(props, *names):
             return pval(props[n])
     return ""
 
+def _sa(s):
+    """minúsculo e sem acento, para comparar nomes com tolerância."""
+    return "".join(c for c in unicodedata.normalize("NFD", s or "")
+                   if unicodedata.category(c) != "Mn").lower().strip()
+
+
+def curto(nome_conta):
+    """Nome de conta do Notion (vem completo, ex.: 'Júlio César Gomes de
+    Morais Filho') -> nome curto que o site usa em RESP_LOCK ('Júlio').
+
+    É isso que faz o <select> de Responsável da Diretoria casar a opção certa:
+    sem essa conversão o nome completo não bate com 'Júlio'/'João Vitor' e o
+    select cai sempre na 1ª opção, ignorando quem está no Notion.
+
+    Sem acento e case-insensitive, tolerante a sobrenomes. Se não reconhecer
+    ninguém, devolve '' e o chamador mantém o nome original do Notion.
+    """
+    k = _sa(nome_conta)
+    if "hudson" in k:            return "Hudson"
+    if k.startswith("lohany"):   return "Lohany"
+    if k.startswith("julio"):    return "Júlio"
+    if "joao vitor" in k:        return "João Vitor"
+    if k.startswith("felipe"):   return "Felipe"
+    if k.startswith("paula"):    return "Paula"   # 'paula...' sim, 'ana paula' não
+    return ""
+
+
 def build_atividades():
     out = []
     for pg in query(DB_ATIV):
         P = pg["properties"]
+        resp_raw = g(P, "Responsável", "Responsavel")
         out.append({
             "id":          pg["id"],
             "nome":        g(P, "Nome", "Atividade"),
             "setor":       g(P, "Setor"),
-            "responsavel": g(P, "Responsável", "Responsavel"),
+            "responsavel": curto(resp_raw) or resp_raw,   # nome curto p/ casar no site
             "prioridade":  g(P, "Prioridade"),
             "status":      g(P, "Status"),
             "semana":      g(P, "Semana"),

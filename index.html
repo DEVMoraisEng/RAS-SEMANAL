@@ -144,6 +144,10 @@ main.wrap{padding:40px 22px 60px}
 .sheet{background:#fff;border-radius:16px;width:100%;max-width:460px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.25);max-height:90vh;overflow-y:auto}
 .sheet h3{margin:0 0 4px;color:var(--navy)}
 .sheet p.sub{margin:0 0 14px;color:var(--muted);font-size:12px}
+.c-obs .obs-cell{cursor:pointer;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35;border-radius:6px;padding:3px 6px;margin:-3px -6px;transition:background .12s;min-height:18px}
+.c-obs .obs-cell:hover{background:#EEF6F5}
+.c-obs .obs-cell.vazio{color:var(--muted)}
+#obsTexto{min-height:200px;line-height:1.5}
 .field{margin-bottom:12px}
 .field label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:5px}
 .field input,.field select,.field textarea{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:9px;font:inherit}
@@ -289,6 +293,20 @@ main.wrap{padding:40px 22px 60px}
     <div class="actions">
       <button class="btn ghost" onclick="closeModalObra()">Cancelar</button>
       <button class="btn primary" onclick="saveObra()">Criar obra</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modalObs">
+  <div class="sheet">
+    <h3>Observações</h3>
+    <p class="sub" id="obsSub"></p>
+    <div class="field">
+      <textarea id="obsTexto" placeholder="Escreva as observações..."></textarea>
+    </div>
+    <div class="actions">
+      <button class="btn ghost" onclick="closeModalObs()">Cancelar</button>
+      <button class="btn primary" onclick="salvarObs()">Salvar</button>
     </div>
   </div>
 </div>
@@ -545,7 +563,7 @@ function renderDepartamentos(){
           <span>${fmtBR(a.semana).slice(0,5)}</span>
           <button title="Avançar uma semana" onclick="moverSemana('${a.id}',1)">▶</button>
         </div></td>
-        <td class="c-obs"><input value="${escapeAttr(a.obs||'')}" placeholder="—" onblur="changeField('${a.id}','obs',this.value)"></td>
+        <td class="c-obs"><div class="obs-cell${a.obs?'':' vazio'}" title="Clique para ver/editar" onclick="abrirObs('ativ','${a.id}')">${a.obs?escapeHtml(a.obs):'—'}</div></td>
         <td class="c-del"><button class="delbtn" title="Excluir atividade" onclick="excluirAtividade('${a.id}')">🗑</button></td>
       </tr>`;
     }).join("");
@@ -593,7 +611,7 @@ function renderObras(){
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
       <td><input type="date" value="${escapeAttr((o.entrega||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','entrega',this.value)"></td>
       <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','prioritaria',this.value)" title="Obra prioritária">${prSel}</select></td>
-      <td class="c-obs"><input value="${escapeAttr(o.obs||'')}" placeholder="—" onblur="changeFieldObra('${o.id}','obs',this.value)"></td>
+      <td class="c-obs"><div class="obs-cell${o.obs?'':' vazio'}" title="Clique para ver/editar" onclick="abrirObs('obra','${o.id}')">${o.obs?escapeHtml(o.obs):'—'}</div></td>
       <td class="c-del"><button class="delbtn" title="Excluir obra" onclick="excluirObra('${o.id}')">🗑</button></td>
     </tr>`;
   }
@@ -814,6 +832,28 @@ function getSetorObra(){
 }
 function closeModalObra(){ document.getElementById("modalObra").classList.remove("open"); }
 
+// --- Modal de Observações: ver/editar o texto completo (o preview na tabela
+// corta em 2 linhas; aqui abre tudo). Vale para atividades e obras.
+let _obsCtx = null;
+function abrirObs(tipo, id){
+  const item = (tipo==="obra" ? OBRAS : ATIV).find(x=>x.id===id);
+  if(!item) return;
+  _obsCtx = {tipo, id};
+  document.getElementById("obsSub").textContent = item.nome || "";
+  document.getElementById("obsTexto").value = item.obs || "";
+  document.getElementById("modalObs").classList.add("open");
+  setTimeout(()=>document.getElementById("obsTexto").focus(), 30);
+}
+function salvarObs(){
+  if(!_obsCtx) return;
+  const val = document.getElementById("obsTexto").value.trim();
+  const {tipo, id} = _obsCtx;
+  if(tipo==="obra") changeFieldObra(id,"obs",val);
+  else              changeField(id,"obs",val);
+  closeModalObs();
+}
+function closeModalObs(){ document.getElementById("modalObs").classList.remove("open"); _obsCtx=null; }
+
 function saveObra(){
   const nome = document.getElementById("o_nome").value.trim();
   const cidade = document.getElementById("o_cidade").value.trim();
@@ -850,6 +890,7 @@ function escapeHtml(s){ return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&
 function escapeAttr(s){ return escapeHtml(s).replace(/'/g,"&#39;"); }
 document.getElementById("modal").addEventListener("click",e=>{ if(e.target.id==="modal") closeModal(); });
 document.getElementById("modalObra").addEventListener("click",e=>{ if(e.target.id==="modalObra") closeModalObra(); });
+document.getElementById("modalObs").addEventListener("click",e=>{ if(e.target.id==="modalObs") closeModalObs(); });
 
 boot();
 </script>
