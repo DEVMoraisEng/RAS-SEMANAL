@@ -54,7 +54,7 @@ main.wrap{padding:40px 22px 60px}
 .skyline{position:absolute;right:0;bottom:0;left:0;height:70px;opacity:.35;pointer-events:none}
 
 /* ===== KPI cards ===== */
-.kpis{display:grid;grid-template-columns:1.4fr repeat(5,1fr);gap:12px;position:relative}
+.kpis{display:grid;grid-template-columns:1.4fr repeat(6,1fr);gap:12px;position:relative}
 .kpi{border-radius:14px;padding:14px 16px;color:#fff;min-height:92px;display:flex;flex-direction:column;justify-content:space-between}
 .kpi .lab{font-size:11px;letter-spacing:.7px;text-transform:uppercase;opacity:.95;font-weight:700}
 .kpi .val{font-family:Sora;font-size:34px;font-weight:700;line-height:1}
@@ -62,10 +62,12 @@ main.wrap{padding:40px 22px 60px}
 .kpi.k1{background:#8A929B}.kpi.k2{background:var(--andamento);color:var(--andamento-t)}
 .kpi.k3{background:var(--pendente);color:var(--pendente-t)}.kpi.k4{background:var(--verde);color:var(--concluido-t)}
 .kpi.k5{background:var(--navy)}
+.kpi.kc{background:var(--continua);color:var(--continua-t)}
 .kpi.small .val{font-size:26px}
 
 .sec-title{font-size:16px;font-weight:700;margin:26px 0 12px;color:var(--navy);display:flex;align-items:center;gap:10px}
 .sec-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.hint-prev{color:var(--muted);font-size:12.5px;line-height:1.5;margin:-4px 0 12px}
 
 /* ===== relatório table ===== */
 .tbl{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -418,16 +420,32 @@ function skylineSVG(){
   </svg>`;
 }
 
+// O resumo NÃO segue o seletor de semanas: ele sempre mostra a semana atual
+// (segunda de hoje) e a semana anterior, que é a regra fixa da reunião.
+//   - Semana atual: atividades em aberto + concluídas
+//   - Semana anterior: apenas as concluídas (as não concluídas já foram
+//     arrastadas para a semana atual pelo rollover)
 function renderRelatorio(){
-  const rows = weekAtiv();
-  const cnt = s => rows.filter(a=>a.status===s).length;
-  const af=cnt("A Fazer"), ea=cnt("Em Andamento"), pe=cnt("Pendente"), co=cnt("Concluído");
-  const aberto=af+ea+pe, total=aberto+co, pct= total? Math.round(co/total*100):0;
-  const cards = `<div class="hero-wrap"><div class="kpis">
+  const SEG = segundaAtual();
+  const ANT = segundaAnterior();
+  const atuais     = ATIV.filter(a=>a.semana===SEG);
+  const anteriores = ATIV.filter(a=>a.semana===ANT);
+
+  /* ---------- SEMANA ATUAL: em aberto + concluídas ---------- */
+  const cnt = s => atuais.filter(a=>a.status===s).length;
+  const af=cnt("A Fazer"), ea=cnt("Em Andamento"), pe=cnt("Pendente"),
+        ct=cnt("Continuidade da Semana Anterior"), co=cnt("Concluído");
+  // "Em aberto" agora inclui as arrastadas (Continuidade), batendo com a
+  // coluna Em aberto da tabela por departamento (que usa OPEN).
+  const aberto=af+ea+pe+ct, total=aberto+co, pct= total? Math.round(co/total*100):0;
+
+  const cards = `<div class="sec-title">Semana atual · ${fmtBR(SEG)}</div>
+  <div class="hero-wrap"><div class="kpis">
     <div class="kpi hero"><div class="lab">Em aberto</div><div class="val">${aberto}</div></div>
     <div class="kpi k1"><div class="lab">A fazer</div><div class="val">${af}</div></div>
     <div class="kpi k2"><div class="lab">Em andamento</div><div class="val">${ea}</div></div>
     <div class="kpi k3"><div class="lab">Pendentes</div><div class="val">${pe}</div></div>
+    <div class="kpi kc"><div class="lab">Continuidade</div><div class="val">${ct}</div></div>
     <div class="kpi k4"><div class="lab">Concluídas</div><div class="val">${co}</div></div>
     <div class="kpi k5 small"><div class="lab">% conclusão</div><div class="val">${pct}%</div></div>
   </div>${skylineSVG()}</div>`;
@@ -435,7 +453,7 @@ function renderRelatorio(){
   let body="";
   let tAb=0,tEa=0,tAlt=0,tCo=0,tTo=0;
   DEPARTAMENTOS.forEach(s=>{
-    const r = rows.filter(a=>a.setor===s);
+    const r = atuais.filter(a=>a.setor===s);
     const ab = r.filter(a=>OPEN.includes(a.status)).length;
     const ea2 = r.filter(a=>a.status==="Em Andamento").length;
     const alt = r.filter(a=>a.prioridade==="Alta" && OPEN.includes(a.status)).length;
@@ -446,13 +464,32 @@ function renderRelatorio(){
       <td><span class="bar"><span style="width:${p}%"></span></span>${p}%</td></tr>`;
   });
   const tp = tTo?Math.round(tCo/tTo*100):0;
-  const table = `<div class="sec-title">Em aberto por departamento</div>
+  const table = `<div class="sec-title">Por departamento · semana atual</div>
     <table class="tbl"><thead><tr>
       <th>Departamento</th><th>Em aberto</th><th>Em andamento</th><th>Alta em aberto</th><th>Concluídas</th><th>Total</th><th>% concluído</th>
     </tr></thead><tbody>${body}
     <tr class="total"><td>Total</td><td>${tAb}</td><td>${tEa}</td><td>${tAlt}</td><td>${tCo}</td><td>${tTo}</td><td>${tp}%</td></tr>
     </tbody></table>`;
-  document.getElementById("relatorio").innerHTML = cards + table;
+
+  /* ---------- SEMANA ANTERIOR: só as concluídas ---------- */
+  const concAnt = [];
+  DEPARTAMENTOS.forEach(s=>{
+    anteriores.filter(a=>a.setor===s && a.status==="Concluído").forEach(a=>concAnt.push(a));
+  });
+  const antBody = concAnt.length
+    ? concAnt.map(a=>`<tr>
+        <td style="text-align:left">${escapeHtml(a.nome)}</td>
+        <td>${escapeHtml(a.setor||"—")}</td>
+        <td>${escapeHtml(a.responsavel||"—")}</td>
+      </tr>`).join("")
+    : `<tr class="empty-row"><td colspan="3">Nenhuma atividade concluída registrada na semana anterior.</td></tr>`;
+  const prev = `<div class="sec-title">Concluídas na semana anterior · ${fmtBR(ANT)} <span class="wlabel" style="font-weight:600">${concAnt.length} concluída${concAnt.length===1?"":"s"}</span></div>
+    <p class="hint-prev">Somente as atividades <b>concluídas</b> na semana de ${fmtBR(ANT)}. As que não foram concluídas não aparecem aqui — elas já passaram sozinhas para a semana atual com o status <b>“Continuidade da Semana Anterior”</b>.</p>
+    <table class="tbl"><thead><tr>
+      <th>Atividade concluída</th><th>Departamento</th><th>Responsável</th>
+    </tr></thead><tbody>${antBody}</tbody></table>`;
+
+  document.getElementById("relatorio").innerHTML = cards + table + prev;
 }
 
 function weekSwitchHTML(){

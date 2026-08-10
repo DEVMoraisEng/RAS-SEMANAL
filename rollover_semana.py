@@ -6,7 +6,10 @@ Roda automaticamente todo DOMINGO à noite (via GitHub Actions).
 
 Para toda atividade que NÃO foi concluída e cuja Semana pertence a uma semana
 já encerrada, o script:
-  - muda a Semana para a segunda-feira da PRÓXIMA semana;
+  - muda a Semana para a segunda-feira da semana ALVO (ver segunda_alvo:
+    domingo à noite = a semana que começa amanhã; nos demais dias = a semana
+    vigente, para que uma execução manual no meio da semana não pule tudo para
+    a semana seguinte);
   - muda o Status para "Continuidade da Semana Anterior".
 
 Assim, o que ficou em aberto reaparece sozinho no quadro da nova semana, já
@@ -97,12 +100,22 @@ def query_all(db):
         time.sleep(0.15)
     return results
 
-def proxima_segunda(d):
-    """Segunda-feira que inicia a próxima semana em relação a d."""
-    dias = (0 - d.weekday()) % 7   # weekday(): segunda=0 ... domingo=6
-    if dias == 0:                  # se hoje já é segunda, vai para a seguinte
-        dias = 7
-    return d + datetime.timedelta(days=dias)
+def segunda_alvo(d):
+    """Segunda-feira para onde as pendências devem ir.
+
+    - Domingo à noite (cron ~23h Brasília, que é o horário oficial da rotina):
+      prepara a semana que COMEÇA amanhã -> retorna a segunda de amanhã.
+    - Qualquer outro dia (execução manual no meio da semana, ou a referência
+      já ter virado segunda por causa do fuso): retorna a segunda da semana
+      VIGENTE, para NÃO empurrar tudo uma semana à frente por engano.
+
+    Isso torna o resultado correto independentemente do dia em que roda:
+    domingo -> próxima segunda; segunda a sábado -> segunda desta semana.
+    """
+    dow = d.weekday()                          # segunda=0 ... domingo=6
+    if dow == 6:                               # domingo
+        return d + datetime.timedelta(days=1)
+    return d - datetime.timedelta(days=dow)    # segunda desta semana
 
 def main():
     if not TOKEN:
@@ -130,7 +143,7 @@ def main():
                 f'Crie essa opção no Notion antes de rodar (a API não cria opção de status automaticamente).')
 
     hoje = datetime.datetime.now(TZ).date()
-    alvo = proxima_segunda(hoje).isoformat()
+    alvo = segunda_alvo(hoje).isoformat()
     print(f"Hoje: {hoje} | Movendo pendências para a semana de: {alvo}")
 
     rows = query_all(DB_ATIV)
