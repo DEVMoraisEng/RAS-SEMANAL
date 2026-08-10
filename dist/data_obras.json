@@ -1,9 +1,10 @@
 {
-  "geradoEm": "2026-08-10T13:33:13",
+  "geradoEm": "2026-08-10T13:38:04",
   "statusOptions": [
     "Em Andamento",
     "Projeto Finalizado",
-    "Orçamento Liberado"
+    "Orçamento Liberado",
+    "Finalizada"
   ],
   "obras": [
     {
@@ -23,7 +24,7 @@
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
-      "status": "Em Andamento",
+      "status": "Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -34,7 +35,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Projeto Finalizado",
+      "status": "Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -45,7 +46,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Projeto Finalizado",
+      "status": "Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -56,7 +57,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Projeto Finalizado",
+      "status": "Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -100,7 +101,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Projeto Finalizado",
+      "status": "Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""

@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-10T13:33:13",
+  "geradoEm": "2026-08-10T13:38:04",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-8162-aab4-f6604d2e71a6",
+      "nome": "Finalizar segunda feira pesquisa IBGE",
+      "setor": "Financeiro",
+      "responsavel": "Lohany Alves",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
     {
       "id": "3b8c5ab5-32d3-813f-bd30-f26934d9807e",
       "nome": "liberar para vistoria marques de abreu b2, apolo lt 35 e 36, pathernon lt 24, tb 21 qd 51 lt 32 e 33, tb 18 lt 24 e 26",
@@ -314,7 +324,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": ""
     },
@@ -324,7 +334,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": "Continuidade"
     },
@@ -334,7 +344,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": "Foi solicitado"
     },
@@ -344,7 +354,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson Ferreira",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": "Em conjunto com Engenharia"
     },
