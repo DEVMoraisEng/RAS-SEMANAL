@@ -1,6 +1,36 @@
 {
-  "geradoEm": "2026-08-10T11:59:20",
+  "geradoEm": "2026-08-10T12:25:27",
   "atividades": [
+    {
+      "id": "3b8c5ab5-32d3-8152-8b17-e4d0a8945bf2",
+      "nome": "Reestruturar mapa de vendas",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "felipe berçan",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-81ea-a123-c60c51cef300",
+      "nome": "Reestrutura o processo de vendas do Notion para o site próprio",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "felipe berçan",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": ""
+    },
+    {
+      "id": "3b8c5ab5-32d3-8192-922d-cf93374ab905",
+      "nome": "Rever os projetos de arrimos e esrutura do Reserva dos Ipês e passar para Paula os quantitativos",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "felipe berçan",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-10",
+      "obs": "Fazer na terça pela manhã"
+    },
     {
       "id": "3b8c5ab5-32d3-8147-8f4d-e41fd06783a2",
       "nome": "Planejamento estratégico",
