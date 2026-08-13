@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-13T11:36:15",
+  "geradoEm": "2026-08-13T11:53:58",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -154,7 +154,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": "11/08 - 14hs"
     },
@@ -204,7 +204,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": "Fazer na terça pela manhã"
     },
@@ -274,7 +274,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": ""
     },
