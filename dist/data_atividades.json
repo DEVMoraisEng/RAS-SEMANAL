@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-14T14:05:47",
+  "geradoEm": "2026-08-14T15:15:48",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -134,7 +134,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": ""
     },
@@ -234,7 +234,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": "escolher um dos orçamentos de marketing urgente."
     },
@@ -554,7 +554,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-10",
       "obs": ""
     },
