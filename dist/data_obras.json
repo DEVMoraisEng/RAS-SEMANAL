@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T15:13:46",
+  "geradoEm": "2026-08-17T15:28:52",
   "statusOptions": [
     "Em Andamento",
     "Projeto Finalizado",
@@ -27,7 +27,7 @@
       "status": "Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "Finalizar arrimo"
     },
     {
       "id": "3b4c5ab5-32d3-8182-beeb-d3f091c753f8",
