@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T10:18:41",
+  "geradoEm": "2026-08-17T11:13:56",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3bfc5ab5-32d3-8172-bf14-d5d2f8eae884",
+      "nome": "Fazer grupos de ambientes hidrossanitarios",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
     {
       "id": "3b9c5ab5-32d3-812a-a918-c8db48bc2059",
       "nome": "Café com lançamento",
