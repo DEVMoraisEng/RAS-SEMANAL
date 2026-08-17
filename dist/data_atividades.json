@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T14:29:48",
+  "geradoEm": "2026-08-17T14:45:48",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3bfc5ab5-32d3-81a5-83eb-c606c36ae62d",
+      "nome": "Alinhar horários limites para lançamentos de pagamentos e medições no financeiro",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
     {
       "id": "3bfc5ab5-32d3-8185-a361-e09f4af25939",
       "nome": "Arrumar sempre um mídia para eventos. Opções de freelancer de videomaker.",
@@ -154,7 +164,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -206,16 +216,6 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
-    },
-    {
-      "id": "3b8c5ab5-32d3-8193-a4db-e7b096b33052",
-      "nome": "Dar continuidade nas cobranças das transferências de energia e água",
-      "setor": "Financeiro",
-      "responsavel": "Lohany",
-      "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
       "obs": ""
     },
     {
@@ -560,13 +560,13 @@
     },
     {
       "id": "3b4c5ab5-32d3-81a4-853d-f126ab90f666",
-      "nome": "Conferir alteração de projetos Reserva dos Ipês (Caixa e Prefeitura)",
+      "nome": "Conferir alteração de projetos Reserva dos Ipês (Prefeitura)",
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-17",
-      "obs": "Caixa já respondeu. Aguardando agora projeto do felipe para dar entrada na reaprovaçao na prefeitura"
+      "obs": "Aguardando análise da prefeitura"
     },
     {
       "id": "3b4c5ab5-32d3-81d3-99ba-e9004cf7b032",
