@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T14:45:48",
+  "geradoEm": "2026-08-17T15:09:48",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,26 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3bfc5ab5-32d3-81e9-907c-f2a12c72242e",
+      "nome": "Criar um nova aba na RAS para pós obras e setor de entrega de casas",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
+    {
+      "id": "3bfc5ab5-32d3-818d-8a20-eb36b55175ab",
+      "nome": "Definir áreas de atuação (ex: orçamento/suprimentos)",
+      "setor": "Compras",
+      "responsavel": "Paula",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
     {
       "id": "3bfc5ab5-32d3-81a5-83eb-c606c36ae62d",
       "nome": "Alinhar horários limites para lançamentos de pagamentos e medições no financeiro",
@@ -40,7 +60,7 @@
     },
     {
       "id": "3bfc5ab5-32d3-801c-876f-e212087dcb9b",
-      "nome": "Alinar e documentar processo de conferencia de transferência e cobrança com clientes - Paula com Financeiro",
+      "nome": "Alinhar e documentar processo de conferencia de transferência e cobrança com clientes - Paula com Financeiro",
       "setor": "Compras",
       "responsavel": "",
       "prioridade": "Média",
@@ -74,7 +94,7 @@
       "setor": "Compras",
       "responsavel": "",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -200,7 +220,7 @@
     },
     {
       "id": "3b8c5ab5-32d3-81eb-a2f3-cd15d554323a",
-      "nome": "Definir Fluxo de pagamento que iremos seguir",
+      "nome": "Definir Fluxo de pagamento do Reserva dos Ipês que iremos seguir",
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
@@ -384,7 +404,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -444,7 +464,7 @@
       "setor": "Compras",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": "Prioridade da semana"
     },
