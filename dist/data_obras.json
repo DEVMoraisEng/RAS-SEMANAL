@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T15:09:48",
+  "geradoEm": "2026-08-17T15:13:46",
   "statusOptions": [
     "Em Andamento",
     "Projeto Finalizado",
@@ -7,6 +7,28 @@
     "Finalizada"
   ],
   "obras": [
+    {
+      "id": "3bfc5ab5-32d3-81d1-85f5-d6cc37994775",
+      "nome": "TB 19 QD 51 LT 03",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Em Andamento",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3bfc5ab5-32d3-81cf-9016-c7c4fcfee5d5",
+      "nome": "TB 19 QD 51 LT 02",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Em Andamento",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
     {
       "id": "3b4c5ab5-32d3-8182-beeb-d3f091c753f8",
       "nome": "52  QD 81  LT 09",
