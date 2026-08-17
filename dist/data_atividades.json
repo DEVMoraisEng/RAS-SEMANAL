@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T14:15:07",
+  "geradoEm": "2026-08-17T14:29:48",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -85,7 +85,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Concluído",
-      "semana": "2026-08-17",
+      "semana": "2026-08-10",
       "obs": "fazer um café da manhã na área para reconhecimento do lançamento com a força de vendas."
     },
     {
@@ -105,7 +105,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -114,8 +114,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Concluído",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -124,8 +124,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Concluído",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -164,7 +164,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -280,7 +280,7 @@
     },
     {
       "id": "3b8c5ab5-32d3-8147-8f4d-e41fd06783a2",
-      "nome": "Planejamento estratégico",
+      "nome": "Planejamento estratégico marketing/comercial",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
@@ -295,7 +295,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Concluído",
-      "semana": "2026-08-17",
+      "semana": "2026-08-10",
       "obs": "escolher um dos orçamentos de marketing urgente."
     },
     {
@@ -550,7 +550,7 @@
     },
     {
       "id": "3b4c5ab5-32d3-8148-9b26-f1c03367e3c1",
-      "nome": "Desenhar fluxos de pagamento de lançamento",
+      "nome": "Desenhar fluxos de pagamento de lançamento do Reserva dos Ipês",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
@@ -604,7 +604,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": "Com a real ja solicitei - aguardando JUCEG e tbm quais investidores irão entrar"
     },
@@ -634,8 +634,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "status": "Concluído",
+      "semana": "2026-08-10",
       "obs": "Cobrar a Naue para voltarem a comparecer 1 x por semana ao escritorio"
     }
   ]
