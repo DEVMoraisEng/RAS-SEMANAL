@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T14:07:26",
+  "geradoEm": "2026-08-17T14:15:07",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3bfc5ab5-32d3-8185-a361-e09f4af25939",
+      "nome": "Arrumar sempre um mídia para eventos. Opções de freelancer de videomaker.",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
     {
       "id": "3bfc5ab5-32d3-8155-83ee-f6305624f81f",
       "nome": "Controle de contas a Receber - Empreendimentos Buritis",
