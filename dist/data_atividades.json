@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T12:16:26",
+  "geradoEm": "2026-08-17T13:05:23",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,46 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3bfc5ab5-32d3-801c-876f-e212087dcb9b",
+      "nome": "Alinar e documentar processo de conferencia de transferência e cobrança com clientes - Paula com Financeiro",
+      "setor": "Compras",
+      "responsavel": "",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
+    {
+      "id": "3bfc5ab5-32d3-80b1-b990-e0dd649798cd",
+      "nome": "Fazer reunião de alinhamento com Engenheiros de Obra",
+      "setor": "Compras",
+      "responsavel": "",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
+    {
+      "id": "3bfc5ab5-32d3-81dc-9b56-fba857dce8f7",
+      "nome": "Identificar possíveis falhas e ajustar processos que impactam diretamente no andamento das tarefas do financeiro",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
+    {
+      "id": "3bfc5ab5-32d3-8048-aa7f-e05fee8630f7",
+      "nome": "Criar planilha de medição de encanador ",
+      "setor": "Compras",
+      "responsavel": "",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": ""
+    },
     {
       "id": "3bfc5ab5-32d3-8172-bf14-d5d2f8eae884",
       "nome": "Fazer grupos de ambientes hidrossanitarios",
@@ -54,7 +94,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -84,8 +124,8 @@
       "setor": "Compras",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "status": "Concluído",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -174,8 +214,8 @@
       "setor": "Compras",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "status": "Concluído",
+      "semana": "2026-08-10",
       "obs": "14 hs 11/08"
     },
     {
@@ -184,7 +224,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -344,8 +384,8 @@
       "setor": "Compras",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "status": "Concluído",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -364,8 +404,8 @@
       "setor": "Compras",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "status": "Concluído",
+      "semana": "2026-08-10",
       "obs": "Nova busca pois não foram aprovados os que buscamos "
     },
     {
@@ -404,8 +444,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "status": "Em Andamento",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
@@ -414,8 +454,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Baixa",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "status": "Em Andamento",
+      "semana": "2026-08-10",
       "obs": ""
     },
     {
