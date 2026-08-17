@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-17T13:30:07",
+  "geradoEm": "2026-08-17T14:05:55",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3bfc5ab5-32d3-8155-83ee-f6305624f81f",
+      "nome": "Controle de contas a Receber - Empreendimentos Buritis",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-17",
+      "obs": "Ver como funcionará toda parte de recebimentos do Empreendimentos Buritis para começar parametrização no Mais Controle"
+    },
     {
       "id": "3bfc5ab5-32d3-801c-876f-e212087dcb9b",
       "nome": "Alinar e documentar processo de conferencia de transferência e cobrança com clientes - Paula com Financeiro",
@@ -64,7 +74,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": "fazer um café da manhã na área para reconhecimento do lançamento com a força de vendas."
     },
@@ -100,11 +110,11 @@
     },
     {
       "id": "3b8c5ab5-32d3-8170-ac56-fb6c443f7b61",
-      "nome": "Foco no Terra Bela - Acrópole",
+      "nome": "Foco no Terra Bela - Casas Goiânia",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -264,7 +274,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-17",
       "obs": "planejamento comercial junto com o marketing para o lançamento"
     },
@@ -274,7 +284,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": "escolher um dos orçamentos de marketing urgente."
     },
@@ -534,7 +544,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-17",
       "obs": ""
     },
