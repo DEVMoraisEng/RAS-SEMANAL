@@ -448,6 +448,9 @@ function destinosDaPessoa(nome, rasAtual, setorAtual){
 }
 
 /* Qual RAS é ESTE site (chave de RAS_INFO). */
+/* Marca da versão, mostrada no rodapé. Serve para saber, olhando a tela,
+   se o arquivo que está no ar é o novo ou o antigo. */
+const VERSAO_SITE = "v2 · 21/08/2026";
 const RAS_ATUAL = "semanal";
 
 let ATIV=[], OBRAS=[], addSetor=null;
@@ -759,7 +762,7 @@ function excluirObra(id){
 function renderFoot(){
   const src = isSeedData() ? "dados de exemplo" : "dados do Notion";
   document.getElementById("foot").textContent =
-    `Fonte: ${src}. ` + (WRITE_ENDPOINT? "Botão de criar conectado ao Notion." : "Modo teste: criações/edições aparecem só na tela até conectar o endpoint de escrita.");
+    `Fonte: ${src}. ` + (WRITE_ENDPOINT? "Botão de criar conectado ao Notion." : "Modo teste: criações/edições aparecem só na tela até conectar o endpoint de escrita.") + ` · ${VERSAO_SITE}`;
 }
 
 function changeField(id, field, value){
