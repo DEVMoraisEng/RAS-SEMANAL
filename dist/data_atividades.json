@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-21T18:18:15",
+  "geradoEm": "2026-08-21T18:39:11",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -21,10 +21,10 @@
     {
       "id": "3bfc5ab5-32d3-818d-8a20-eb36b55175ab",
       "nome": "Definir áreas de atuação (ex: orçamento/suprimentos)",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -61,20 +61,20 @@
     {
       "id": "3bfc5ab5-32d3-801c-876f-e212087dcb9b",
       "nome": "Alinhar e documentar processo de conferencia de transferência e cobrança com clientes - Paula com Financeiro",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "JA ALINHAMOS AGORA FALTA DOCUMENTAR"
     },
     {
       "id": "3bfc5ab5-32d3-80b1-b990-e0dd649798cd",
       "nome": "Fazer reunião de alinhamento com Engenheiros de Obra",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": ""
     },
@@ -91,7 +91,7 @@
     {
       "id": "3bfc5ab5-32d3-8048-aa7f-e05fee8630f7",
       "nome": "Criar planilha de medição de encanador",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "",
       "prioridade": "Alta",
       "status": "Concluído",
@@ -117,16 +117,6 @@
       "status": "Concluído",
       "semana": "2026-08-10",
       "obs": "fazer um café da manhã na área para reconhecimento do lançamento com a força de vendas."
-    },
-    {
-      "id": "3b8c5ab5-32d3-81c4-81d9-db34f527f633",
-      "nome": "Fazer levantamento de obra do decorado do Reserva do Ipês - 10/08",
-      "setor": "Compras",
-      "responsavel": "Paula",
-      "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
-      "obs": ""
     },
     {
       "id": "3b8c5ab5-32d3-819c-b314-cbc1bbe8d271",
@@ -161,17 +151,17 @@
     {
       "id": "3b8c5ab5-32d3-81e8-af55-d1d25557fd16",
       "nome": "Alinhar com Caio sobre o processo de vistoria com os engenheiros",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-17",
       "obs": ""
     },
     {
       "id": "3b8c5ab5-32d3-8185-a87c-fcce37cea2d3",
       "nome": "Editar o card de vistoria com o cliente",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
       "status": "Concluído",
@@ -251,7 +241,7 @@
     {
       "id": "3b8c5ab5-32d3-817d-82b0-e8b8c8bf2075",
       "nome": "Reunião com diretoria para tirar duvidas sobre Reserva dos Ipês",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
       "status": "Concluído",
@@ -411,7 +401,7 @@
     {
       "id": "3b4c5ab5-32d3-812c-9cea-c3c0790dbf36",
       "nome": "Verificar com o pessoal do MC quantidade e inatividade de usuários",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Baixa",
       "status": "Concluído",
@@ -421,7 +411,7 @@
     {
       "id": "3b4c5ab5-32d3-811b-ba80-dca7d7959902",
       "nome": "Criar novo processo de cobrança das transferências de energia e água",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Concluído",
@@ -431,7 +421,7 @@
     {
       "id": "3b4c5ab5-32d3-8177-a2a4-e8310036f149",
       "nome": "Alinhar com Juliana retorno das transferências de UC junto ao cliente",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Concluído",
@@ -441,7 +431,7 @@
     {
       "id": "3b4c5ab5-32d3-81e4-b4b8-d91db931d763",
       "nome": "Apresentar outros modelos de pisos e revestimentos p/ o Reserva dos Ipês",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Concluído",
@@ -451,7 +441,7 @@
     {
       "id": "3b4c5ab5-32d3-8121-9897-db042065b201",
       "nome": "Conferir e editar orçamento Reserva dos Ipês com os projetos alterados",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Concluído",
@@ -461,7 +451,7 @@
     {
       "id": "3b4c5ab5-32d3-8195-b1d6-c0ab79e13042",
       "nome": "Finalizar orçamentos com projetos finalizados (prioridade p/ obras da próx. semana)",
-      "setor": "Compras",
+      "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
       "status": "Concluído",
