@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-22T20:08:24",
+  "geradoEm": "2026-08-22T21:09:25",
   "statusOptions": [
     "Em Andamento",
     "Projeto Finalizado",
@@ -35,7 +35,7 @@
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
-      "status": "Em Andamento",
+      "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -101,7 +101,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Em Andamento",
+      "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
