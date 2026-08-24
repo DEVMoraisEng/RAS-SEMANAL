@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T14:03:17",
+  "geradoEm": "2026-08-24T14:12:59",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -194,8 +194,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "status": "Concluído",
+      "semana": "2026-08-17",
       "obs": ""
     },
     {
@@ -284,8 +284,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "status": "Concluído",
+      "semana": "2026-08-17",
       "obs": ""
     },
     {
