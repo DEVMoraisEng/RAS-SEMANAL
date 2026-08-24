@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T13:08:11",
+  "geradoEm": "2026-08-24T13:37:12",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,46 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-819c-b451-f33058cd3e2f",
+      "nome": "Reforçar divulgação das casas para bater meta de venda de Agosto.",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-817b-9b13-fd7453385976",
+      "nome": "Reforçar divulgação das casas para bater meta de venda de Agosto.",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-81f8-b1ed-ce60771fa1f3",
+      "nome": "DEFINIR COM COMERCIAL ESTRATEGIA DE DIVULGAÇÃO DO MARQUES DE ABREU",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-8196-8815-fc514d701eb6",
+      "nome": "DEFINIR COM COMERCIAL ESTRATEGIA DE DIVULGAÇÃO DO MARQUES DE ABREU",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-8125-80d3-cab2e23d0892",
       "nome": "Reestruturar processo de ligações",

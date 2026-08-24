@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T13:08:11",
+  "geradoEm": "2026-08-24T13:37:12",
   "statusOptions": [
     "Em Andamento",
     "Projeto Finalizado",
@@ -7,6 +7,28 @@
     "Finalizada"
   ],
   "obras": [
+    {
+      "id": "3c6c5ab5-32d3-8173-9194-f7547afa3f9a",
+      "nome": "SV 24 QD 40 LT 22",
+      "cidade": "Goiânia",
+      "setor": "Solar Ville",
+      "mes": "Agosto/2026",
+      "status": "Em Andamento",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-81c2-b579-f6e54456de18",
+      "nome": "SV 24 QD 40 LT 21",
+      "cidade": "Goiânia",
+      "setor": "Solar Ville",
+      "mes": "Agosto/2026",
+      "status": "Em Andamento",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
     {
       "id": "3bfc5ab5-32d3-81d1-85f5-d6cc37994775",
       "nome": "TB 19 QD 51 LT 03",
