@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T14:32:08",
+  "geradoEm": "2026-08-24T14:51:19",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,26 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-81fc-ac76-d980c29a7aac",
+      "nome": "Gerar indicador de VSO",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-81c2-b13c-d614ec15bf9e",
+      "nome": "Parametrização do plano de contas",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-8198-8049-d08f6517187b",
       "nome": "teste teste",
