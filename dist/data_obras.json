@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T15:09:17",
+  "geradoEm": "2026-08-24T15:26:19",
   "statusOptions": [
     "Em Andamento",
     "Projeto Finalizado",
@@ -38,7 +38,7 @@
       "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "2"
     },
     {
       "id": "3bfc5ab5-32d3-81cf-9016-c7c4fcfee5d5",
@@ -60,7 +60,7 @@
       "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "3"
     },
     {
       "id": "3b4c5ab5-32d3-81ac-a81c-fb64945aa8b4",
@@ -126,7 +126,7 @@
       "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "2"
     },
     {
       "id": "3b4c5ab5-32d3-81ce-ba14-cb7fe8107758",
@@ -159,7 +159,7 @@
       "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "1"
     }
   ]
 }
