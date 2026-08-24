@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T18:20:02",
+  "geradoEm": "2026-08-24T19:16:55",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,26 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-8197-9d97-f2a5ef62520f",
+      "nome": "Alinhar os lançamentos/compras do comercial",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-81ae-98af-e8ae277655d5",
+      "nome": "Alinhar os lançamentos/compras do comercial",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-8190-9842-e4a30550694d",
       "nome": "Editar Status da pagina de obra no notion",
