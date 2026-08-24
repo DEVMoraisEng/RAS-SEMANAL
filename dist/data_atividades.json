@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T14:29:28",
+  "geradoEm": "2026-08-24T14:32:08",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-8198-8049-d08f6517187b",
+      "nome": "teste teste",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-812d-9a49-d25ef82a16c4",
       "nome": "Acompanhar a atualização do banco de dados das solicitações de água, energia e esgoto com os estagiários das obras. Marcamos que eles vão vir até o escritório dia 25/08 e sugerimos que eles viessem pelo menos um dia por semana para manter a atualização do processo",
