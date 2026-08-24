@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T02:14:01",
+  "geradoEm": "2026-08-24T03:03:57",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -34,8 +34,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -44,8 +44,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -54,8 +54,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": "Ver como funcionará toda parte de recebimentos do Empreendimentos Buritis para começar parametrização no Mais Controle"
     },
     {
@@ -64,8 +64,8 @@
       "setor": "Suprimentos",
       "responsavel": "",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": "JA ALINHAMOS AGORA FALTA DOCUMENTAR"
     },
     {
@@ -125,7 +125,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-10",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -184,8 +184,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -215,7 +215,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "semana": "2026-08-24",
       "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe"
     },
     {
@@ -254,8 +254,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -265,7 +265,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -294,8 +294,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": "planejamento comercial junto com o marketing para o lançamento"
     },
     {
@@ -474,8 +474,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-10",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -484,8 +484,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Baixa",
-      "status": "Em Andamento",
-      "semana": "2026-08-10",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -564,8 +564,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -575,7 +575,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "semana": "2026-08-24",
       "obs": "Aguardando análise da prefeitura"
     },
     {
@@ -585,7 +585,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "semana": "2026-08-24",
       "obs": "Aguardando agenda com fiscal"
     },
     {
@@ -595,7 +595,7 @@
       "responsavel": "Júlio",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "semana": "2026-08-24",
       "obs": "Focar em fazer mais testes (todos)"
     },
     {
@@ -625,7 +625,7 @@
       "responsavel": "Júlio",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-17",
+      "semana": "2026-08-24",
       "obs": "Fechamento dependera de quanto precisaremos aportar pro Florença"
     },
     {
