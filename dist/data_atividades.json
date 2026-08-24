@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T13:37:12",
+  "geradoEm": "2026-08-24T13:40:04",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -73,16 +73,6 @@
       "nome": "Criar automação de orçamentos",
       "setor": "Suprimentos",
       "responsavel": "Paula",
-      "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
-      "obs": ""
-    },
-    {
-      "id": "3c6c5ab5-32d3-813e-b544-c1cf38a598c1",
-      "nome": "Criar automação de orçamentos",
-      "setor": "Projetos e Desenvolvimento",
-      "responsavel": "Felipe",
       "prioridade": "Alta",
       "status": "A Fazer",
       "semana": "2026-08-24",
