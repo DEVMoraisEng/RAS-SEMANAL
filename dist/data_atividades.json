@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T12:38:32",
+  "geradoEm": "2026-08-24T13:08:11",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,86 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-8125-80d3-cab2e23d0892",
+      "nome": "Reestruturar processo de ligações",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-8162-a51a-ea21b36ee98f",
+      "nome": "Preencher a localização das casas modelo no site",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-814c-9462-e11a0eab2360",
+      "nome": "Criar automação de orçamentos",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-813e-b544-c1cf38a598c1",
+      "nome": "Criar automação de orçamentos",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-81cb-b470-e7d88d10c10a",
+      "nome": "Recriar fluxo de pós obras no Notion e adaptar com melhorias sugeridas",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-8180-bab8-f38d143b5d45",
+      "nome": "Recriar fluxo de pós obras no Notion e adaptar com melhorias sugeridas",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-815d-b27e-d196a907d47e",
+      "nome": "Criar automação de orçamentos",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-818e-990b-c89eb0f5c9bf",
+      "nome": "Informativo - prazos de liberação de comprovantes",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Baixa",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-812f-a806-fa7d6d588d14",
       "nome": "Apenas para informação: na semana passada fizemos a reunião de alinhamento com os engenheiros e dentre as definições iremos atualizar a planilha dos mestres visando maior compatibilidade com a realidade no canteiro de obras. As novas planilhas vão começar a valer para as proximas obras a começarem",
@@ -60,13 +140,13 @@
     },
     {
       "id": "3bfc5ab5-32d3-8155-83ee-f6305624f81f",
-      "nome": "Controle de contas a Receber - Empreendimentos Buritis",
+      "nome": "Parametrização CNAB no Mais Controle - Empreendimentos Buritis",
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
       "status": "Em Andamento",
       "semana": "2026-08-24",
-      "obs": "Parametrização CNAB no Mais Controle"
+      "obs": "Controle de contas a Receber"
     },
     {
       "id": "3bfc5ab5-32d3-801c-876f-e212087dcb9b",
@@ -276,7 +356,7 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "Finalizando plantas humanizadas, falta o preenchimento das localizações"
     },
     {
       "id": "3b8c5ab5-32d3-81ea-a123-c60c51cef300",
