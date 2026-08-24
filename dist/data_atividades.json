@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T14:51:19",
+  "geradoEm": "2026-08-24T15:09:17",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-8190-9842-e4a30550694d",
+      "nome": "Editar Status da pagina de obra no notion",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-81fc-ac76-d980c29a7aac",
       "nome": "Gerar indicador de VSO",
@@ -113,16 +123,6 @@
       "nome": "DEFINIR COM COMERCIAL ESTRATEGIA DE DIVULGAÇÃO DO MARQUES DE ABREU",
       "setor": "Diretoria",
       "responsavel": "João Vitor",
-      "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
-      "obs": ""
-    },
-    {
-      "id": "3c6c5ab5-32d3-8125-80d3-cab2e23d0892",
-      "nome": "Reestruturar processo de ligações",
-      "setor": "Projetos e Desenvolvimento",
-      "responsavel": "Felipe",
       "prioridade": "Alta",
       "status": "A Fazer",
       "semana": "2026-08-24",
