@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T12:20:03",
+  "geradoEm": "2026-08-24T12:38:32",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-812f-a806-fa7d6d588d14",
+      "nome": "Apenas para informação: na semana passada fizemos a reunião de alinhamento com os engenheiros e dentre as definições iremos atualizar a planilha dos mestres visando maior compatibilidade com a realidade no canteiro de obras. As novas planilhas vão começar a valer para as proximas obras a começarem",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3bfc5ab5-32d3-81e9-907c-f2a12c72242e",
       "nome": "Criar um nova aba na RAS para pós obras e setor de entrega de casas",
@@ -40,13 +50,13 @@
     },
     {
       "id": "3bfc5ab5-32d3-8185-a361-e09f4af25939",
-      "nome": "Arrumar sempre um mídia para eventos. Opções de freelancer de videomaker.",
+      "nome": "Ações final mês para casas de rua.",
       "setor": "Comercial",
       "responsavel": "Hudson",
-      "prioridade": "Alta",
+      "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "conjunto e ações para bater a meta de vendas mensal. semana final"
     },
     {
       "id": "3bfc5ab5-32d3-8155-83ee-f6305624f81f",
@@ -54,9 +64,9 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-24",
-      "obs": "Ver como funcionará toda parte de recebimentos do Empreendimentos Buritis para começar parametrização no Mais Controle"
+      "obs": "Parametrização CNAB no Mais Controle"
     },
     {
       "id": "3bfc5ab5-32d3-801c-876f-e212087dcb9b",
@@ -254,8 +264,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "status": "Concluído",
+      "semana": "2026-08-17",
       "obs": ""
     },
     {
@@ -290,13 +300,13 @@
     },
     {
       "id": "3b8c5ab5-32d3-8147-8f4d-e41fd06783a2",
-      "nome": "Planejamento estratégico marketing/comercial",
+      "nome": "Planejamento estratégico para lançamento reserva dos ipês.",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-24",
-      "obs": "planejamento comercial junto com o marketing para o lançamento"
+      "obs": "planejamento das proximas etapas, comercia/marketing"
     },
     {
       "id": "3b8c5ab5-32d3-8198-896b-c776533e2a90",
@@ -474,8 +484,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "status": "Em Andamento",
+      "semana": "2026-08-17",
       "obs": ""
     },
     {
@@ -484,8 +494,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Baixa",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "status": "Concluído",
+      "semana": "2026-08-17",
       "obs": ""
     },
     {
@@ -566,7 +576,7 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "Definir fluxos de pagamento"
     },
     {
       "id": "3b4c5ab5-32d3-81a4-853d-f126ab90f666",
