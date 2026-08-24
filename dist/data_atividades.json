@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-24T13:55:32",
+  "geradoEm": "2026-08-24T14:03:17",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,46 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3c6c5ab5-32d3-812d-9a49-d25ef82a16c4",
+      "nome": "Acompanhar a atualização do banco de dados das solicitações de água, energia e esgoto com os estagiários das obras. Marcamos que eles vão vir até o escritório dia 25/08 e sugerimos que eles viessem pelo menos um dia por semana para manter a atualização do processo",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-81e1-be80-d52b281411dd",
+      "nome": "Acompanhar a atualização do banco de dados das solicitações de água, energia e esgoto com os estagiários das obras. Marcamos que eles vão vir até o escritório dia 25/08 e sugerimos que eles viessem pelo menos um dia por semana para manter a atualização do processo",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-816c-96c0-eac625dc883c",
+      "nome": "Solicitar e acompanhar a criação de um processo de acompanhamento de solicitação e ligação de esgoto para Goiânia",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
+    {
+      "id": "3c6c5ab5-32d3-81e0-98f6-e484e60fbf17",
+      "nome": "Solicitar e acompanhar a criação de um processo de acompanhamento de solicitação e ligação de esgoto para Goiânia",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-24",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-819c-b451-f33058cd3e2f",
       "nome": "Reforçar divulgação das casas para bater meta de venda de Agosto.",
