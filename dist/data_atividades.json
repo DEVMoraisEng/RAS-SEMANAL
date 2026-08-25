@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T17:20:43",
+  "geradoEm": "2026-08-25T17:45:05",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -34,7 +34,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-24",
       "obs": ""
     },
