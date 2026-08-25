@@ -1,10 +1,11 @@
 {
-  "geradoEm": "2026-08-25T14:32:24",
+  "geradoEm": "2026-08-25T15:30:57",
   "statusOptions": [
-    "Em Andamento",
+    "Projeto Em Andamento",
     "Projeto Finalizado",
-    "Orçamento Liberado",
-    "Finalizada"
+    "Orçamento Finalizado",
+    "Demanda Finalizada",
+    "Nova Inclusão"
   ],
   "obras": [
     {
@@ -13,7 +14,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Em Andamento",
+      "status": "Projeto Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -24,7 +25,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Em Andamento",
+      "status": "Projeto Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -46,7 +47,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Em Andamento",
+      "status": "Projeto Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": "Finalizar arrimo"
@@ -68,7 +69,7 @@
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
-      "status": "Orçamento Liberado",
+      "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -79,7 +80,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Orçamento Liberado",
+      "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -90,7 +91,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Orçamento Liberado",
+      "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -101,7 +102,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Orçamento Liberado",
+      "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -112,7 +113,7 @@
       "cidade": "Senador Canedo",
       "setor": "Ravena",
       "mes": "Agosto/2026",
-      "status": "Em Andamento",
+      "status": "Projeto Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -134,7 +135,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Orçamento Liberado",
+      "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -145,7 +146,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Orçamento Liberado",
+      "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -156,10 +157,10 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Projeto Finalizado",
+      "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": "1"
+      "obs": ""
     }
   ]
 }
