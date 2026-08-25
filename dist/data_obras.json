@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T16:21:37",
+  "geradoEm": "2026-08-25T17:00:12",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -124,7 +124,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Projeto Finalizado",
+      "status": "Projeto Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": "2"
