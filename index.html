@@ -125,6 +125,7 @@ main.wrap{padding:40px 22px 60px}
 .empty-row td{color:var(--muted);font-size:12px;text-align:center;padding:16px 0}
 
 /* ===== obras ===== */
+.obra-viewswitch{display:flex;gap:8px;margin-bottom:14px}
 .filters{display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap;justify-content:space-between}
 .filters .left{display:flex;gap:10px;align-items:center}
 .filters select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:#fff}
@@ -364,15 +365,43 @@ const STCOL = {"A Fazer":["var(--afazer)","var(--afazer-t)"],"Em Andamento":["va
                "Continuidade da Semana Anterior":["var(--continua)","var(--continua-t)"]};
 const PRCOL = {"Alta":["var(--alta)","var(--alta-t)"],"Média":["var(--media)","var(--media-t)"],"Baixa":["var(--baixa)","var(--baixa-t)"]};
 const OPEN = ["A Fazer","Em Andamento","Pendente","Continuidade da Semana Anterior"];
-const OBRA_STCOL = {"Em Andamento":["var(--andamento)","var(--andamento-t)"],
-                    "Paralisada":["var(--pendente)","var(--pendente-t)"],
-                    "Finalizada":["var(--concluido)","var(--concluido-t)"],
-                    "Projeto Finalizado":["var(--continua)","var(--continua-t)"]};
+// Paleta usada AUTOMATICAMENTE para colorir os status das obras. Sempre que
+// surgir uma opção nova no Notion (que ainda não tem cor fixada em
+// OBRA_STCOL, logo abaixo), ela recebe a próxima cor desta lista de acordo
+// com a posição em que aparece nas opções do Notion — assim uma opção nova
+// já nasce com uma cor diferente de todas as outras, sem precisar editar
+// código nenhum.
+const OBRA_STPALETTE = [
+  ["var(--andamento)","var(--andamento-t)"],  // amarelo
+  ["var(--continua)","var(--continua-t)"],    // roxo
+  ["var(--baixa)","var(--baixa-t)"],          // verde claro
+  ["var(--concluido)","var(--concluido-t)"],  // verde-água
+  ["var(--media)","var(--media-t)"],          // laranja
+  ["var(--pendente)","var(--pendente-t)"],    // salmão
+  ["var(--alta)","var(--alta-t)"],            // rosa
+  ["var(--afazer)","var(--afazer-t)"],        // cinza
+];
+// Cores fixas para os status já conhecidos hoje (28/08/2026), pra elas não
+// "pularem" de cor se a ordem das opções mudar no Notion. Qualquer status
+// que não esteja aqui cai automaticamente na paleta acima.
+const OBRA_STCOL = {
+  "Nova Inclusão":        OBRA_STPALETTE[7],
+  "Projeto Em Andamento": OBRA_STPALETTE[0],
+  "Orçamento Finalizado": OBRA_STPALETTE[1],
+  "Projeto Finalizado":   OBRA_STPALETTE[2],
+  "Demanda Finalizada":   OBRA_STPALETTE[3],
+  // nomes legados (versões antigas do Notion/site) — mantidos por segurança
+  "Em Andamento": OBRA_STPALETTE[0],
+  "Paralisada":   OBRA_STPALETTE[5],
+  "Finalizada":   OBRA_STPALETTE[3],
+};
+// Status que faz a obra sumir da aba "Em aberto" e aparecer só em "Finalizadas".
+const OBRA_STATUS_FINAL = "Demanda Finalizada";
 // Status base das obras (fallback só para o modo teste/seed, quando o JSON do
 // Notion ainda não carregou). Em produção a fonte de verdade é
 // OBRAS_STATUS_OPCOES, preenchido no boot() a partir do schema do Notion —
 // então criar/renomear/remover uma opção no Notion reflete no site sozinho.
-const OBRA_STATUS_BASE = ["Em Andamento","Finalizada","Projeto Finalizado"];
+const OBRA_STATUS_BASE = ["Nova Inclusão","Projeto Em Andamento","Projeto Finalizado","Orçamento Finalizado","Demanda Finalizada"];
 let OBRAS_STATUS_OPCOES = [];   // vem de dist/data_obras.json (statusOptions)
 function obraStatusOpcoes(atual){
   // Fonte de verdade = opções do Notion (na ordem definida lá). Sem elas
@@ -383,6 +412,15 @@ function obraStatusOpcoes(atual){
     ? OBRAS_STATUS_OPCOES
     : [...OBRA_STATUS_BASE, ...OBRAS.map(o=>o.status)];
   return [...new Set([...base, atual].filter(Boolean))];
+}
+// Devolve [fundo,texto] para um status de obra: usa a cor fixa em OBRA_STCOL
+// se existir; senão calcula automaticamente pela posição do status na lista
+// de opções do Notion, garantindo que cada opção tenha uma cor própria.
+function corStatusObra(status){
+  if(OBRA_STCOL[status]) return OBRA_STCOL[status];
+  const lista = obraStatusOpcoes(status);
+  const idx = Math.max(0, lista.indexOf(status));
+  return OBRA_STPALETTE[idx % OBRA_STPALETTE.length];
 }
 
 /* ================= REGISTRO DAS RAS (compartilhado entre os 5 sites) =========
@@ -450,7 +488,7 @@ function destinosDaPessoa(nome, rasAtual, setorAtual){
 /* Qual RAS é ESTE site (chave de RAS_INFO). */
 /* Marca da versão, mostrada no rodapé. Serve para saber, olhando a tela,
    se o arquivo que está no ar é o novo ou o antigo. */
-const VERSAO_SITE = "v2 · 21/08/2026";
+const VERSAO_SITE = "v3 · 28/08/2026";
 const RAS_ATUAL = "semanal";
 
 let ATIV=[], OBRAS=[], addSetor=null;
@@ -679,8 +717,18 @@ function renderDepartamentos(){
 function renderObras(){
   const meses = [...new Set(OBRAS.map(o=>o.mes).filter(Boolean))].sort();
   const cur = window._obraMes || (meses[meses.length-1]||"");
-  const filtered = OBRAS.filter(o=>!cur || o.mes===cur);
+  // "aberto" = tudo exceto Demanda Finalizada · "finalizadas" = só Demanda Finalizada
+  const view = window._obraView || "aberto";
+  const porMes = OBRAS.filter(o=>!cur || o.mes===cur);
+  const filtered = porMes.filter(o => view==="finalizadas"
+    ? o.status===OBRA_STATUS_FINAL
+    : o.status!==OBRA_STATUS_FINAL);
   const cidades = [...new Set(filtered.map(o=>o.cidade).filter(Boolean))].sort();
+
+  const viewSwitch = `<div class="obra-viewswitch">
+    <button class="wbtn ${view==="aberto"?"on":""}" onclick="window._obraView='aberto';renderObras()">Em aberto</button>
+    <button class="wbtn ${view==="finalizadas"?"on":""}" onclick="window._obraView='finalizadas';renderObras()">Finalizadas</button>
+  </div>`;
 
   const filter = `<div class="filters">
     <div class="left">
@@ -694,7 +742,7 @@ function renderObras(){
   </div>`;
 
   function linhaObra(o){
-    const [sb,st] = OBRA_STCOL[o.status]||["var(--menta)","var(--petroleo)"];
+    const [sb,st] = corStatusObra(o.status);
     // Garante que o valor atual da obra sempre exista no seletor, mesmo que não
     // esteja na lista base (evita o status "sumir" da própria linha).
     const opcoesSt = obraStatusOpcoes(o.status);
@@ -710,9 +758,10 @@ function renderObras(){
     </tr>`;
   }
 
-  let html = filter;
+  let html = viewSwitch + filter;
   if(!cidades.length){
-    html += `<div class="city-board"><table class="dtbl"><tbody><tr class="empty-row"><td colspan="6">Nenhuma obra neste mês.</td></tr></tbody></table></div>`;
+    const msgVazio = view==="finalizadas" ? "Nenhuma obra finalizada neste mês." : "Nenhuma obra em aberto neste mês.";
+    html += `<div class="city-board"><table class="dtbl"><tbody><tr class="empty-row"><td colspan="6">${msgVazio}</td></tr></tbody></table></div>`;
   }
   cidades.forEach(cidade=>{
     const rowsCidade = filtered.filter(o=>o.cidade===cidade);
@@ -732,7 +781,7 @@ function renderObras(){
       </table></div>
     </div>`;
   });
-  html += `<div class="foot">Selecione "Sim" na coluna Prior. para marcar a obra como prioritária.</div>`;
+  html += `<div class="foot">Selecione "Sim" na coluna Prior. para marcar a obra como prioritária. Ao trocar o status para "${OBRA_STATUS_FINAL}", a obra sai desta aba e passa para "Finalizadas".</div>`;
   document.getElementById("obras").innerHTML = html;
 }
 
@@ -988,9 +1037,10 @@ function openModalObra(){
     setores.map(s=>`<option value="${escapeAttr(s)}">${escapeHtml(s)}</option>`).join("") +
     `<option value="__novo__">➕ Criar novo setor…</option>`;
   document.getElementById("o_setor_novo").value=""; document.getElementById("o_setor_novo").style.display="none";
-  // Status: base + status reais dos dados
+  // Status: base + status reais dos dados (nova obra começa como "Nova Inclusão")
+  const statusInicialObra = "Nova Inclusão";
   document.getElementById("o_status").innerHTML =
-    obraStatusOpcoes().map(s=>`<option ${s==="Em Andamento"?"selected":""}>${s}</option>`).join("");
+    obraStatusOpcoes().map(s=>`<option ${s===statusInicialObra?"selected":""}>${s}</option>`).join("");
   ["o_nome","o_cidade","o_entrega","o_obs"].forEach(id=>document.getElementById(id).value="");
   document.getElementById("o_mes").value = window._obraMes || (meses[meses.length-1]||"");
   document.getElementById("o_prio").checked=true;
@@ -1045,6 +1095,7 @@ function saveObra(){
     obs:document.getElementById("o_obs").value.trim()
   };
   OBRAS.push({id:"local-"+Date.now(), ...dados});
+  window._obraView = "aberto"; // garante que a obra recém-criada apareça na tela
   closeModalObra(); render();
   if(WRITE_ENDPOINT){ post(dados); toast("Obra criada no Notion."); }
   else { toast("Criada (modo teste — só na tela)."); }
