@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-28T13:23:28",
+  "geradoEm": "2026-08-28T15:05:31",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -74,7 +74,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-08-24",
       "obs": ""
     },
@@ -164,7 +164,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-24",
       "obs": ""
     },
@@ -184,7 +184,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-08-24",
       "obs": ""
     },
@@ -214,7 +214,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-08-24",
       "obs": ""
     },
@@ -274,7 +274,7 @@
       "setor": "Suprimentos",
       "responsavel": "",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-24",
       "obs": "JA ALINHAMOS AGORA FALTA DOCUMENTAR"
     },

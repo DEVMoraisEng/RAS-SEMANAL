@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-28T13:23:28",
+  "geradoEm": "2026-08-28T15:05:31",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -50,7 +50,7 @@
       "status": "Projeto Em Andamento",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": "Finalizar arrimo"
+      "obs": "Orçamento arrimo liberado"
     },
     {
       "id": "3b4c5ab5-32d3-8182-beeb-d3f091c753f8",
@@ -127,7 +127,7 @@
       "status": "Orçamento Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": "2"
+      "obs": ""
     },
     {
       "id": "3b4c5ab5-32d3-81ce-ba14-cb7fe8107758",
