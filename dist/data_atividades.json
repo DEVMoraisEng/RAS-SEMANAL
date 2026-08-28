@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-28T15:05:31",
+  "geradoEm": "2026-08-28T19:26:58",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,16 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3cac5ab5-32d3-814d-9d94-c253bfe096f5",
+      "nome": "Plano de contas parametrizado",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
     {
       "id": "3c7c5ab5-32d3-8174-8275-f2040f338349",
       "nome": "TESTE POS OBRA",
