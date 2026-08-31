@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T15:37:34",
+  "geradoEm": "2026-08-31T17:24:21",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -58,7 +58,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": "atualizar orça"
@@ -69,7 +69,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": "atualizar orça"
@@ -80,7 +80,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -91,7 +91,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
