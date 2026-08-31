@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T13:02:19",
+  "geradoEm": "2026-08-31T13:34:03",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,26 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3cdc5ab5-32d3-81e2-ab52-fa2c7565a622",
+      "nome": "Atualizar o banco de dados do pós obra para o Dashboard",
+      "setor": "Pós Obra",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-81d6-a74a-c7f39a326f54",
+      "nome": "Agendar reunião com dep. de Suprimentos",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
     {
       "id": "3cdc5ab5-32d3-81c3-b51e-dc66dc0a3dce",
       "nome": "Irei elaborar a primeira planilha de medição de excluisiva de instalaçoes hidrossanitárias, que agora será usadas em todas as obras de Goiânia",
@@ -144,8 +164,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "status": "Concluído",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -204,7 +224,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-08-31",
       "obs": ""
     },
@@ -224,8 +244,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "status": "Concluído",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -724,8 +744,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "status": "Concluído",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
