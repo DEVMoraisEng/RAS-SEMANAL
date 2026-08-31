@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T10:08:36",
+  "geradoEm": "2026-08-31T12:44:01",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -124,7 +124,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-31",
       "obs": ""
     },
@@ -144,7 +144,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-31",
       "obs": ""
     },
@@ -160,13 +160,13 @@
     },
     {
       "id": "3c6c5ab5-32d3-8162-a51a-ea21b36ee98f",
-      "nome": "Preencher a localização das casas modelo no site",
+      "nome": "Ações intensivas casas terra bela.",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "ofetões, materiais de divulgação, ativar corretores."
     },
     {
       "id": "3c6c5ab5-32d3-814c-9462-e11a0eab2360",
@@ -184,8 +184,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "status": "Concluído",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -264,7 +264,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-08-31",
       "obs": "conjunto e ações para bater a meta de vendas mensal. semana final"
     },
