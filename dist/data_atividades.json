@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T14:37:57",
+  "geradoEm": "2026-08-31T14:57:55",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -70,7 +70,7 @@
     },
     {
       "id": "3cdc5ab5-32d3-81c3-b51e-dc66dc0a3dce",
-      "nome": "Irei elaborar a primeira planilha de medição de excluisiva de instalaçoes hidrossanitárias, que agora será usadas em todas as obras de Goiânia",
+      "nome": "Irei elaborar a primeira planilha de medição exclusiva de instalaçoes hidrossanitárias, que agora será usadas em todas as obras de Goiânia",
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
@@ -156,7 +156,7 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "Verificar indicadores na ADEMI"
     },
     {
       "id": "3c6c5ab5-32d3-81c2-b13c-d614ec15bf9e",
