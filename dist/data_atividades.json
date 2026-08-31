@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T14:18:12",
+  "geradoEm": "2026-08-31T14:37:57",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,46 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3cdc5ab5-32d3-81d3-991a-c13af3328b2a",
+      "nome": "Fechar estudo de viabilidade - Reserva dos Ipês",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-81a2-99af-ea73dc903d64",
+      "nome": "Desenhar fluxos de pagamento de lançamento do Reserva dos Ipês",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-817f-ba91-fc8b5ac817b5",
+      "nome": "Desenhar fluxos de pagamento de lançamento do Reserva dos Ipês",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-8151-9409-e0419fa68a19",
+      "nome": "Reunir com contador para alinhar sobre reajuste de contratação da mão de obra (Reserva dos Ipês)",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
     {
       "id": "3cdc5ab5-32d3-81e2-ab52-fa2c7565a622",
       "nome": "Atualizar o banco de dados do pós obra para o Dashboard",
@@ -64,8 +104,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-31",
+      "status": "Concluído",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -175,7 +215,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Concluído",
-      "semana": "2026-08-31",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -195,7 +235,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Concluído",
-      "semana": "2026-08-31",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -216,7 +256,7 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "ofetões, materiais de divulgação, ativar corretores."
+      "obs": "ofertões, materiais de divulgação, ativar corretores."
     },
     {
       "id": "3c6c5ab5-32d3-814c-9462-e11a0eab2360",
@@ -315,7 +355,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Concluído",
-      "semana": "2026-08-31",
+      "semana": "2026-08-24",
       "obs": "conjunto e ações para bater a meta de vendas mensal. semana final"
     },
     {
@@ -887,16 +927,6 @@
       "status": "Concluído",
       "semana": "2026-08-17",
       "obs": "Com a real ja solicitei - aguardando JUCEG e tbm quais investidores irão entrar"
-    },
-    {
-      "id": "3b4c5ab5-32d3-81a8-8349-cc686de6af4a",
-      "nome": "Negociar e fechar as áreas do Amim Camargo e Jardim Petrópolis",
-      "setor": "Diretoria",
-      "responsavel": "Júlio",
-      "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
-      "obs": "Fechamento dependera de quanto precisaremos aportar pro Florença"
     },
     {
       "id": "3b4c5ab5-32d3-81fd-98aa-caa8b57afc20",
