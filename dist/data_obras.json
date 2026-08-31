@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T15:21:56",
+  "geradoEm": "2026-08-31T15:37:34",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -8,6 +8,28 @@
     "Nova Inclusão"
   ],
   "obras": [
+    {
+      "id": "3cdc5ab5-32d3-810b-89b0-f35486adf935",
+      "nome": "52 QD 81 LT 10",
+      "cidade": "Goiânia",
+      "setor": "Cond. Esmeraldas",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-81c2-b77a-c078033018f5",
+      "nome": "MACEIO QD LT 71 C",
+      "cidade": "Goiânia",
+      "setor": "Petropolis",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
     {
       "id": "3cdc5ab5-32d3-8115-a83f-f3c8eac209a8",
       "nome": "MACEIO QD LT 71 B",
