@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T14:02:45",
+  "geradoEm": "2026-08-31T14:18:12",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -184,8 +184,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "status": "Concluído",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -204,8 +204,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "status": "Concluído",
+      "semana": "2026-08-24",
       "obs": ""
     },
     {
@@ -455,7 +455,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": ""
     },
     {
