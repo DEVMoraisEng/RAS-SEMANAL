@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T14:57:55",
+  "geradoEm": "2026-08-31T15:21:56",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -8,6 +8,105 @@
     "Nova Inclusão"
   ],
   "obras": [
+    {
+      "id": "3cdc5ab5-32d3-8115-a83f-f3c8eac209a8",
+      "nome": "MACEIO QD LT 71 B",
+      "cidade": "Goiânia",
+      "setor": "Petropolis",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-81f7-a790-dd6c639156e1",
+      "nome": "MACEIO QD LT 71 A",
+      "cidade": "Goiânia",
+      "setor": "Petropolis",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-817d-873e-f28e3dca3772",
+      "nome": "TB 17 QD 49 LT 15",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": "atualizar orça"
+    },
+    {
+      "id": "3cdc5ab5-32d3-8111-a3be-d5db3c997dc3",
+      "nome": "TB 17 QD 49 LT 10",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": "atualizar orça"
+    },
+    {
+      "id": "3cdc5ab5-32d3-8186-adeb-ec710c6f3a8b",
+      "nome": "TB 17 QD 49 LT 14",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-817b-8ce1-cc6cd9e8e3c9",
+      "nome": "TB 17 QD 49 LT 11",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-814a-815f-c52f95ad73b2",
+      "nome": "TB 19 QD 50 LT 11",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-8160-a8f3-d3730fc0587e",
+      "nome": "TB 19 QD 50 LT 09",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-819a-b148-d6da123e9467",
+      "nome": "TB 19 QD 50 LT 07",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Agosto/2026",
+      "status": "Nova Inclusão",
+      "entrega": "",
+      "prioritaria": "Sim",
+      "obs": ""
+    },
     {
       "id": "3c6c5ab5-32d3-8173-9194-f7547afa3f9a",
       "nome": "SV 24 QD 40 LT 22",
@@ -36,7 +135,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -69,7 +168,7 @@
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -80,7 +179,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -91,7 +190,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -102,7 +201,7 @@
       "cidade": "Goiânia",
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -124,7 +223,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -135,7 +234,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -146,7 +245,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
@@ -157,7 +256,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Agosto/2026",
-      "status": "Orçamento Finalizado",
+      "status": "Demanda Finalizada",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
