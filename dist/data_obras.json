@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T17:24:21",
+  "geradoEm": "2026-08-31T17:43:25",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -14,7 +14,7 @@
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "entrega": "",
       "prioritaria": "Sim",
       "obs": ""
