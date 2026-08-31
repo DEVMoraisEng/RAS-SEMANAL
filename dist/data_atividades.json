@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T12:44:01",
+  "geradoEm": "2026-08-31T13:02:19",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,36 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3cdc5ab5-32d3-81c3-b51e-dc66dc0a3dce",
+      "nome": "Irei elaborar a primeira planilha de medição de excluisiva de instalaçoes hidrossanitárias, que agora será usadas em todas as obras de Goiânia",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-818c-b992-e9a1b3ac0bf7",
+      "nome": "Essa semana iremos fazer alguns teste com o Wenzel sobre ele ajudar com a parte de \"recebimento de material\" para mantermos isso de forma ativa semanalmente",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
+    {
+      "id": "3cdc5ab5-32d3-81e3-823d-e77c8312a70e",
+      "nome": "Plano de ação do mês de SETEMBRO",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-08-31",
+      "obs": ""
+    },
     {
       "id": "3cac5ab5-32d3-814d-9d94-c253bfe096f5",
       "nome": "Plano de contas parametrizado",
