@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-31T03:02:03",
+  "geradoEm": "2026-08-31T08:13:37",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -24,8 +24,8 @@
       "setor": "Pós Obra",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -34,8 +34,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -44,8 +44,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -64,8 +64,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -114,8 +114,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -124,8 +124,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -134,8 +134,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -144,8 +144,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -154,8 +154,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -164,8 +164,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -174,8 +174,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Em Andamento",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -184,8 +184,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -194,8 +194,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Em Andamento",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -204,8 +204,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-08-24",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -265,7 +265,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "conjunto e ações para bater a meta de vendas mensal. semana final"
     },
     {
@@ -405,7 +405,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -435,7 +435,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe"
     },
     {
@@ -515,7 +515,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "planejamento das proximas etapas, comercia/marketing"
     },
     {
@@ -694,8 +694,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-08-17",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-08-31",
       "obs": ""
     },
     {
@@ -785,7 +785,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "Definir fluxos de pagamento"
     },
     {
@@ -795,7 +795,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "Aguardando análise da prefeitura"
     },
     {
@@ -805,7 +805,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "Aguardando agenda com fiscal"
     },
     {
@@ -815,7 +815,7 @@
       "responsavel": "Júlio",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "Focar em fazer mais testes (todos)"
     },
     {
@@ -845,7 +845,7 @@
       "responsavel": "Júlio",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-24",
+      "semana": "2026-08-31",
       "obs": "Fechamento dependera de quanto precisaremos aportar pro Florença"
     },
     {
