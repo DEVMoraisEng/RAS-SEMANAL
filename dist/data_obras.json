@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-01T12:08:52",
+  "geradoEm": "2026-09-01T15:42:36",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -28,7 +28,7 @@
       "status": "Nova Inclusão",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "ESTUDOS"
     },
     {
       "id": "3cdc5ab5-32d3-8115-a83f-f3c8eac209a8",
@@ -39,7 +39,7 @@
       "status": "Nova Inclusão",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "ESTUDOS"
     },
     {
       "id": "3cdc5ab5-32d3-81f7-a790-dd6c639156e1",
@@ -50,7 +50,7 @@
       "status": "Nova Inclusão",
       "entrega": "",
       "prioritaria": "Sim",
-      "obs": ""
+      "obs": "ESTUDOS"
     },
     {
       "id": "3cdc5ab5-32d3-817d-873e-f28e3dca3772",
