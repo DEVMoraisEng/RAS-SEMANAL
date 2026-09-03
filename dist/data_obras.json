@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-03T19:40:07",
+  "geradoEm": "2026-09-03T21:27:56",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -13,10 +13,10 @@
       "nome": "52 QD 81 LT 10",
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -24,10 +24,10 @@
       "nome": "MACEIO QD LT 71 C",
       "cidade": "Goiânia",
       "setor": "Petropolis",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Nova Inclusão",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": "ESTUDOS"
     },
     {
@@ -35,10 +35,10 @@
       "nome": "MACEIO QD LT 71 B",
       "cidade": "Goiânia",
       "setor": "Petropolis",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Nova Inclusão",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": "ESTUDOS"
     },
     {
@@ -46,10 +46,10 @@
       "nome": "MACEIO QD LT 71 A",
       "cidade": "Goiânia",
       "setor": "Petropolis",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Nova Inclusão",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": "ESTUDOS"
     },
     {
@@ -57,10 +57,10 @@
       "nome": "TB 17 QD 49 LT 15",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": "atualizar orça"
     },
     {
@@ -68,10 +68,10 @@
       "nome": "TB 17 QD 49 LT 10",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": "atualizar orça"
     },
     {
@@ -79,10 +79,10 @@
       "nome": "TB 17 QD 49 LT 14",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -90,10 +90,10 @@
       "nome": "TB 17 QD 49 LT 11",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -101,10 +101,10 @@
       "nome": "TB 19 QD 50 LT 11",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Nova Inclusão",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -112,10 +112,10 @@
       "nome": "TB 19 QD 50 LT 09",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Nova Inclusão",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -123,10 +123,10 @@
       "nome": "TB 19 QD 50 LT 07",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Nova Inclusão",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -137,7 +137,7 @@
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -148,7 +148,7 @@
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -156,10 +156,10 @@
       "nome": "TB 19 QD 51 LT 03",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -167,10 +167,10 @@
       "nome": "TB 19 QD 51 LT 02",
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
-      "mes": "Agosto/2026",
+      "mes": "Setembro/2026",
       "status": "Projeto Em Andamento",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": "Orçamento arrimo liberado"
     },
     {
@@ -181,7 +181,7 @@
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": "3"
     },
     {
@@ -192,7 +192,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -203,7 +203,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -214,7 +214,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -225,7 +225,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -236,7 +236,7 @@
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -247,7 +247,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -258,7 +258,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -269,7 +269,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     },
     {
@@ -280,7 +280,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "entrega": "",
-      "prioritaria": "Sim",
+      "prioritaria": "",
       "obs": ""
     }
   ]
