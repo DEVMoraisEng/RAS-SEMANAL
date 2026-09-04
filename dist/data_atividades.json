@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-04T11:48:05",
+  "geradoEm": "2026-09-04T12:34:55",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -9,6 +9,28 @@
   ],
   "atividades": [
     {
+      "id": "3d1c5ab5-32d3-816e-85f9-d1ffc9d4a139",
+      "nome": "TESTE",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3d1c5ab5-32d3-81e8-832c-f776d558a6e6",
+      "nome": "TESTE",
+      "setor": "Pós Obra",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe",
+      "origem": ""
+    },
+    {
       "id": "3cdc5ab5-32d3-81d3-991a-c13af3328b2a",
       "nome": "Fechar estudo de viabilidade - Reserva dos Ipês",
       "setor": "Diretoria",
@@ -16,7 +38,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-81a2-99af-ea73dc903d64",
@@ -26,7 +49,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-817f-ba91-fc8b5ac817b5",
@@ -36,7 +60,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-8151-9409-e0419fa68a19",
@@ -46,7 +71,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-81e2-ab52-fa2c7565a622",
@@ -56,7 +82,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-81d6-a74a-c7f39a326f54",
@@ -66,7 +93,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-81c3-b51e-dc66dc0a3dce",
@@ -76,7 +104,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-818c-b992-e9a1b3ac0bf7",
@@ -86,7 +115,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cdc5ab5-32d3-81e3-823d-e77c8312a70e",
@@ -96,7 +126,8 @@
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3cac5ab5-32d3-814d-9d94-c253bfe096f5",
@@ -106,7 +137,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c7c5ab5-32d3-8174-8275-f2040f338349",
@@ -116,7 +148,8 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-8197-9d97-f2a5ef62520f",
@@ -126,7 +159,8 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-81ae-98af-e8ae277655d5",
@@ -136,7 +170,8 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-8190-9842-e4a30550694d",
@@ -146,7 +181,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-81fc-ac76-d980c29a7aac",
@@ -156,7 +192,8 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "Verificar indicadores na ADEMI"
+      "obs": "Verificar indicadores na ADEMI",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-81c2-b13c-d614ec15bf9e",
@@ -166,7 +203,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-812d-9a49-d25ef82a16c4",
@@ -176,7 +214,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-81e1-be80-d52b281411dd",
@@ -186,7 +225,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-816c-96c0-eac625dc883c",
@@ -196,7 +236,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-81e0-98f6-e484e60fbf17",
@@ -206,7 +247,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-819c-b451-f33058cd3e2f",
@@ -216,7 +258,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-817b-9b13-fd7453385976",
@@ -226,7 +269,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-81f8-b1ed-ce60771fa1f3",
@@ -236,7 +280,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-8196-8815-fc514d701eb6",
@@ -246,7 +291,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-8162-a51a-ea21b36ee98f",
@@ -256,7 +302,8 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "ofertões, materiais de divulgação, ativar corretores."
+      "obs": "ofertões, materiais de divulgação, ativar corretores.",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-814c-9462-e11a0eab2360",
@@ -266,7 +313,8 @@
       "prioridade": "Alta",
       "status": "Em Andamento",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-81cb-b470-e7d88d10c10a",
@@ -276,7 +324,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-8180-bab8-f38d143b5d45",
@@ -286,7 +335,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-815d-b27e-d196a907d47e",
@@ -296,7 +346,8 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-818e-990b-c89eb0f5c9bf",
@@ -306,7 +357,8 @@
       "prioridade": "Baixa",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3c6c5ab5-32d3-812f-a806-fa7d6d588d14",
@@ -316,7 +368,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-81e9-907c-f2a12c72242e",
@@ -326,7 +379,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-818d-8a20-eb36b55175ab",
@@ -336,7 +390,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-81a5-83eb-c606c36ae62d",
@@ -346,7 +401,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-8185-a361-e09f4af25939",
@@ -356,7 +412,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": "conjunto e ações para bater a meta de vendas mensal. semana final"
+      "obs": "conjunto e ações para bater a meta de vendas mensal. semana final",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-8155-83ee-f6305624f81f",
@@ -366,7 +423,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": "Fase de testes"
+      "obs": "Fase de testes",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-801c-876f-e212087dcb9b",
@@ -376,7 +434,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": "JA ALINHAMOS AGORA FALTA DOCUMENTAR"
+      "obs": "JA ALINHAMOS AGORA FALTA DOCUMENTAR",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-80b1-b990-e0dd649798cd",
@@ -386,7 +445,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-81dc-9b56-fba857dce8f7",
@@ -396,7 +456,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-8048-aa7f-e05fee8630f7",
@@ -406,7 +467,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3bfc5ab5-32d3-8172-bf14-d5d2f8eae884",
@@ -416,7 +478,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b9c5ab5-32d3-812a-a918-c8db48bc2059",
@@ -426,7 +489,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "fazer um café da manhã na área para reconhecimento do lançamento com a força de vendas."
+      "obs": "fazer um café da manhã na área para reconhecimento do lançamento com a força de vendas.",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-819c-b314-cbc1bbe8d271",
@@ -436,7 +500,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-81ce-a4f9-f1a8f354f7e5",
@@ -446,7 +511,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8170-ac56-fb6c443f7b61",
@@ -456,7 +522,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-81e8-af55-d1d25557fd16",
@@ -466,7 +533,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8185-a87c-fcce37cea2d3",
@@ -476,7 +544,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-81a5-a811-dcffb9bd65a9",
@@ -486,7 +555,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8181-878b-ce4749ce7da1",
@@ -496,7 +566,8 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-09-07",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-816a-8679-e6ab81004311",
@@ -506,7 +577,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-81fb-a472-ebd14c926b07",
@@ -516,7 +588,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe"
+      "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-81eb-a2f3-cd15d554323a",
@@ -526,7 +599,8 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe"
+      "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-813f-bd30-f26934d9807e",
@@ -536,7 +610,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8100-aa9c-e2ec311bb59c",
@@ -546,7 +621,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "11/08 - 14hs"
+      "obs": "11/08 - 14hs",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-817d-82b0-e8b8c8bf2075",
@@ -556,7 +632,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "14 hs 11/08"
+      "obs": "14 hs 11/08",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8126-9c79-d83e4889d29c",
@@ -566,7 +643,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8152-8b17-e4d0a8945bf2",
@@ -576,7 +654,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": "Finalizando plantas humanizadas, falta o preenchimento das localizações"
+      "obs": "Finalizando plantas humanizadas, falta o preenchimento das localizações",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-81ea-a123-c60c51cef300",
@@ -586,7 +665,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8192-922d-cf93374ab905",
@@ -596,7 +676,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "Fazer na terça pela manhã"
+      "obs": "Fazer na terça pela manhã",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8147-8f4d-e41fd06783a2",
@@ -606,7 +687,8 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "planejamento das proximas etapas, comercia/marketing"
+      "obs": "planejamento das proximas etapas, comercia/marketing",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-8198-896b-c776533e2a90",
@@ -616,7 +698,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "escolher um dos orçamentos de marketing urgente."
+      "obs": "escolher um dos orçamentos de marketing urgente.",
+      "origem": ""
     },
     {
       "id": "3b8c5ab5-32d3-81e9-bde6-e8be056ecaf3",
@@ -626,7 +709,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "escolher um dos orçamentos de marketing urgente."
+      "obs": "escolher um dos orçamentos de marketing urgente.",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81f7-a7c5-fc2a7151df34",
@@ -636,7 +720,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-07-27",
-      "obs": "teste"
+      "obs": "teste",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-816c-8e4a-dc3d3ca7db51",
@@ -646,7 +731,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-07-27",
-      "obs": "NENHUMA"
+      "obs": "NENHUMA",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81c3-98eb-cd8f64465672",
@@ -656,7 +742,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81af-acfb-f909eac61b20",
@@ -666,7 +753,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-814a-b8f2-f70827b08394",
@@ -676,7 +764,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8109-8a65-cabb9e990c04",
@@ -686,7 +775,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-815e-a592-ea16a92c3d2d",
@@ -696,7 +786,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8188-8e3b-d712e840bb5d",
@@ -706,7 +797,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-812c-9cea-c3c0790dbf36",
@@ -716,7 +808,8 @@
       "prioridade": "Baixa",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": "Cadastro novo da Lohany criado e o antigo esta como inativado, bastar inativar um e criar um novo"
+      "obs": "Cadastro novo da Lohany criado e o antigo esta como inativado, bastar inativar um e criar um novo",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-811b-ba80-dca7d7959902",
@@ -726,7 +819,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8177-a2a4-e8310036f149",
@@ -736,7 +830,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81e4-b4b8-d91db931d763",
@@ -746,7 +841,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "Nova busca pois não foram aprovados os que buscamos "
+      "obs": "Nova busca pois não foram aprovados os que buscamos ",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8121-9897-db042065b201",
@@ -756,7 +852,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": "Continuidade"
+      "obs": "Continuidade",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8195-b1d6-c0ab79e13042",
@@ -766,7 +863,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": "Prioridade da semana"
+      "obs": "Prioridade da semana",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-810b-9181-dd93267d249c",
@@ -776,7 +874,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8137-b2e8-eca75eafe7ea",
@@ -786,7 +885,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-24",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81e1-9461-cfb27bb25702",
@@ -796,7 +896,8 @@
       "prioridade": "Baixa",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8121-99c0-c7dc3df5c91a",
@@ -806,7 +907,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81bd-a85e-d659bfa892ea",
@@ -816,7 +918,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8197-8346-f961ab74a215",
@@ -826,7 +929,8 @@
       "prioridade": "Alta",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8116-8cbe-fb99e3398979",
@@ -836,7 +940,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": "Continuidade"
+      "obs": "Continuidade",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81c1-9288-c1709ba723b0",
@@ -846,7 +951,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": "Foi solicitado"
+      "obs": "Foi solicitado",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81f0-aa16-f5140ecc2f62",
@@ -856,7 +962,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": "Em conjunto com Engenharia"
+      "obs": "Em conjunto com Engenharia",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81b8-9c5b-f5c6b53754b0",
@@ -866,7 +973,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8148-9b26-f1c03367e3c1",
@@ -876,7 +984,8 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "Definir fluxos de pagamento"
+      "obs": "Definir fluxos de pagamento",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81a4-853d-f126ab90f666",
@@ -886,7 +995,8 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "Aguardando análise da prefeitura"
+      "obs": "Aguardando análise da prefeitura",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81d3-99ba-e9004cf7b032",
@@ -896,7 +1006,8 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "Aguardando agenda com fiscal"
+      "obs": "Aguardando agenda com fiscal",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-811b-aa01-d6528914f3a1",
@@ -906,7 +1017,8 @@
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-08-31",
-      "obs": "Focar em fazer mais testes (todos)"
+      "obs": "Focar em fazer mais testes (todos)",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8180-b6ee-fea8034b574e",
@@ -916,7 +1028,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-03",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81ef-924c-d20a9a16c493",
@@ -926,7 +1039,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-17",
-      "obs": "Com a real ja solicitei - aguardando JUCEG e tbm quais investidores irão entrar"
+      "obs": "Com a real ja solicitei - aguardando JUCEG e tbm quais investidores irão entrar",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-81fd-98aa-caa8b57afc20",
@@ -936,7 +1050,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": ""
+      "obs": "",
+      "origem": ""
     },
     {
       "id": "3b4c5ab5-32d3-8155-8850-f136e123fbc2",
@@ -946,7 +1061,8 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-08-10",
-      "obs": "Cobrar a Naue para voltarem a comparecer 1 x por semana ao escritorio"
+      "obs": "Cobrar a Naue para voltarem a comparecer 1 x por semana ao escritorio",
+      "origem": ""
     }
   ]
 }

@@ -1,11 +1,15 @@
 {
-  "geradoEm": "2026-09-04T11:48:05",
+  "geradoEm": "2026-09-04T12:34:55",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
     "Orçamento Finalizado",
     "Demanda Finalizada",
     "Nova Inclusão"
+  ],
+  "liberadaOptions": [
+    "Sim",
+    "NÃO"
   ],
   "obras": [
     {
@@ -15,8 +19,8 @@
       "setor": "Cond. Esmeraldas",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -26,8 +30,8 @@
       "setor": "Petropolis",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": "ESTUDOS"
     },
     {
@@ -37,8 +41,8 @@
       "setor": "Petropolis",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": "ESTUDOS"
     },
     {
@@ -48,8 +52,8 @@
       "setor": "Petropolis",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": "ESTUDOS"
     },
     {
@@ -59,8 +63,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": "atualizar orça"
     },
     {
@@ -70,8 +74,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": "atualizar orça"
     },
     {
@@ -81,8 +85,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -92,8 +96,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -103,8 +107,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -114,8 +118,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -125,8 +129,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -136,8 +140,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -147,8 +151,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -158,8 +162,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -169,8 +173,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Em Andamento",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": "Orçamento arrimo liberado"
     },
     {
@@ -180,8 +184,8 @@
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": "3"
     },
     {
@@ -191,8 +195,8 @@
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -202,8 +206,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -213,8 +217,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -224,8 +228,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -235,8 +239,8 @@
       "setor": "Ravena",
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -246,8 +250,8 @@
       "setor": "Terrabela",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -257,8 +261,8 @@
       "setor": "Terrabela",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -268,8 +272,8 @@
       "setor": "Terrabela",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -279,8 +283,8 @@
       "setor": "Terrabela",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "entrega": "",
-      "prioritaria": "",
+      "previsao": "",
+      "liberada": "NÃO",
       "obs": ""
     }
   ]
