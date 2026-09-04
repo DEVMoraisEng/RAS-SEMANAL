@@ -142,7 +142,7 @@ main.wrap{padding:40px 22px 60px}
 /* ===== modal ===== */
 .modal{position:fixed;inset:0;background:rgba(20,25,30,.5);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
 .modal.open{display:flex}
-.sheet{background:#fff;border-radius:16px;width:100%;max-width:460px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.25);max-height:90vh;overflow-y:auto}
+.sheet{position:relative;background:#fff;border-radius:16px;width:100%;max-width:460px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.25);max-height:90vh;overflow-y:auto}
 .sheet h3{margin:0 0 4px;color:var(--navy)}
 .sheet p.sub{margin:0 0 14px;color:var(--muted);font-size:12px}
 .c-obs .obs-cell{cursor:pointer;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35;border-radius:6px;padding:3px 6px;margin:-3px -6px;transition:background .12s;min-height:18px}
@@ -175,6 +175,14 @@ main.wrap{padding:40px 22px 60px}
 .foot{color:var(--muted);font-size:12px;margin-top:20px}
 @media (max-width:820px){.kpis{grid-template-columns:1fr 1fr}.hbar{flex-wrap:wrap}.htitle{font-size:16px}.row2{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Botao X do modal (item 3): o modal NAO fecha mais clicando fora, entao
+   precisa de uma saida obvia alem do Cancelar. */
+.sheet-x{position:absolute;top:12px;right:12px;width:30px;height:30px;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:8px;font-size:15px;line-height:1;padding:0;cursor:pointer}
+.sheet-x:hover{background:#FCE8E8;color:#B3261E;border-color:#F1B8B8}
+.sheet h3{padding-right:34px}
+/* Selo de origem (item 2): de onde/de quem a atividade veio. */
+.origem-tag{margin-top:5px;font-size:10.5px;font-weight:700;color:var(--petroleo);background:var(--menta);display:inline-block;padding:2px 9px;border-radius:20px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -211,6 +219,7 @@ main.wrap{padding:40px 22px 60px}
 <!-- modal criar atividade -->
 <div class="modal" id="modal">
   <div class="sheet">
+    <button class="sheet-x" title="Fechar" onclick="closeModal()">&#10005;</button>
     <h3>Nova atividade</h3>
     <p class="sub" id="modalSub"></p>
     <div class="field">
@@ -260,6 +269,7 @@ main.wrap{padding:40px 22px 60px}
 <!-- modal criar obra -->
 <div class="modal" id="modalObra">
   <div class="sheet">
+    <button class="sheet-x" title="Fechar" onclick="closeModalObra()">&#10005;</button>
     <h3>Nova obra</h3>
     <p class="sub">Cidade aceita valores novos — é só digitar. Em Setor, escolha um existente ou "➕ Criar novo setor".</p>
     <div class="field">
@@ -281,8 +291,7 @@ main.wrap{padding:40px 22px 60px}
     <div class="row2">
       <div class="field">
         <label>Mês</label>
-        <input id="o_mes" list="dl_meses" placeholder="Ex.: Agosto/2026">
-        <datalist id="dl_meses"></datalist>
+        <select id="o_mes"></select>
       </div>
       <div class="field">
         <label>Status</label>
@@ -291,11 +300,12 @@ main.wrap{padding:40px 22px 60px}
     </div>
     <div class="row2">
       <div class="field">
-        <label>Entrega prevista (opcional)</label>
-        <input id="o_entrega" type="date">
+        <label>Previsão de início (opcional)</label>
+        <input id="o_previsao" type="date">
       </div>
-      <div class="field" style="display:flex;align-items:flex-end">
-        <label class="chk"><input type="checkbox" id="o_prio" checked> Obra prioritária</label>
+      <div class="field">
+        <label>Liberada para iniciar</label>
+        <select id="o_liberada"></select>
       </div>
     </div>
     <div class="field">
@@ -311,6 +321,7 @@ main.wrap{padding:40px 22px 60px}
 
 <div class="modal" id="modalObs">
   <div class="sheet">
+    <button class="sheet-x" title="Fechar" onclick="closeModalObs()">&#10005;</button>
     <h3>Observações</h3>
     <p class="sub" id="obsSub"></p>
     <div class="field">
@@ -332,7 +343,7 @@ main.wrap{padding:40px 22px 60px}
 const WRITE_ENDPOINT = "https://script.google.com/macros/s/AKfycbxZM2jwwTlIHjSvgu-N4Z46S-grGv2YWzThEmJfUG0LqYkql40Cai4ND5WpRB7Cc-in/exec";
 
 const SEED_ATIV  = [{"id": "seed-a1", "nome": "Definir a estrutura da Reunião de Alinhamento Mensal", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a2", "nome": "Fechar render do condomínio e definir layout do decorado com a arquiteta", "setor": "Diretoria", "responsavel": "João Vitor", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a3", "nome": "Negociar e fechar as áreas do Amim Camargo e Jardim Petrópolis", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Alta", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a4", "nome": "Definir SCP do Jardim Florença", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a5", "nome": "Criar solicitações QD 49 LT 10, 11, 14 e 15", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a6", "nome": "Otimização e testes do WhatsApp", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a7", "nome": "Reunião com fiscais da prefeitura para questão fiscal (ISSQN)", "setor": "Diretoria", "responsavel": "Júlio", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a8", "nome": "Conferir alteração de projetos Reserva dos Ipês (Caixa e Prefeitura)", "setor": "Diretoria", "responsavel": "João Vitor", "prioridade": "Alta", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a9", "nome": "Desenhar fluxos de pagamento de lançamento", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Concluído", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a10", "nome": "Reuniões para orçamento de marketing", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Concluído", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a11", "nome": "Implementar processo comercial (alguns com Felipe, aos poucos)", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a12", "nome": "Limpar todas as casas modelo para vídeos e visitas", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a13", "nome": "Ativar comercial (grupos, visitas, suporte)", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a14", "nome": "Deixar o WhatsApp funcionando na operação", "setor": "Comercial", "responsavel": "Hudson", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a15", "nome": "Otimizar baixas de pessoa física", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a16", "nome": "Enviar fechamentos PF à contabilidade", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a17", "nome": "Controlar, junto com a Ana, as planilhas de contas de água", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a18", "nome": "Formalizar rotina diária de Ana e Lohany", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Baixa", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a19", "nome": "Conferência de todas as unidades consumidoras diretamente no site", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a20", "nome": "Liberar acesso à conta bancária Moura Dantas", "setor": "Financeiro", "responsavel": "Lohany", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a21", "nome": "Finalizar orçamentos com projetos finalizados (prioridade p/ obras da próx. semana)", "setor": "Compras", "responsavel": "Paula", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a22", "nome": "Conferir e editar orçamento Reserva dos Ipês com os projetos alterados", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a23", "nome": "Apresentar outros modelos de pisos e revestimentos p/ o Reserva dos Ipês", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a24", "nome": "Alinhar com Juliana retorno das transferências de UC junto ao cliente", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a25", "nome": "Criar novo processo de cobrança das transferências de energia e água", "setor": "Compras", "responsavel": "Paula", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a26", "nome": "Verificar com o pessoal do MC quantidade e inatividade de usuários", "setor": "Compras", "responsavel": "Paula", "prioridade": "Baixa", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a27", "nome": "Finalizar os projetos de casas de rua em aberto", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Alta", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a28", "nome": "Rever quantitativo do Cond. Reserva dos Ipês", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "Em Andamento", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a29", "nome": "Fazer projeto do Corpo de Bombeiros do Cond. Reserva dos Jacarandás", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a30", "nome": "Reunir com Hudson para entender o novo processo de vendas", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Baixa", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a31", "nome": "Rever e estudar a segurança dos sites internos", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}, {"id": "seed-a32", "nome": "Testes diários do WhatsApp", "setor": "Projetos e Desenvolvimento", "responsavel": "Felipe", "prioridade": "Média", "status": "A Fazer", "semana": "2026-08-03", "obs": ""}];
-const SEED_OBRAS = [{"id": "seed-o1", "nome": "52 · QD 81 · LT 09", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o2", "nome": "52 · QD 81 · LT 11", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o3", "nome": "SV 13 · QD 40 · LT 20", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o4", "nome": "SV 13 · QD 40 · LT 19", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o5", "nome": "SV 13 · QD 40 · LT 18", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o6", "nome": "RR 03 · QD 03 · LT 05", "cidade": "Senador Canedo", "setor": "Ravena", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o7", "nome": "TB 21 · QD 50 · LT 34", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o8", "nome": "TB 19 · QD 51 · LT 20", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o9", "nome": "TB 19 · QD 51 · LT 19", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}, {"id": "seed-o10", "nome": "TB 21 · QD 51 · LT 40", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "entrega": "", "prioritaria": "Sim", "obs": ""}];
+const SEED_OBRAS = [{"id": "seed-o1", "nome": "52 · QD 81 · LT 09", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o2", "nome": "52 · QD 81 · LT 11", "cidade": "Goiânia", "setor": "Cond. Esmeraldas", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o3", "nome": "SV 13 · QD 40 · LT 20", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o4", "nome": "SV 13 · QD 40 · LT 19", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o5", "nome": "SV 13 · QD 40 · LT 18", "cidade": "Goiânia", "setor": "Solar Ville", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o6", "nome": "RR 03 · QD 03 · LT 05", "cidade": "Senador Canedo", "setor": "Ravena", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o7", "nome": "TB 21 · QD 50 · LT 34", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o8", "nome": "TB 19 · QD 51 · LT 20", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o9", "nome": "TB 19 · QD 51 · LT 19", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}, {"id": "seed-o10", "nome": "TB 21 · QD 51 · LT 40", "cidade": "Senador Canedo", "setor": "Terrabela", "mes": "Agosto/2026", "status": "Em Andamento", "previsao": "", "liberada": "SIM", "obs": ""}];
 
 /* Departamentos na ordem em que aparecem na tela. "Suprimentos" é o antigo
    "Compras" (renomeado no Notion) e "Pós Obra" é o quadro novo — os dois são
@@ -402,6 +413,53 @@ const OBRA_STATUS_FINAL = "Demanda Finalizada";
 // OBRAS_STATUS_OPCOES, preenchido no boot() a partir do schema do Notion —
 // então criar/renomear/remover uma opção no Notion reflete no site sozinho.
 const OBRA_STATUS_BASE = ["Nova Inclusão","Projeto Em Andamento","Projeto Finalizado","Orçamento Finalizado","Demanda Finalizada"];
+
+/* ============ ITEM 1 — ESCOLHER O MES DA OBRA (03/09/2026) ================
+   Antes o campo Mes era um <input> com datalist alimentado SO pelos meses que
+   ja existiam nos dados; na pratica a obra nascia sempre no mes vigente.
+   Agora a lista e gerada por calendario (6 meses para tras, 12 para frente)
+   somada aos meses que ja existem no banco.
+
+   De quebra isso conserta uma ordenacao errada: "Agosto/2026" e "Julho/2026"
+   estavam sendo ordenados em ordem ALFABETICA, entao Agosto vinha antes de
+   Julho. mesChave() converte o rotulo em 202608 / 202607 e ordena de verdade. */
+const MESES_NOME = ["Janeiro","Fevereiro","Marco","Abril","Maio","Junho",
+                    "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+const MESES_ROTULO = ["Janeiro","Fevereiro","Mar\u00e7o","Abril","Maio","Junho",
+                      "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+function _saMes(t){ return (t||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim(); }
+function mesRotulo(d){ return `${MESES_ROTULO[d.getMonth()]}/${d.getFullYear()}`; }
+function mesChave(m){
+  const p = String(m||"").split("/");
+  const i = MESES_NOME.findIndex(n=>_saMes(n)===_saMes(p[0]));
+  const ano = parseInt(p[1],10);
+  if(i<0 || isNaN(ano)) return 999999;      // formato desconhecido vai pro fim
+  return ano*100 + (i+1);
+}
+function ordenarMeses(lista){ return [...new Set((lista||[]).filter(Boolean))].sort((a,b)=>mesChave(a)-mesChave(b)); }
+function mesAtualRotulo(){ return mesRotulo(new Date()); }
+function mesesDisponiveis(){
+  const hoje = new Date(), gerados = [];
+  for(let i=-6;i<=12;i++) gerados.push(mesRotulo(new Date(hoje.getFullYear(), hoje.getMonth()+i, 1)));
+  return ordenarMeses([...gerados, ...OBRAS.map(o=>o.mes)]);
+}
+
+/* ============ ITEM 5 — COLUNAS RENOMEADAS NO NOTION (03/09/2026) ==========
+   "Entrega prevista" virou "Previsao de inicio"  -> campo interno: previsao
+   "Prioritaria"      virou "LIBERADA PARA INICIAR" -> campo interno: liberada
+
+   Os nomes das colunas ficam SO no fetch_ras.py e no Code.gs (os dois toleram
+   o nome antigo tambem). Aqui o site usa apenas os campos internos, e as
+   opcoes do seletor vem do proprio schema do Notion (liberadaOptions), entao
+   se la estiver "SIM"/"NAO" em maiusculas e exatamente isso que e gravado. */
+const LIBERADA_FALLBACK = ["SIM","N\u00c3O"];
+let LIBERADA_OPCOES = [];   // vem de dist/data_obras.json (liberadaOptions)
+function liberadaOpcoes(atual){
+  const base = LIBERADA_OPCOES.length ? LIBERADA_OPCOES : LIBERADA_FALLBACK;
+  return [...new Set([...base, atual].filter(Boolean))];
+}
+function ehLiberada(v){ return /^s/i.test(_saMes(v)); }   // SIM / Sim / s...
+
 let OBRAS_STATUS_OPCOES = [];   // vem de dist/data_obras.json (statusOptions)
 function obraStatusOpcoes(atual){
   // Fonte de verdade = opções do Notion (na ordem definida lá). Sem elas
@@ -449,22 +507,26 @@ const RAS_INFO = {
   projetos:   { nome: "RAS Projetos" },
   compras:    { nome: "RAS Suprimentos" },
   posobra:    { nome: "RAS Pós-Obra" },
+  obras:      { nome: "RAS Obras" },        // criada em 03/09/2026
 };
 
 const PESSOAS = {
   "Júlio":       [ {ras:"semanal", setor:"Diretoria"}, {ras:"financeiro", setor:"Júlio Cesar"} ],
-  "João Vitor":  [ {ras:"semanal", setor:"Diretoria"} ],
+  "João Vitor":  [ {ras:"semanal", setor:"Diretoria"}, {ras:"obras", setor:"João Vitor"} ],
   "Hudson":      [ {ras:"semanal", setor:"Comercial"} ],
   "Lohany":      [ {ras:"semanal", setor:"Financeiro"}, {ras:"financeiro", setor:"Lohany"} ],
   "Paula":       [ {ras:"semanal", setor:"Suprimentos"}, {ras:"semanal", setor:"Pós Obra"},
                    {ras:"compras", setor:"Paula"}, {ras:"posobra", setor:"Paula"} ],
   "Felipe":      [ {ras:"semanal", setor:"Projetos e Desenvolvimento"}, {ras:"projetos", setor:"Felipe"} ],
   "Caio":        [ {ras:"posobra", setor:"Caio"} ],
-  "Guilherme":   [ {ras:"compras", setor:"Guilherme"} ],
+  "Guilherme":   [ {ras:"compras", setor:"Guilherme"}, {ras:"obras", setor:"Guilherme"} ],
   "Wenzel":      [ {ras:"compras", setor:"Wenzel"} ],
   "José Arthur": [ {ras:"projetos", setor:"José Arthur"} ],
   "Ana Paula":   [ {ras:"financeiro", setor:"Ana Paula"} ],
   "Gustavo":     [ {ras:"financeiro", setor:"Gustavo"} ],
+  /* RAS OBRAS (03/09/2026) — os quatro quadros que existem lá hoje. */
+  "Isaac":       [ {ras:"obras", setor:"Isaac"} ],
+  "João Marcos": [ {ras:"obras", setor:"João Marcos"} ],
 };
 
 /* nome usado numa RAS -> nome canônico da tabela PESSOAS */
@@ -488,8 +550,26 @@ function destinosDaPessoa(nome, rasAtual, setorAtual){
 /* Qual RAS é ESTE site (chave de RAS_INFO). */
 /* Marca da versão, mostrada no rodapé. Serve para saber, olhando a tela,
    se o arquivo que está no ar é o novo ou o antigo. */
-const VERSAO_SITE = "v3 · 28/08/2026";
+const VERSAO_SITE = "v4 · 03/09/2026";
 const RAS_ATUAL = "semanal";
+
+const NOME_DESTA_RAS = "RAS Líderes";
+
+/* ============ ITEM 2 — QUEM CRIOU (pedido de 03/09/2026) =================
+   Toda atividade que NAO nasce direto no proprio quadro (coparticipacao ou
+   replicacao vinda de outra RAS) leva junto um carimbo de origem:
+
+       "RAS Lideres > Diretoria > Julio"
+
+   Esse texto vai para a coluna Origem do Notion. Se a coluna ainda nao
+   existir naquele banco, o Code.gs anexa o carimbo no fim das Observacoes,
+   entao a informacao nunca se perde por causa de schema desatualizado.
+   Recomendado: criar em cada banco de ATIVIDADES uma coluna de TEXTO
+   chamada "Origem". */
+function carimboOrigem(motivo, setorDeOrigem, quemCriou){
+  const ras = (typeof RAS_INFO === "object" && RAS_INFO[RAS_ATUAL] && RAS_INFO[RAS_ATUAL].nome) || NOME_DESTA_RAS;
+  return [motivo, ras, setorDeOrigem, quemCriou].filter(Boolean).join(" \u203a ");
+}
 
 let ATIV=[], OBRAS=[], addSetor=null;
 
@@ -516,6 +596,7 @@ async function boot(){
     ATIV = (a.atividades||[]).map(x=>({...x, setor: normalizarSetor(x.setor)}));
     OBRAS = o.obras||[];
     OBRAS_STATUS_OPCOES = o.statusOptions || [];
+    LIBERADA_OPCOES     = o.liberadaOptions || [];
     window._geradoEm = a.geradoEm || o.geradoEm || "";
   }catch(e){ ATIV = SEED_ATIV.map(x=>({...x, setor: normalizarSetor(x.setor)})); OBRAS = SEED_OBRAS.slice(); }
   const SEG = segundaAtual();
@@ -686,7 +767,7 @@ function renderDepartamentos(){
         respCell = `<span class="resp-fixed">${escapeHtml(a.responsavel||locked[0]||"")}</span>`;
       }
       return `<tr>
-        <td class="c-atv ${a.status==='Concluído'?'done':''}"><div class="atv-edit" contenteditable="true" spellcheck="false" title="Clique para editar o nome" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}" onblur="editarNome('${a.id}',this)">${escapeHtml(a.nome)}</div></td>
+        <td class="c-atv ${a.status==='Concluído'?'done':''}"><div class="atv-edit" contenteditable="true" spellcheck="false" title="Clique para editar o nome" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}" onblur="editarNome('${a.id}',this)">${escapeHtml(a.nome)}</div>${a.origem?`<div class="origem-tag" title="Origem desta atividade">&#8627; ${escapeHtml(a.origem)}</div>`:``}</td>
         <td class="c-resp">${respCell}</td>
         <td><select class="pr-select" style="background:${pb};color:${pt}" onchange="changeField('${a.id}','prioridade',this.value)">${prOpts}</select></td>
         <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeField('${a.id}','status',this.value)">${stOpts}</select></td>
@@ -715,8 +796,10 @@ function renderDepartamentos(){
 }
 
 function renderObras(){
-  const meses = [...new Set(OBRAS.map(o=>o.mes).filter(Boolean))].sort();
-  const cur = window._obraMes || (meses[meses.length-1]||"");
+  const meses = ordenarMeses(OBRAS.map(o=>o.mes));
+  // Padrao = mes de hoje quando ele existe nos dados; senao, o mais recente.
+  const mesHoje = mesAtualRotulo();
+  const cur = window._obraMes || (meses.includes(mesHoje) ? mesHoje : (meses[meses.length-1]||""));
   // "aberto" = tudo exceto Demanda Finalizada · "finalizadas" = só Demanda Finalizada
   const view = window._obraView || "aberto";
   const porMes = OBRAS.filter(o=>!cur || o.mes===cur);
@@ -747,12 +830,13 @@ function renderObras(){
     // esteja na lista base (evita o status "sumir" da própria linha).
     const opcoesSt = obraStatusOpcoes(o.status);
     const stSel = opcoesSt.map(s=>`<option ${s===o.status?"selected":""}>${s}</option>`).join("");
-    const prSel = ["Sim","Não"].map(v=>`<option ${v===(o.prioritaria||"Não")?"selected":""}>${v}</option>`).join("");
-    return `<tr class="${o.prioritaria==='Sim'?'prioritaria':''}">
+    const lbAtual = o.liberada || "";
+    const lbSel = liberadaOpcoes(lbAtual).map(v=>`<option ${v===lbAtual?"selected":""}>${escapeHtml(v)}</option>`).join("");
+    return `<tr class="${ehLiberada(lbAtual)?'prioritaria':''}">
       <td class="c-obra-nome">${escapeHtml(o.nome)}</td>
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
-      <td><input type="date" value="${escapeAttr((o.entrega||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','entrega',this.value)"></td>
-      <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','prioritaria',this.value)" title="Obra prioritária">${prSel}</select></td>
+      <td><input type="date" value="${escapeAttr((o.previsao||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','previsao',this.value)"></td>
+      <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','liberada',this.value)" title="Liberada para iniciar">${lbSel}</select></td>
       <td class="c-obs"><div class="obs-cell${o.obs?'':' vazio'}" title="Clique para ver/editar" onclick="abrirObs('obra','${o.id}')">${o.obs?escapeHtml(o.obs):'—'}</div></td>
       <td class="c-del"><button class="delbtn" title="Excluir obra" onclick="excluirObra('${o.id}')">🗑</button></td>
     </tr>`;
@@ -776,12 +860,12 @@ function renderObras(){
     html += `<div class="city-board">
       <div class="chead"><span>${cidade}</span><span class="cmeta">${rowsCidade.length} obra(s)</span></div>
       <div class="dtbl-wrap"><table class="dtbl">
-        <thead><tr><th>Obra</th><th>Status</th><th>Entrega prevista</th><th>Prior.</th><th>Obs</th><th></th></tr></thead>
+        <thead><tr><th>Obra</th><th>Status</th><th>Previsão de início</th><th>Liberada</th><th>Obs</th><th></th></tr></thead>
         <tbody>${body}</tbody>
       </table></div>
     </div>`;
   });
-  html += `<div class="foot">Selecione "Sim" na coluna Prior. para marcar a obra como prioritária. Ao trocar o status para "${OBRA_STATUS_FINAL}", a obra sai desta aba e passa para "Finalizadas".</div>`;
+  html += `<div class="foot">A coluna Liberada espelha a coluna "LIBERADA PARA INICIAR" do Notion — obras liberadas ficam destacadas. Ao trocar o status para "${OBRA_STATUS_FINAL}", a obra sai desta aba e passa para "Finalizadas".</div>`;
   document.getElementById("obras").innerHTML = html;
 }
 
@@ -969,10 +1053,10 @@ function fillCopartSetores(){
   }).join("");
 }
 
-function criarEntrada(nome, setor, resp, prioridade, status, semana, obs){
-  const dados = {action:"create", atividade:nome, setor, responsavel:resp, prioridade, status, semana, obs};
+function criarEntrada(nome, setor, resp, prioridade, status, semana, obs, origem){
+  const dados = {action:"create", atividade:nome, setor, responsavel:resp, prioridade, status, semana, obs, origem: origem||""};
   ATIV.push({id:"local-"+Date.now()+"-"+Math.random().toString(36).slice(2,6),
-             nome, setor, responsavel:resp, prioridade, status, semana, obs});
+             nome, setor, responsavel:resp, prioridade, status, semana, obs, origem: origem||""});
   if(WRITE_ENDPOINT){ post(dados); }
 }
 
@@ -994,7 +1078,8 @@ function saveAtividade(){
       const sel = document.querySelector('.cp-resp[data-setor="'+cSetor.replace(/"/g,'\\"')+'"]');
       const cResp = sel ? sel.value : ((RESP_LOCK[cSetor]||[])[0] || "");
       if(cSetor && cResp && !(cSetor===addSetor && cResp===respPrim)){
-        criarEntrada(nome, cSetor, cResp, prioridade, status, semana, obs);
+        criarEntrada(nome, cSetor, cResp, prioridade, status, semana, obs,
+                     carimboOrigem("Coparticipacao", addSetor, respPrim));
         criados++;
       }
     });
@@ -1006,12 +1091,13 @@ function saveAtividade(){
     document.querySelectorAll(".rep-chk:checked").forEach(chk=>{
       const rasDest   = chk.dataset.ras;
       const setorDest = chk.dataset.setor;
+      const origem = carimboOrigem("Replicada de", addSetor, respPrim);
       if(rasDest === RAS_ATUAL){
         // mesma RAS, outro quadro: entra na lista daqui mesmo
-        criarEntrada(nome, setorDest, (RESP_LOCK[setorDest]||[])[0] || respPrim, prioridade, status, semana, obs);
+        criarEntrada(nome, setorDest, (RESP_LOCK[setorDest]||[])[0] || respPrim, prioridade, status, semana, obs, origem);
       } else if(WRITE_ENDPOINT){
         post({action:"create", ras:rasDest, atividade:nome, setor:setorDest,
-              responsavel:respPrim, prioridade, status, semana, obs});
+              responsavel:respPrim, prioridade, status, semana, obs, origem});
       }
       replicadas++;
     });
@@ -1029,9 +1115,14 @@ function saveAtividade(){
 function openModalObra(){
   const cidades=[...new Set(OBRAS.map(o=>o.cidade).filter(Boolean))].sort();
   const setores=[...new Set(OBRAS.map(o=>o.setor).filter(Boolean))].sort();
-  const meses=[...new Set(OBRAS.map(o=>o.mes).filter(Boolean))].sort();
   document.getElementById("dl_cidades").innerHTML = cidades.map(c=>`<option value="${escapeAttr(c)}">`).join("");
-  document.getElementById("dl_meses").innerHTML = meses.map(c=>`<option value="${escapeAttr(c)}">`).join("");
+  // Mes: lista de calendario (-6 / +12 meses) + os meses que ja existem.
+  const mesAlvo = window._obraMes || mesAtualRotulo();
+  document.getElementById("o_mes").innerHTML =
+    mesesDisponiveis().map(m=>`<option ${m===mesAlvo?"selected":""}>${escapeHtml(m)}</option>`).join("");
+  // Liberada para iniciar: opcoes vindas do schema do Notion.
+  document.getElementById("o_liberada").innerHTML =
+    liberadaOpcoes().map(v=>`<option>${escapeHtml(v)}</option>`).join("");
   // Setor: existentes + opção de criar novo
   document.getElementById("o_setor_sel").innerHTML =
     setores.map(s=>`<option value="${escapeAttr(s)}">${escapeHtml(s)}</option>`).join("") +
@@ -1041,9 +1132,7 @@ function openModalObra(){
   const statusInicialObra = "Nova Inclusão";
   document.getElementById("o_status").innerHTML =
     obraStatusOpcoes().map(s=>`<option ${s===statusInicialObra?"selected":""}>${s}</option>`).join("");
-  ["o_nome","o_cidade","o_entrega","o_obs"].forEach(id=>document.getElementById(id).value="");
-  document.getElementById("o_mes").value = window._obraMes || (meses[meses.length-1]||"");
-  document.getElementById("o_prio").checked=true;
+  ["o_nome","o_cidade","o_previsao","o_obs"].forEach(id=>document.getElementById(id).value="");
   document.getElementById("modalObra").classList.add("open");
   document.getElementById("o_nome").focus();
 }
@@ -1090,8 +1179,8 @@ function saveObra(){
     setor:getSetorObra(),
     mes:document.getElementById("o_mes").value.trim(),
     status:document.getElementById("o_status").value,
-    entrega:document.getElementById("o_entrega").value,
-    prioritaria: document.getElementById("o_prio").checked ? "Sim":"Não",
+    previsao:document.getElementById("o_previsao").value,
+    liberada:document.getElementById("o_liberada").value,
     obs:document.getElementById("o_obs").value.trim()
   };
   OBRAS.push({id:"local-"+Date.now(), ...dados});
@@ -1116,9 +1205,10 @@ function toast(msg){ const t=document.getElementById("toast"); t.textContent=msg
   clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("show"),2600); }
 function escapeHtml(s){ return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 function escapeAttr(s){ return escapeHtml(s).replace(/'/g,"&#39;"); }
-document.getElementById("modal").addEventListener("click",e=>{ if(e.target.id==="modal") closeModal(); });
-document.getElementById("modalObra").addEventListener("click",e=>{ if(e.target.id==="modalObra") closeModalObra(); });
-document.getElementById("modalObs").addEventListener("click",e=>{ if(e.target.id==="modalObs") closeModalObs(); });
+
+/* Item 3 (pedido de 03/09/2026): os modais NAO fecham mais ao clicar fora.
+   Antes um clique acidental no fundo escuro descartava tudo o que ja tinha
+   sido digitado. Agora so fecham pelo X, pelo Cancelar ou salvando. */
 
 boot();
 </script>

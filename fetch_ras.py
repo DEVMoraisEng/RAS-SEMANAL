@@ -112,6 +112,11 @@ def build_atividades():
             "status":      g(P, "Status"),
             "semana":      g(P, "Semana"),
             "obs":         g(P, "Observações", "Observacoes"),
+            # ITEM 2 (03/09/2026) — de onde a atividade veio. A coluna Origem é
+            # gravada pelo Code.gs quando a atividade nasce por coparticipação
+            # ou vem replicada de outra RAS. Banco sem a coluna devolve "" e o
+            # site simplesmente não mostra o selo.
+            "origem":      g(P, "Origem"),
         })
     return out
 
@@ -126,8 +131,15 @@ def build_obras():
             "setor":       g(P, "SETOR", "Setor"),
             "mes":         g(P, "Mês", "Mes"),
             "status":      g(P, "Status"),
-            "entrega":     g(P, "Entrega prevista", "Entrega"),
-            "prioritaria": g(P, "Prioritária", "Prioritaria"),
+            # ITEM 5 (03/09/2026) — colunas renomeadas no Notion:
+            #   "Entrega prevista" -> "Previsão de início"
+            #   "Prioritária"      -> "LIBERADA PARA INICIAR"
+            # Os nomes antigos ficam na lista: banco ainda não renomeado
+            # continua sendo lido sem erro.
+            "previsao":    g(P, "Previsão de início", "Previsao de inicio",
+                              "PREVISÃO DE INÍCIO", "Entrega prevista", "Entrega"),
+            "liberada":    g(P, "LIBERADA PARA INICIAR", "Liberada para iniciar",
+                              "Liberada", "Prioritária", "Prioritaria"),
             "obs":         g(P, "Observações", "Observacoes"),
         })
     return out
@@ -172,10 +184,17 @@ def main():
 
     obras = build_obras()
     obras_status = status_options(DB_OBRAS, "Status")
-    json.dump({"geradoEm": now, "statusOptions": obras_status, "obras": obras},
+    # Opções da coluna "LIBERADA PARA INICIAR" na ordem do Notion — é isso que
+    # faz o <select> do site gravar exatamente "SIM"/"NÃO" como está lá.
+    liberada_opts = status_options(DB_OBRAS, "LIBERADA PARA INICIAR",
+                                   "Liberada para iniciar", "Liberada",
+                                   "Prioritária", "Prioritaria")
+    json.dump({"geradoEm": now, "statusOptions": obras_status,
+               "liberadaOptions": liberada_opts, "obras": obras},
               open("dist/data_obras.json", "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
     print(f"data_obras.json       -> {len(obras)} obras | status: {obras_status}")
+    print(f"  liberada: {liberada_opts}")
 
 if __name__ == "__main__":
     main()
