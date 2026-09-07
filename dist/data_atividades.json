@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-07T05:20:19",
+  "geradoEm": "2026-09-07T07:05:19",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -36,8 +36,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -47,8 +47,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -58,8 +58,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -69,8 +69,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -80,8 +80,8 @@
       "setor": "Pós Obra",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -91,8 +91,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -102,8 +102,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -113,8 +113,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -124,8 +124,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -147,7 +147,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -158,7 +158,7 @@
       "responsavel": "Júlio",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -169,7 +169,7 @@
       "responsavel": "Lohany",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -191,7 +191,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "Verificar indicadores na ADEMI",
       "origem": ""
     },
@@ -301,7 +301,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "ofertões, materiais de divulgação, ativar corretores.",
       "origem": ""
     },
@@ -311,8 +311,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Em Andamento",
-      "semana": "2026-08-31",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -345,7 +345,7 @@
       "responsavel": "Felipe",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -598,7 +598,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe",
       "origem": ""
     },
@@ -686,7 +686,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "planejamento das proximas etapas, comercia/marketing",
       "origem": ""
     },
@@ -983,7 +983,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "Definir fluxos de pagamento",
       "origem": ""
     },
@@ -994,7 +994,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "Aguardando análise da prefeitura",
       "origem": ""
     },
@@ -1005,7 +1005,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "Aguardando agenda com fiscal",
       "origem": ""
     },
@@ -1016,7 +1016,7 @@
       "responsavel": "Júlio",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-08-31",
+      "semana": "2026-09-07",
       "obs": "Focar em fazer mais testes (todos)",
       "origem": ""
     },
