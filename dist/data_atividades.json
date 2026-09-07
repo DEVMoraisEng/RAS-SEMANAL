@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-07T10:49:37",
+  "geradoEm": "2026-09-07T11:07:16",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -126,7 +126,7 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-09-07",
-      "obs": "",
+      "obs": "Levando consideração a greve caixa, e o cenário do mês",
       "origem": ""
     },
     {
@@ -300,7 +300,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-07",
       "obs": "ofertões, materiais de divulgação, ativar corretores.",
       "origem": ""
@@ -681,7 +681,7 @@
     },
     {
       "id": "3b8c5ab5-32d3-8147-8f4d-e41fd06783a2",
-      "nome": "Planejamento estratégico para lançamento reserva dos ipês.",
+      "nome": "Execução do Planejamento estratégico para lançamento reserva dos ipês.",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
@@ -981,7 +981,7 @@
       "nome": "Desenhar fluxos de pagamento de lançamento do Reserva dos Ipês",
       "setor": "Comercial",
       "responsavel": "Hudson",
-      "prioridade": "Média",
+      "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-09-07",
       "obs": "Definir fluxos de pagamento",
