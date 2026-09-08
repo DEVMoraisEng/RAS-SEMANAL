@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T13:16:26",
+  "geradoEm": "2026-09-08T14:43:19",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3d5c5ab5-32d3-812a-8068-f7538ab9960c",
+      "nome": "Sobre nova modalidade de conferência das ordens de compra, verificar a respeito do acúmulo de e-mails recebidos de notas fiscais",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3d5c5ab5-32d3-8150-9594-f8aea574b17d",
       "nome": "Continuar a migração do Notion para o Site",
