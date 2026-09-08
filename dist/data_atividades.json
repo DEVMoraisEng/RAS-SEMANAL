@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T20:12:20",
+  "geradoEm": "2026-09-08T20:30:07",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,50 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3d5c5ab5-32d3-8196-9a9e-c93ea21ec402",
+      "nome": "Alinhas sobre o plano de Upgrade do Claude",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe",
+      "origem": ""
+    },
+    {
+      "id": "3d5c5ab5-32d3-817f-91c6-c79b92811dc5",
+      "nome": "Alinhas sobre o plano de Upgrade do Claude",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3d5c5ab5-32d3-8113-9749-dfd71684b057",
+      "nome": "Deixar primeira versão do site funcionando (com simulação)",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3d5c5ab5-32d3-81cf-86aa-de0ade2daa00",
+      "nome": "Definir traços - geral",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3d5c5ab5-32d3-8100-b2ee-c7867d446152",
       "nome": "Estudo de layouts do Florença",
