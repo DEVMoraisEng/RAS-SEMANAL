@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T19:01:48",
+  "geradoEm": "2026-09-08T19:25:23",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -9,8 +9,19 @@
   ],
   "atividades": [
     {
+      "id": "3d5c5ab5-32d3-816a-92d2-dcf74c22ccfa",
+      "nome": "Definir, orçar e comprar mobília e eletrodomésticos do decorado",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
+    {
       "id": "3d5c5ab5-32d3-812a-8068-f7538ab9960c",
-      "nome": "Sobre nova modalidade de conferência das ordens de compra, verificar a respeito do acúmulo de e-mails recebidos de notas fiscais",
+      "nome": "Discutir sobre nova modalidade de conferência das ordens de compra, verificar a respeito do acúmulo de e-mails recebidos de notas fiscais",
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
@@ -102,8 +113,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-07",
+      "status": "Concluído",
+      "semana": "2026-08-31",
       "obs": "",
       "origem": ""
     },
@@ -113,8 +124,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-07",
+      "status": "Concluído",
+      "semana": "2026-08-31",
       "obs": "",
       "origem": ""
     },
