@@ -10,10 +10,14 @@ já encerrada, o script:
     domingo à noite = a semana que começa amanhã; nos demais dias = a semana
     vigente, para que uma execução manual no meio da semana não pule tudo para
     a semana seguinte);
-  - muda o Status para "Continuidade da Semana Anterior".
+  - muda o Status para "Continuidade da Semana Anterior" — EXCETO quem já
+    está "Em Andamento": esse só muda de semana, o status continua "Em
+    Andamento" (item de 07/09/2026 — não faz sentido rotular de "pendência
+    arrastada" algo que já está sendo feito).
 
 Assim, o que ficou em aberto reaparece sozinho no quadro da nova semana, já
-sinalizado como pendência arrastada. O que foi concluído fica no histórico.
+sinalizado como pendência arrastada (ou, se já estava em andamento, sem
+mudar essa sinalização). O que foi concluído fica no histórico.
 
 Tolerância: a coluna Status pode ser do tipo "select" OU "status" no Notion;
 os nomes das colunas podem variar (Nome/Atividade, etc.). O script lê o schema
@@ -36,6 +40,9 @@ DRY_RUN = "--dry-run" in sys.argv
 
 STATUS_CONCLUIDO    = "Concluído"
 STATUS_CONTINUIDADE = "Continuidade da Semana Anterior"
+# ITEM 3 (07/09/2026): quem esta "Em Andamento" continua "Em Andamento" no
+# rollover — so muda de semana, o status nao vira Continuidade.
+STATUS_EM_ANDAMENTO = "Em Andamento"
 
 # nomes possíveis de cada coluna (tolera renome/acentos)
 NOMES = {
@@ -158,11 +165,14 @@ def main():
         if semana >= alvo:
             continue  # já está na próxima semana (ou em semana futura) — não mexe
         movidas += 1
-        print(f"  -> {nome[:60]!r}: semana {semana} => {alvo} | status {status!r} => {STATUS_CONTINUIDADE!r}")
+        # Em Andamento fica Em Andamento (so muda de semana); os demais
+        # status em aberto (A Fazer, Pendente...) viram Continuidade.
+        novo_status = status if status == STATUS_EM_ANDAMENTO else STATUS_CONTINUIDADE
+        print(f"  -> {nome[:60]!r}: semana {semana} => {alvo} | status {status!r} => {novo_status!r}")
         if not DRY_RUN:
             api("PATCH", f"/pages/{pg['id']}", {"properties": {
                 p_semana: {"date": {"start": alvo}},
-                p_status: valor_status(tipo_status, STATUS_CONTINUIDADE),
+                p_status: valor_status(tipo_status, novo_status),
             }})
             time.sleep(0.2)
 

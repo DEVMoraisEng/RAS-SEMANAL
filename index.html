@@ -260,6 +260,9 @@ main.wrap{padding:40px 22px 60px}
       <select id="f_semana"></select>
     </div>
     <div class="field">
+      <label class="chk"><input type="checkbox" id="f_soopara"> Não criar também no meu setor — só para quem eu selecionar abaixo</label>
+    </div>
+    <div class="field">
       <label class="chk"><input type="checkbox" id="f_copart" onchange="toggleCopart()"> Coparticipação — criar também para outros setores</label>
     </div>
     <div class="field" id="f_copart_wrap" style="display:none">
@@ -324,7 +327,7 @@ main.wrap{padding:40px 22px 60px}
         <input id="o_previsao" type="date">
       </div>
       <div class="field">
-        <label>Liberada para iniciar</label>
+        <label>LIBERADA P/ INÍCIO</label>
         <select id="o_liberada"></select>
       </div>
     </div>
@@ -845,7 +848,7 @@ function renderObras(){
       <td class="c-obra-nome">${escapeHtml(o.nome)}</td>
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
       <td><input type="date" value="${escapeAttr((o.previsao||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','previsao',this.value)"></td>
-      <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','liberada',this.value)" title="Liberada para iniciar">${lbSel}</select></td>
+      <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','liberada',this.value)" title="LIBERADA P/ INÍCIO">${lbSel}</select></td>
       <td class="c-obs"><div class="obs-cell${o.obs?'':' vazio'}" title="Clique para ver/editar" onclick="abrirObs('obra','${o.id}')">${o.obs?escapeHtml(o.obs):'—'}</div></td>
       <td class="c-del"><button class="delbtn" title="Excluir obra" onclick="excluirObra('${o.id}')">🗑</button></td>
     </tr>`;
@@ -869,7 +872,7 @@ function renderObras(){
     html += `<div class="city-board">
       <div class="chead"><span>${cidade}</span><span class="cmeta">${rowsCidade.length} obra(s)</span></div>
       <div class="dtbl-wrap"><table class="dtbl">
-        <thead><tr><th>Obra</th><th>Status</th><th>Previsão de início</th><th>Liberada</th><th>Obs</th><th></th></tr></thead>
+        <thead><tr><th>Obra</th><th>Status</th><th>Previsão de início</th><th>LIBERADA P/ INÍCIO</th><th>Obs</th><th></th></tr></thead>
         <tbody>${body}</tbody>
       </table></div>
     </div>`;
@@ -969,6 +972,7 @@ function openModal(setor){
   document.getElementById("f_status").value="A Fazer";
   document.getElementById("f_copart").checked=false;
   document.getElementById("f_copart_wrap").style.display="none";
+  document.getElementById("f_soopara").checked = false;
   document.getElementById("f_or").checked = false;
   document.getElementById("f_or_wrap").style.display = "none";
   _destinosOR = [];
@@ -1106,7 +1110,21 @@ function saveAtividade(){
   const obs        = document.getElementById("f_obs").value.trim();
   const respPrim   = getRespFromModal();
 
-  criarEntrada(nome, addSetor, respPrim, prioridade, status, semana, obs);
+  // ITEM 1 (pedido de 07/09/2026): quem marcou "não criar no meu setor"
+  // precisa ter escolhido pelo menos um destino — senão a atividade não
+  // vai pra lugar nenhum, e é melhor avisar do que salvar do nada.
+  const naoCriarLocal = document.getElementById("f_soopara").checked;
+  const temCopart = document.getElementById("f_copart").checked &&
+                    document.querySelectorAll(".cp-chk:checked").length > 0;
+  const temEnviarOR = document.getElementById("f_or").checked && _destinosOR.length > 0;
+  if(naoCriarLocal && !temCopart && !temEnviarOR){
+    toast("Marque pelo menos um destino (coparticipação ou outra RAS), ou desmarque \"não criar no meu setor\".");
+    return;
+  }
+
+  if(!naoCriarLocal){
+    criarEntrada(nome, addSetor, respPrim, prioridade, status, semana, obs);
+  }
   let criados = 0;
 
   if(document.getElementById("f_copart").checked){
