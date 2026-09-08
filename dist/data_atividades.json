@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T12:43:10",
+  "geradoEm": "2026-09-08T13:16:26",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -80,8 +80,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-07",
+      "status": "Concluído",
+      "semana": "2026-08-31",
       "obs": "",
       "origem": ""
     },
@@ -157,8 +157,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-07",
+      "status": "Concluído",
+      "semana": "2026-08-31",
       "obs": "",
       "origem": ""
     },
