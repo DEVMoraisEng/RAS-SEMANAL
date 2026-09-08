@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T19:25:23",
+  "geradoEm": "2026-09-08T19:51:41",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,50 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3d5c5ab5-32d3-8190-8550-f73ea5b7fbd7",
+      "nome": "Negociar a parte de cobranças com escritório de advocacia",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3d5c5ab5-32d3-818d-a1a1-d17c06b88fe2",
+      "nome": "Mandar premissas do contrato do condomínio",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3d5c5ab5-32d3-81a0-a993-da0a43264d25",
+      "nome": "Foco no processo de contas a receber",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3d5c5ab5-32d3-817f-af79-d9063c0cc827",
+      "nome": "Definir, orçar e comprar mobília e eletrodomésticos do decorado",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-07",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3d5c5ab5-32d3-816a-92d2-dcf74c22ccfa",
       "nome": "Definir, orçar e comprar mobília e eletrodomésticos do decorado",
@@ -80,9 +124,9 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-09-07",
-      "obs": "",
+      "obs": "Agendado para 10/09",
       "origem": ""
     },
     {
@@ -91,7 +135,7 @@
       "setor": "Pós Obra",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-09-07",
       "obs": "",
       "origem": ""
@@ -152,23 +196,12 @@
       "origem": ""
     },
     {
-      "id": "3c7c5ab5-32d3-8174-8275-f2040f338349",
-      "nome": "TESTE POS OBRA",
-      "setor": "Pós Obra",
-      "responsavel": "Paula",
-      "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-07",
-      "obs": "",
-      "origem": ""
-    },
-    {
       "id": "3c6c5ab5-32d3-8197-9d97-f2a5ef62520f",
       "nome": "Alinhar os lançamentos/compras do comercial",
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-09-07",
       "obs": "",
       "origem": ""
@@ -322,7 +355,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-09-07",
       "obs": "",
       "origem": ""
@@ -575,7 +608,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-09-07",
       "obs": "",
       "origem": ""
@@ -1004,7 +1037,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-07",
       "obs": "Aguardando análise da prefeitura",
       "origem": ""
@@ -1015,7 +1048,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-09-07",
       "obs": "Aguardando agenda com fiscal",
       "origem": ""
@@ -1026,7 +1059,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-09-07",
       "obs": "Focar em fazer mais testes (todos)",
       "origem": ""
