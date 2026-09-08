@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-08T11:48:15",
+  "geradoEm": "2026-09-08T12:43:10",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -9,25 +9,14 @@
   ],
   "atividades": [
     {
-      "id": "3d1c5ab5-32d3-816e-85f9-d1ffc9d4a139",
-      "nome": "TESTE",
+      "id": "3d5c5ab5-32d3-8150-9594-f8aea574b17d",
+      "nome": "Continuar a migração do Notion para o Site",
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "A Fazer",
       "semana": "2026-09-07",
       "obs": "",
-      "origem": ""
-    },
-    {
-      "id": "3d1c5ab5-32d3-81e8-832c-f776d558a6e6",
-      "nome": "TESTE",
-      "setor": "Pós Obra",
-      "responsavel": "Paula",
-      "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-09-07",
-      "obs": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe",
       "origem": ""
     },
     {
@@ -190,8 +179,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-07",
+      "status": "Concluído",
+      "semana": "2026-08-31",
       "obs": "Verificar indicadores na ADEMI",
       "origem": ""
     },
