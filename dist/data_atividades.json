@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-14T07:38:54",
+  "geradoEm": "2026-09-14T13:24:05",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3dbc5ab5-32d3-81a4-bc75-fb7b85a49bed",
+      "nome": "Rever sobre a execução real dos telhados, conforme atividade que criei no Notion",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3d5c5ab5-32d3-8196-9a9e-c93ea21ec402",
       "nome": "Alinhas sobre o plano de Upgrade do Claude",
@@ -21,7 +32,7 @@
     },
     {
       "id": "3d5c5ab5-32d3-817f-91c6-c79b92811dc5",
-      "nome": "Alinhas sobre o plano de Upgrade do Claude",
+      "nome": "Alinhar sobre o plano de Upgrade do Claude",
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
@@ -36,8 +47,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "status": "Concluído",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -47,8 +58,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "status": "Concluído",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -168,8 +179,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "status": "Concluído",
+      "semana": "2026-09-07",
       "obs": "",
       "origem": ""
     },
@@ -696,8 +707,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "status": "Concluído",
+      "semana": "2026-09-07",
       "obs": "observar o que outras empresas estão fazendo - Começar a criar simulador junto com o Felipe",
       "origem": ""
     },
