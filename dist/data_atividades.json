@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-15T12:16:34",
+  "geradoEm": "2026-09-15T15:47:37",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -245,7 +245,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "Levando consideração a greve caixa, e o cenário do mês",
       "origem": ""
@@ -1088,7 +1088,7 @@
     },
     {
       "id": "3b4c5ab5-32d3-8148-9b26-f1c03367e3c1",
-      "nome": "Desenhar fluxos de pagamento de lançamento do Reserva dos Ipês",
+      "nome": "Testar Fluxos e cénarios de pagamento.",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
