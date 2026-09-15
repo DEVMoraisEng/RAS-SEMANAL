@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-15T17:20:43",
+  "geradoEm": "2026-09-15T17:49:44",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3dcc5ab5-32d3-819d-b466-df2760bea84d",
+      "nome": "Atenção nas casas de rua, especialmente Senador Canedo",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3dbc5ab5-32d3-81a4-bc75-fb7b85a49bed",
       "nome": "Rever sobre a execução real dos telhados, conforme atividade que criei no Notion",
