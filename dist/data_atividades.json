@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-15T17:49:44",
+  "geradoEm": "2026-09-15T18:27:48",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,83 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3dcc5ab5-32d3-81bd-b870-dd802b56a51b",
+      "nome": "Alinhar integração de contrato através de IA com Mais Controle",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3dcc5ab5-32d3-81c0-8817-fa55fe630931",
+      "nome": "Alinhar integração de contrato através de IA com Mais Controle",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
+    },
+    {
+      "id": "3dcc5ab5-32d3-81f9-9bb9-d037c188c6d8",
+      "nome": "Finalizar a criação das obras pendentes",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3dcc5ab5-32d3-81d6-8688-f25f36eddd70",
+      "nome": "Finalizar a criação das obras pendentes",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3dcc5ab5-32d3-818f-a4a3-f84c851b357f",
+      "nome": "Finalizar a criação das obras pendentes",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3dcc5ab5-32d3-8173-8376-cddc2401cf12",
+      "nome": "Atualizar as RAS para funcionar sem internet",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3dcc5ab5-32d3-81e0-8dad-fe02093cd162",
+      "nome": "Iniciar estudos do Portal do Oriente",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-14",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3dcc5ab5-32d3-819d-b466-df2760bea84d",
       "nome": "Atenção nas casas de rua, especialmente Senador Canedo",
@@ -36,7 +113,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe",
       "origem": ""
@@ -47,7 +124,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -91,7 +168,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -102,7 +179,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -124,7 +201,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -146,8 +223,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-09-14",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -168,7 +245,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -179,7 +256,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -201,7 +278,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "Agendado para 10/09",
       "origem": ""
@@ -278,7 +355,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -685,7 +762,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
@@ -1125,7 +1202,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "Aguardando agenda com fiscal",
       "origem": ""
