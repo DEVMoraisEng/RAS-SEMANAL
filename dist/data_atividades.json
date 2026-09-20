@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-20T16:33:09",
+  "geradoEm": "2026-09-20T18:43:48",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -135,7 +135,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-14",
       "obs": "",
       "origem": ""
