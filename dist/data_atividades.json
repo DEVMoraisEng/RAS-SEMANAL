@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T13:04:10",
+  "geradoEm": "2026-09-21T13:51:49",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -58,7 +58,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-21",
       "obs": "",
       "origem": ""
@@ -153,11 +153,11 @@
     },
     {
       "id": "3d5c5ab5-32d3-81a0-a993-da0a43264d25",
-      "nome": "Foco no processo de contas a receber",
+      "nome": "Testes do cobrança fácil integrado ao banco",
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "A Fazer",
       "semana": "2026-09-21",
       "obs": "",
       "origem": ""
