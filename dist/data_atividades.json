@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T07:18:55",
+  "geradoEm": "2026-09-21T07:42:51",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -14,8 +14,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-09-14",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -25,8 +25,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-09-14",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
     },
@@ -47,8 +47,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-09-14",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -58,8 +58,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-09-14",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -69,8 +69,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-09-14",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -80,8 +80,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-09-14",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -158,7 +158,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -169,7 +169,7 @@
       "responsavel": "Lohany",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -180,7 +180,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -191,7 +191,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -213,7 +213,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -268,7 +268,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -488,7 +488,7 @@
       "responsavel": "Paula",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -521,7 +521,7 @@
       "responsavel": "Felipe",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -740,8 +740,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-09-14",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -862,7 +862,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "planejamento das proximas etapas, comercia/marketing",
       "origem": ""
     },
@@ -1159,7 +1159,7 @@
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "Definir fluxos de pagamento",
       "origem": ""
     },
@@ -1192,7 +1192,7 @@
       "responsavel": "Júlio",
       "prioridade": "Alta",
       "status": "Em Andamento",
-      "semana": "2026-09-14",
+      "semana": "2026-09-21",
       "obs": "Focar em fazer mais testes (todos)",
       "origem": ""
     },
