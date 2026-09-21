@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T14:35:42",
+  "geradoEm": "2026-09-21T14:53:45",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3e2c5ab5-32d3-81bc-ba67-d7d58e7ec07c",
+      "nome": "Criar automação de leitura dos e-mails do compras",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3e2c5ab5-32d3-81ab-a53c-c831cf8f0f24",
+      "nome": "Avaliar possibilidade de alterar os centros de custo do pós obra (Jorcineide)",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3e2c5ab5-32d3-81eb-a9e4-d33a1f78e2fb",
       "nome": "Definir o espaço do evento - Reserva dos Ipês",
