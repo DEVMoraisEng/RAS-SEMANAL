@@ -359,6 +359,7 @@ main.wrap{padding:40px 22px 60px}
 
 <div class="toast" id="toast"></div>
 
+<script src="ras-offline.js"></script>
 <script>
 /* ====== CONFIGURAÇÃO ======
    Cole a URL do endpoint de escrita (Google Apps Script) aqui.
@@ -504,7 +505,7 @@ function corStatusObra(status){
   return OBRA_STPALETTE[idx % OBRA_STPALETTE.length];
 }
 
-const VERSAO_SITE = "v4 · 03/09/2026";
+const VERSAO_SITE = "v5 · 21/09/2026 · offline";
 const RAS_ATUAL = "semanal";
 
 /* ================= REGISTRO DAS RAS (compartilhado entre os 6 sites) =====
@@ -611,6 +612,11 @@ async function boot(){
     LIBERADA_OPCOES     = o.liberadaOptions || [];
     window._geradoEm = a.geradoEm || o.geradoEm || "";
   }catch(e){ ATIV = SEED_ATIV.map(x=>({...x, setor: normalizarSetor(x.setor)})); OBRAS = SEED_OBRAS.slice(); }
+  /* OFFLINE (21/09/2026): reaplica por cima dos dados o que foi preenchido
+     neste aparelho e ainda não está no arquivo publicado (fila ou recém-
+     enviado). Sem isto, recarregar sem internet "apagava" o preenchido. */
+  { const r = RasOffline.aplicar({ativ:ATIV, obras:OBRAS, geradoEm:window._geradoEm});
+    ATIV = r.ativ; OBRAS = r.obras; }
   const SEG = segundaAtual();
   const ANT = segundaAnterior();
   // Junta as semanas dos dados com a semana atual e a anterior (mesmo que ainda
@@ -883,21 +889,33 @@ function renderObras(){
 
 function changeFieldObra(id, field, value){
   const o = OBRAS.find(x=>x.id===id); if(!o) return;
+  const local = String(id).startsWith("local-");
+  if(local && RasOffline.estado(id)==="enviado"){
+    toast("Esta obra acabou de ir para o Notion — dá para editar depois da próxima atualização do site (até 15 min).");
+    renderObras(); return;
+  }
   o[field] = value;
   /* renderObras() aqui é o que faz a OBSERVAÇÃO aparecer: ela é editada num
      modal, então sem repintar a tabela a célula continuava mostrando o texto
      velho (ou "—") até recarregar a página. Nos outros campos ninguém notava,
      porque o próprio <select> já mostra o valor novo. */
   renderObras();
+  if(local){ RasOffline.editarCriacao(id, field, value); return; }
   if(WRITE_ENDPOINT){ post({action:"update_obra", id, field, value}); }
 }
 
 function excluirObra(id){
   const o = OBRAS.find(x=>x.id===id); if(!o) return;
+  const local = String(id).startsWith("local-");
+  if(local && RasOffline.estado(id)==="enviado"){
+    toast("Esta obra acabou de ir para o Notion — dá para excluir depois da próxima atualização do site (até 15 min).");
+    return;
+  }
   if(!confirm(`Excluir a obra "${o.nome}"?\n\nEla vai para a lixeira do Notion (dá pra recuperar por lá se for engano).`)) return;
   OBRAS = OBRAS.filter(x=>x.id!==id); render();
-  if(String(id).startsWith("local-")){
-    toast("Removida da tela. Ainda não tinha sincronizado com o Notion.");
+  if(local){
+    RasOffline.cancelarCriacao(id);
+    toast("Removida. Ela ainda não tinha sido enviada ao Notion.");
     return;
   }
   if(WRITE_ENDPOINT){ post({action:"delete_obra", id}); toast("Obra excluída."); }
@@ -912,9 +930,19 @@ function renderFoot(){
 
 function changeField(id, field, value){
   const a = ATIV.find(x=>x.id===id); if(!a) return;
+  /* OFFLINE (21/09/2026) — atividade criada neste aparelho ("local-..."):
+     enquanto a criação ainda está na fila, a edição entra NELA (a atividade
+     já nasce certa no Notion). Se a criação já foi enviada, ainda não existe
+     ID do Notion para editar — avisa em vez de fingir que salvou. */
+  const local = String(id).startsWith("local-");
+  if(local && RasOffline.estado(id)==="enviado"){
+    toast("Esta atividade acabou de ir para o Notion — dá para editar depois da próxima atualização do site (até 15 min).");
+    render(); return;
+  }
   a[field] = value;
   if(field==="semana") recomputarSeletorSemanas();
   render();
+  if(local){ RasOffline.editarCriacao(id, field, value); return; }
   if(WRITE_ENDPOINT){ post({action:"update", id, field, value}); }
 }
 
@@ -937,13 +965,18 @@ function editarNome(id, el){
 
 function excluirAtividade(id){
   const a = ATIV.find(x=>x.id===id); if(!a) return;
+  const local = String(id).startsWith("local-");
+  if(local && RasOffline.estado(id)==="enviado"){
+    toast("Esta atividade acabou de ir para o Notion — dá para excluir depois da próxima atualização do site (até 15 min).");
+    return;
+  }
   if(!confirm(`Excluir a atividade "${a.nome}"?\n\nEla vai para a lixeira do Notion (dá pra recuperar por lá se for engano).`)) return;
   ATIV = ATIV.filter(x=>x.id!==id);
   recomputarSeletorSemanas(); render();
-  if(String(id).startsWith("local-")){
-    // Ainda não sincronizou com o Notion (criada nesta sessão, antes do
-    // próximo fetch_ras.py) — não existe página real pra excluir lá.
-    toast("Removida da tela. Ainda não tinha sincronizado com o Notion.");
+  if(local){
+    // Criada neste aparelho e ainda na fila: tira da fila, nem chega ao Notion.
+    RasOffline.cancelarCriacao(id);
+    toast("Removida. Ela ainda não tinha sido enviada ao Notion.");
     return;
   }
   if(WRITE_ENDPOINT){ post({action:"delete", id}); toast("Atividade excluída."); }
@@ -1096,9 +1129,12 @@ function renderDestinosOR(){
 
 function criarEntrada(nome, setor, resp, prioridade, status, semana, obs, origem){
   const dados = {action:"create", atividade:nome, setor, responsavel:resp, prioridade, status, semana, obs, origem: origem||""};
-  ATIV.push({id:"local-"+Date.now()+"-"+Math.random().toString(36).slice(2,6),
-             nome, setor, responsavel:resp, prioridade, status, semana, obs, origem: origem||""});
-  if(WRITE_ENDPOINT){ post(dados); }
+  const item = {id:"local-"+Date.now()+"-"+Math.random().toString(36).slice(2,6),
+                nome, setor, responsavel:resp, prioridade, status, semana, obs, origem: origem||""};
+  ATIV.push(item);
+  // localId + item: se a página recarregar antes do Notion publicar, a
+  // atividade é redesenhada a partir daqui (ver RasOffline.aplicar no boot).
+  if(WRITE_ENDPOINT){ post(dados, {localId:item.id, item}); }
 }
 
 function saveAtividade(){
@@ -1161,7 +1197,7 @@ function saveAtividade(){
   else if(criados===1) base = "Atividade criada para o setor principal + 1 coparticipante";
   else                 base = `Atividade criada para o setor principal + ${criados} coparticipantes`;
   if(enviadas) base += ` \u00b7 enviada para ${enviadas} ${enviadas===1?"RAS":"RAS diferentes"}`;
-  toast(WRITE_ENDPOINT ? base+" no Notion." : base+" (modo teste — só na tela).");
+  toast(WRITE_ENDPOINT ? base+RasOffline.onde() : base+" (modo teste — só na tela).");
 }
 
 function openModalObra(){
@@ -1235,21 +1271,21 @@ function saveObra(){
     liberada:document.getElementById("o_liberada").value,
     obs:document.getElementById("o_obs").value.trim()
   };
-  OBRAS.push({id:"local-"+Date.now(), ...dados});
+  const itemObra = {id:"local-"+Date.now(), ...dados};
+  OBRAS.push(itemObra);
   window._obraView = "aberto"; // garante que a obra recém-criada apareça na tela
   closeModalObra(); render();
-  if(WRITE_ENDPOINT){ post(dados); toast("Obra criada no Notion."); }
+  if(WRITE_ENDPOINT){ post(dados, {localId:itemObra.id, item:itemObra}); toast("Obra criada"+RasOffline.onde()); }
   else { toast("Criada (modo teste — só na tela)."); }
 }
 
-function post(dados){
-  // GET com parâmetros na URL — mesmo padrão validado no OBRAS-GERAL.
-  // POST com corpo JSON em modo no-cors não é confiável para Apps Script.
-  const qs = Object.entries(dados)
-    .map(([k,v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v ?? "")}`)
-    .join("&");
-  fetch(`${WRITE_ENDPOINT}?${qs}`, {method:"GET", mode:"no-cors"})
-    .catch(()=>toast("Falha ao enviar ao endpoint."));
+function post(dados, meta){
+  /* OFFLINE (21/09/2026): antes o pedido era mandado UMA vez e, sem internet,
+     morria aqui — por isso o que foi preenchido com a rede fora se perdeu.
+     Agora ele entra na fila do ras-offline.js (guardada no navegador) e é
+     enviado quando der, em ordem, sem duplicar (opId). Mesmo esquema do
+     PORTAL-MORAIS. O envio continua sendo GET no-cors, como antes. */
+  return RasOffline.enviar(dados, meta);
 }
 
 let toastT;
