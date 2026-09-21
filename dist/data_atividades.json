@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T14:03:44",
+  "geradoEm": "2026-09-21T14:23:40",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,39 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3e2c5ab5-32d3-81eb-a9e4-d33a1f78e2fb",
+      "nome": "Definir o espaço do evento - Reserva dos Ipês",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Comercial › Hudson"
+    },
+    {
+      "id": "3e2c5ab5-32d3-8138-ac0e-eb24ae62ed3c",
+      "nome": "Definir o espaço do evento - Reserva dos Ipês",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3e2c5ab5-32d3-81f7-9381-fe227eaab9e8",
+      "nome": "Definir data de correção de lançamentos incorretos referente ao novo manual",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3dcc5ab5-32d3-81bd-b870-dd802b56a51b",
       "nome": "Alinhar integração de contrato através de IA com Mais Controle",
@@ -146,7 +179,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-09-21",
       "obs": "",
       "origem": ""
@@ -729,7 +762,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-09-21",
       "obs": "",
       "origem": ""
