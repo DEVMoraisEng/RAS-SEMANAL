@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-21T07:42:51",
+  "geradoEm": "2026-09-21T13:04:10",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -47,8 +47,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-21",
+      "status": "Concluído",
+      "semana": "2026-09-14",
       "obs": "",
       "origem": ""
     },
@@ -69,17 +69,6 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-21",
-      "obs": "",
-      "origem": ""
-    },
-    {
-      "id": "3dbc5ab5-32d3-81a4-bc75-fb7b85a49bed",
-      "nome": "Rever sobre a execução real dos telhados, conforme atividade que criei no Notion",
-      "setor": "Projetos e Desenvolvimento",
-      "responsavel": "Felipe",
-      "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-09-21",
       "obs": "",
