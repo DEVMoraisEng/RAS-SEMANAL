@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-24T10:35:20",
+  "geradoEm": "2026-09-24T19:32:16",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -106,7 +106,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Setembro/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "previsao": "",
       "liberada": "NÃO",
       "obs": ""
@@ -117,7 +117,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Setembro/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "previsao": "",
       "liberada": "NÃO",
       "obs": ""
@@ -128,7 +128,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Setembro/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "previsao": "",
       "liberada": "NÃO",
       "obs": ""
@@ -172,7 +172,7 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Setembro/2026",
-      "status": "Projeto Em Andamento",
+      "status": "Projeto Finalizado",
       "previsao": "",
       "liberada": "NÃO",
       "obs": "Orçamento arrimo liberado"
