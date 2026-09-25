@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-25T15:35:59",
+  "geradoEm": "2026-09-25T16:40:47",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3e6c5ab5-32d3-8130-ab98-cf15bb2281c8",
+      "nome": "Discutir abertura MEI para o pessoal de obra",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
+    },
+    {
+      "id": "3e6c5ab5-32d3-8131-96af-c39812b93dbe",
+      "nome": "Discutir abertura MEI para o pessoal de obra",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-21",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3e2c5ab5-32d3-81bc-ba67-d7d58e7ec07c",
       "nome": "Criar automação de leitura dos e-mails do compras",
