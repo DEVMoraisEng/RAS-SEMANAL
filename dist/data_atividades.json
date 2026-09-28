@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T14:36:33",
+  "geradoEm": "2026-09-28T18:49:11",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3e9c5ab5-32d3-81b6-9bee-c0e2081ff082",
+      "nome": "Reiterar sobre os pagamentos de última hora",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-09-28",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3e6c5ab5-32d3-8161-8872-f534b446f8c4",
       "nome": "Discutir abertura MEI para o pessoal de obra",
@@ -36,8 +47,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-09-28",
+      "status": "Concluído",
+      "semana": "2026-09-21",
       "obs": "",
       "origem": ""
     },
@@ -71,17 +82,6 @@
       "prioridade": "Média",
       "status": "Concluído",
       "semana": "2026-09-21",
-      "obs": "",
-      "origem": ""
-    },
-    {
-      "id": "3dcc5ab5-32d3-81bd-b870-dd802b56a51b",
-      "nome": "Alinhar integração de contrato através de IA com Mais Controle",
-      "setor": "Financeiro",
-      "responsavel": "Lohany",
-      "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-09-28",
       "obs": "",
       "origem": ""
     },
@@ -225,7 +225,7 @@
       "prioridade": "Média",
       "status": "Em Andamento",
       "semana": "2026-09-28",
-      "obs": "",
+      "obs": "Aguardando retorno do banco",
       "origem": ""
     },
     {
