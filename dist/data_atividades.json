@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T08:20:46",
+  "geradoEm": "2026-09-28T10:44:44",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -58,7 +58,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-09-28",
       "obs": "",
       "origem": ""
