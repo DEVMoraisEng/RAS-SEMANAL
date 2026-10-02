@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-02T14:13:33",
+  "geradoEm": "2026-10-02T15:04:29",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -62,10 +62,10 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Setembro/2026",
-      "status": "Projeto Finalizado",
+      "status": "Demanda Finalizada",
       "previsao": "",
       "liberada": "NÃO",
-      "obs": "atualizar orça"
+      "obs": ""
     },
     {
       "id": "3cdc5ab5-32d3-8111-a3be-d5db3c997dc3",
@@ -73,10 +73,10 @@
       "cidade": "Senador Canedo",
       "setor": "Terrabela",
       "mes": "Setembro/2026",
-      "status": "Projeto Finalizado",
+      "status": "Demanda Finalizada",
       "previsao": "",
       "liberada": "NÃO",
-      "obs": "atualizar orça"
+      "obs": ""
     },
     {
       "id": "3cdc5ab5-32d3-8186-adeb-ec710c6f3a8b",
