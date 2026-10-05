@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-05T08:31:27",
+  "geradoEm": "2026-10-05T12:36:38",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3f0c5ab5-32d3-8120-a8d0-e69e3d75e4ba",
+      "nome": "FINALIZAR OS PROJETOS EXECUTIVOS DO RESERVA DOS IPÊS",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3f0c5ab5-32d3-81d5-a7b1-ee48c29a9f2e",
+      "nome": "INICIAR AS MELHRIAS DE ANÁLISE DE DADOS",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3e9c5ab5-32d3-81b6-9bee-c0e2081ff082",
       "nome": "Reiterar sobre os pagamentos de última hora",
@@ -91,7 +113,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-05",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
@@ -267,7 +289,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-05",
       "obs": "",
       "origem": ""
@@ -575,7 +597,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-05",
       "obs": "",
       "origem": ""
