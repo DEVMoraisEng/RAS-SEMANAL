@@ -122,6 +122,9 @@ main.wrap{padding:40px 22px 60px}
 .delbtn{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:6px;width:26px;height:26px;line-height:1;padding:0;cursor:pointer;font-size:13px}
 .delbtn:hover{background:#FCE8E8;color:#B3261E;border-color:#F1B8B8}
 .c-del{text-align:center;width:34px}
+.c-del2{text-align:center;width:66px;white-space:nowrap}
+.c-del2 .delbtn+.delbtn{margin-left:4px}
+.editbtn:hover{background:#EEF6F5;color:var(--navy);border-color:var(--verde)}
 .empty-row td{color:var(--muted);font-size:12px;text-align:center;padding:16px 0}
 
 /* ===== obras ===== */
@@ -293,7 +296,7 @@ main.wrap{padding:40px 22px 60px}
 <div class="modal" id="modalObra">
   <div class="sheet">
     <button class="sheet-x" title="Fechar" onclick="closeModalObra()">&#10005;</button>
-    <h3>Nova obra</h3>
+    <h3 id="o_titulo">Nova obra</h3>
     <p class="sub">Cidade aceita valores novos — é só digitar. Em Setor, escolha um existente ou "➕ Criar novo setor".</p>
     <div class="field">
       <label>Identificação (ex.: TB 21 QD 02 LT 03)</label>
@@ -337,7 +340,7 @@ main.wrap{padding:40px 22px 60px}
     </div>
     <div class="actions">
       <button class="btn ghost" onclick="closeModalObra()">Cancelar</button>
-      <button class="btn primary" onclick="saveObra()">Criar obra</button>
+      <button class="btn primary" id="o_btnSalvar" onclick="saveObra()">Criar obra</button>
     </div>
   </div>
 </div>
@@ -505,7 +508,7 @@ function corStatusObra(status){
   return OBRA_STPALETTE[idx % OBRA_STPALETTE.length];
 }
 
-const VERSAO_SITE = "v5 · 21/09/2026 · offline";
+const VERSAO_SITE = "v6 · 07/10/2026 · editar obra";
 const RAS_ATUAL = "semanal";
 
 /* ================= REGISTRO DAS RAS (compartilhado entre os 6 sites) =====
@@ -856,7 +859,7 @@ function renderObras(){
       <td><input type="date" value="${escapeAttr((o.previsao||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','previsao',this.value)"></td>
       <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','liberada',this.value)" title="LIBERADA P/ INÍCIO">${lbSel}</select></td>
       <td class="c-obs"><div class="obs-cell${o.obs?'':' vazio'}" title="Clique para ver/editar" onclick="abrirObs('obra','${o.id}')">${o.obs?escapeHtml(o.obs):'—'}</div></td>
-      <td class="c-del"><button class="delbtn" title="Excluir obra" onclick="excluirObra('${o.id}')">🗑</button></td>
+      <td class="c-del2"><button class="delbtn editbtn" title="Editar endereço, setor, cidade e mês" onclick="openModalObra('${o.id}')">✏️</button><button class="delbtn" title="Excluir obra" onclick="excluirObra('${o.id}')">🗑</button></td>
     </tr>`;
   }
 
@@ -1200,7 +1203,14 @@ function saveAtividade(){
   toast(WRITE_ENDPOINT ? base+RasOffline.onde() : base+" (modo teste — só na tela).");
 }
 
-function openModalObra(){
+/* EDITAR OBRA (07/10/2026): o mesmo modal da "Nova obra" abre preenchido
+   pelo lápis da linha. Dá para trocar endereço (nome), setor, cidade e o MÊS
+   de referência — além do resto. Ao salvar, só os campos que mudaram são
+   enviados (update_obra, um por campo), pela mesma fila offline de sempre. */
+let _obraEdit = null;
+function openModalObra(editId){
+  const ob = editId ? OBRAS.find(x=>x.id===editId) : null;
+  _obraEdit = ob ? ob.id : null;
   const cidades=[...new Set(OBRAS.map(o=>o.cidade).filter(Boolean))].sort();
   const setores=[...new Set(OBRAS.map(o=>o.setor).filter(Boolean))].sort();
   document.getElementById("dl_cidades").innerHTML = cidades.map(c=>`<option value="${escapeAttr(c)}">`).join("");
@@ -1221,6 +1231,24 @@ function openModalObra(){
   document.getElementById("o_status").innerHTML =
     obraStatusOpcoes().map(s=>`<option ${s===statusInicialObra?"selected":""}>${s}</option>`).join("");
   ["o_nome","o_cidade","o_previsao","o_obs"].forEach(id=>document.getElementById(id).value="");
+  document.getElementById("o_titulo").textContent = ob ? "Editar obra" : "Nova obra";
+  document.getElementById("o_btnSalvar").textContent = ob ? "Salvar alterações" : "Criar obra";
+  if(ob){
+    document.getElementById("o_nome").value     = ob.nome || "";
+    document.getElementById("o_cidade").value   = ob.cidade || "";
+    document.getElementById("o_previsao").value = (ob.previsao||"").slice(0,10);
+    document.getElementById("o_obs").value      = ob.obs || "";
+    const meses = mesesDisponiveis();
+    if(ob.mes && !meses.includes(ob.mes)) meses.push(ob.mes);
+    document.getElementById("o_mes").innerHTML =
+      meses.map(m=>`<option ${m===ob.mes?"selected":""}>${escapeHtml(m)}</option>`).join("");
+    const selSetor = document.getElementById("o_setor_sel");
+    if(ob.setor && setores.includes(ob.setor)) selSetor.value = ob.setor;
+    document.getElementById("o_status").innerHTML =
+      obraStatusOpcoes(ob.status).map(s=>`<option ${s===ob.status?"selected":""}>${s}</option>`).join("");
+    document.getElementById("o_liberada").innerHTML =
+      liberadaOpcoes(ob.liberada||"").map(v=>`<option ${v===(ob.liberada||"")?"selected":""}>${escapeHtml(v)}</option>`).join("");
+  }
   document.getElementById("modalObra").classList.add("open");
   document.getElementById("o_nome").focus();
 }
@@ -1234,7 +1262,7 @@ function getSetorObra(){
   const sel = document.getElementById("o_setor_sel").value;
   return sel==="__novo__" ? document.getElementById("o_setor_novo").value.trim() : sel;
 }
-function closeModalObra(){ document.getElementById("modalObra").classList.remove("open"); }
+function closeModalObra(){ document.getElementById("modalObra").classList.remove("open"); _obraEdit = null; }
 
 // --- Modal de Observações: ver/editar o texto completo (o preview na tabela
 // corta em 2 linhas; aqui abre tudo). Vale para atividades e obras.
@@ -1258,7 +1286,30 @@ function salvarObs(){
 }
 function closeModalObs(){ document.getElementById("modalObs").classList.remove("open"); _obsCtx=null; }
 
+function saveObraEdicao(){
+  const ob = OBRAS.find(x=>x.id===_obraEdit); if(!ob){ closeModalObra(); return; }
+  const novo = {
+    nome:     document.getElementById("o_nome").value.replace(/\s+/g," ").trim(),
+    cidade:   document.getElementById("o_cidade").value.trim(),
+    setor:    getSetorObra(),
+    mes:      document.getElementById("o_mes").value.trim(),
+    status:   document.getElementById("o_status").value,
+    previsao: document.getElementById("o_previsao").value,
+    liberada: document.getElementById("o_liberada").value,
+    obs:      document.getElementById("o_obs").value.trim()
+  };
+  if(!novo.nome || !novo.cidade){ toast("Preencha ao menos Identificação e Cidade."); return; }
+  if(document.getElementById("o_setor_sel").value==="__novo__" && !novo.setor){ toast("Digite o nome do novo setor."); return; }
+  const mudou = Object.keys(novo).filter(k => String(novo[k]||"") !== String(k==="previsao" ? (ob.previsao||"").slice(0,10) : (ob[k]||"")));
+  closeModalObra();
+  if(!mudou.length){ toast("Nada mudou."); return; }
+  mudou.forEach(k => changeFieldObra(ob.id, k, novo[k]));
+  if(mudou.includes("mes")) toast(`Obra movida para ${novo.mes} — troque o mês no filtro para vê-la.`);
+  else toast("Obra atualizada" + (WRITE_ENDPOINT ? RasOffline.onde() : " (modo teste — só na tela)."));
+}
+
 function saveObra(){
+  if(_obraEdit){ saveObraEdicao(); return; }
   const nome = document.getElementById("o_nome").value.trim();
   const cidade = document.getElementById("o_cidade").value.trim();
   if(!nome || !cidade){ toast("Preencha ao menos Identificação e Cidade."); return; }
