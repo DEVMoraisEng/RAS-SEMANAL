@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T13:40:18",
+  "geradoEm": "2026-10-07T14:00:40",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,94 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3f2c5ab5-32d3-812d-bf12-d35c9759648c",
+      "nome": "Iniciar abertura de novas SCPs",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
+    },
+    {
+      "id": "3f2c5ab5-32d3-8181-b5df-f99b98235eb4",
+      "nome": "Iniciar abertura de novas SCPs",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-810c-9f63-e13736c89f55",
+      "nome": "Focar nas casas de Goiânia",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-81af-81aa-fe51aa9f0fd3",
+      "nome": "Verificar sobre API oficial do WhatsApp",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-81bd-9036-d5e350686b48",
+      "nome": "Retornar todos os leads da campanha",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "3f2c5ab5-32d3-81b8-a9d8-c5467a5f1012",
+      "nome": "Retornar todos os leads da campanha",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "3f2c5ab5-32d3-81ea-b15e-f783ba042516",
+      "nome": "Retornar todos os leads da campanha",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-81ae-8d8f-d2d0b1294d19",
+      "nome": "Verificar a respeito dos testes dos números de contato serem departamentalizados ou não",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3f2c5ab5-32d3-81d1-84e7-caa22307586c",
       "nome": "Finalização das demandas do DECORADO",
@@ -47,7 +135,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-05",
       "obs": "",
       "origem": ""
@@ -256,7 +344,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-10-05",
       "obs": "",
       "origem": ""
@@ -1268,7 +1356,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-10-05",
       "obs": "Focar em fazer mais testes (todos)",
       "origem": ""
