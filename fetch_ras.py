@@ -16,12 +16,14 @@ NO GITHUB ACTIONS:
     o token vem de secret; os DB IDs já estão abaixo (pode sobrescrever por env).
 """
 
-import os, json, time, datetime, unicodedata, urllib.request, urllib.error
+import os, re, json, time, datetime, unicodedata, urllib.request, urllib.error
 
 TOKEN = os.environ.get("NOTION_TOKEN", "").strip()
 DB_ATIV  = os.environ.get("RAS_ATIVIDADES_DB_ID", "3b4c5ab532d380b2a5acd915bda9021c").strip()
 DB_OBRAS = os.environ.get("RAS_OBRAS_DB_ID",      "3b4c5ab532d3806ba64bcf67f2dd4d6b").strip()
 NOTION_VERSION = "2022-06-28"
+# DOCUMENTOS (Gestão de Documentos do portal) — destino da Previsão de início.
+DB_DOCS = os.environ.get("DOCUMENTOS_DB_ID", "32fc5ab532d380a0900dd7f4bfc619bd").strip()
 
 def query(db):
     """Retorna todas as linhas do banco (com paginação)."""
@@ -169,6 +171,113 @@ def status_options(db, *col_names):
     return []
 
 
+# ===================== PREVISÃO DE INÍCIO -> DOCUMENTOS (07/10/2026) ==========
+# A "Previsão de início" preenchida na aba Obras da RAS passa a preencher
+# sozinha a coluna "PREVISÃO DE INÍCIO DE OBRA" da base DOCUMENTOS.
+#   - Casamento pelo ENDEREÇO: nome da obra na RAS x título ENDEREÇO em
+#     DOCUMENTOS, normalizados (sem acento, sem hífen, espaço entre letra e
+#     número, sem zero à esquerda: "SV-24 QD 4 LT 1" == "SV 24 QD 04 LT 01").
+#   - A RAS manda: se a data da RAS for diferente, DOCUMENTOS é atualizado.
+#     Data vazia na RAS nunca apaga nada em DOCUMENTOS.
+#   - Mesmo endereço com datas diferentes na RAS: não mexe e avisa no log.
+#   - Qualquer erro aqui só vira aviso no log: os JSON da RAS saem sempre.
+def _req(method, path, body=None):
+    req = urllib.request.Request("https://api.notion.com/v1" + path,
+                                 data=json.dumps(body).encode("utf-8") if body is not None else None,
+                                 method=method)
+    req.add_header("Authorization", "Bearer " + TOKEN)
+    req.add_header("Notion-Version", NOTION_VERSION)
+    req.add_header("Content-Type", "application/json")
+    for tent in range(3):
+        try:
+            with urllib.request.urlopen(req) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 502, 503) and tent < 2:
+                time.sleep(2 * (tent + 1)); continue
+            raise RuntimeError(f"Notion {e.code}: {e.read().decode('utf-8')[:300]}")
+
+def chave_endereco(s):
+    s = _sa(s).upper()
+    s = re.sub(r"[^A-Z0-9]+", " ", s)
+    s = re.sub(r"(?<=[A-Z])(?=[0-9])|(?<=[0-9])(?=[A-Z])", " ", s)
+    return " ".join((t.lstrip("0") or "0") if t.isdigit() else t for t in s.split())
+
+def _achar_coluna(schema, *fragmentos):
+    for frag in fragmentos:
+        f = _sa(frag)
+        for nome in schema:
+            if _sa(nome) == f:
+                return nome
+    for frag in fragmentos:
+        f = _sa(frag)
+        for nome in schema:
+            if f in _sa(nome):
+                return nome
+    return None
+
+def sync_previsao_documentos(obras):
+    if not DB_DOCS:
+        print("PREVISÃO -> DOCUMENTOS: DOCUMENTOS_DB_ID vazio, pulando.")
+        return
+    try:
+        schema = _req("GET", f"/databases/{DB_DOCS}").get("properties", {})
+        c_tit = next((n for n, p in schema.items() if p.get("type") == "title"), None)
+        c_prev = _achar_coluna(schema, "PREVISÃO DE INÍCIO DE OBRA", "PREVISAO DE INICIO DE OBRA",
+                               "PREVISÃO DE INÍCIO DA OBRA", "PREVISÃO DE INÍCIO")
+        if not c_tit or not c_prev:
+            print(f"PREVISÃO -> DOCUMENTOS: coluna não encontrada (título={c_tit!r} previsão={c_prev!r}).")
+            return
+        tipo = schema[c_prev]["type"]
+
+        # endereço da RAS -> data (só obras com data)
+        alvo, conflito = {}, set()
+        for o in obras:
+            d = (o.get("previsao") or "")[:10]
+            k = chave_endereco(o.get("nome"))
+            if not d or not k:
+                continue
+            if k in alvo and alvo[k] != d:
+                conflito.add(k)
+            alvo[k] = d
+        for k in conflito:
+            print(f"  ! {k}: aparece mais de uma vez na RAS com datas diferentes — não alterado.")
+            alvo.pop(k, None)
+
+        atualizadas, iguais, achadas = 0, 0, set()
+        for pg in query(DB_DOCS):
+            P = pg["properties"]
+            k = chave_endereco(pval(P.get(c_tit)))
+            if k not in alvo:
+                continue
+            achadas.add(k)
+            atual = (pval(P.get(c_prev)) or "")[:10] if tipo == "date" else pval(P.get(c_prev))
+            novo = alvo[k]
+            if tipo == "date":
+                if atual == novo:
+                    iguais += 1; continue
+                valor = {"date": {"start": novo}}
+            elif tipo == "rich_text":
+                txt = "/".join(reversed(novo.split("-")))      # dd/mm/aaaa
+                if (atual or "").strip() == txt:
+                    iguais += 1; continue
+                valor = {"rich_text": [{"type": "text", "text": {"content": txt}}]}
+            else:
+                print(f"PREVISÃO -> DOCUMENTOS: coluna {c_prev!r} é do tipo {tipo!r}, não sei gravar.")
+                return
+            _req("PATCH", f"/pages/{pg['id']}", {"properties": {c_prev: valor}})
+            atualizadas += 1
+            print(f"  ✓ {pval(P.get(c_tit))}: {atual or '(vazio)'} -> {novo}")
+            time.sleep(0.35)
+        sem_doc = sorted(set(alvo) - achadas)
+        print(f"PREVISÃO -> DOCUMENTOS: {atualizadas} atualizada(s), {iguais} já certas, "
+              f"{len(sem_doc)} obra(s) da RAS sem endereço igual em DOCUMENTOS.")
+        for k in sem_doc:
+            print(f"  · sem par em DOCUMENTOS: {k}")
+    except (Exception, SystemExit) as e:
+        print(f"PREVISÃO -> DOCUMENTOS: AVISO, sincronização não concluída ({e}). Os JSON da RAS saíram normalmente.")
+
+
 def main():
     if not TOKEN:
         raise SystemExit("Defina NOTION_TOKEN (o seu token do Notion).")
@@ -195,6 +304,8 @@ def main():
               ensure_ascii=False, indent=2)
     print(f"data_obras.json       -> {len(obras)} obras | status: {obras_status}")
     print(f"  liberada: {liberada_opts}")
+
+    sync_previsao_documentos(obras)
 
 if __name__ == "__main__":
     main()
