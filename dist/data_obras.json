@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T15:30:43",
+  "geradoEm": "2026-10-07T15:37:18",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -21,7 +21,10 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3f2c5ab5-32d3-8140-a062-d58d593a4b7f",
@@ -32,7 +35,10 @@
       "status": "Nova Inclusão",
       "previsao": "",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3f2c5ab5-32d3-814d-9476-f5663c2630cf",
@@ -43,7 +49,10 @@
       "status": "Nova Inclusão",
       "previsao": "",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3f2c5ab5-32d3-810e-b7d1-e0bd1e4c82bd",
@@ -54,7 +63,10 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3f2c5ab5-32d3-8163-b291-fba76e4cb206",
@@ -65,7 +77,10 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3f2c5ab5-32d3-81e9-8bd0-d72d6983720e",
@@ -76,7 +91,10 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3f2c5ab5-32d3-8135-8a1a-f1bd60db419b",
@@ -87,7 +105,10 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-810b-89b0-f35486adf935",
@@ -98,7 +119,10 @@
       "status": "Projeto Finalizado",
       "previsao": "2026-10-12",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-81c2-b77a-c078033018f5",
@@ -109,7 +133,16 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": "ESTUDOS - FINALIZADO"
+      "obs": "ESTUDOS - FINALIZADO",
+      "doc": {
+        "status": "sugestao",
+        "sugestoes": [
+          {
+            "endereco": "MACEIO QD 129 LT 71C",
+            "setor": "JARDIM PETROPOLIS"
+          }
+        ]
+      }
     },
     {
       "id": "3cdc5ab5-32d3-8115-a83f-f3c8eac209a8",
@@ -120,7 +153,16 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": "ESTUDOS - FINALIZADO"
+      "obs": "ESTUDOS - FINALIZADO",
+      "doc": {
+        "status": "sugestao",
+        "sugestoes": [
+          {
+            "endereco": "MACEIO QD 129 LT 71B",
+            "setor": "JARDIM PETROPOLIS"
+          }
+        ]
+      }
     },
     {
       "id": "3cdc5ab5-32d3-81f7-a790-dd6c639156e1",
@@ -131,7 +173,16 @@
       "status": "Nova Inclusão",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": "ESTUDOS - FINALIZADO"
+      "obs": "ESTUDOS - FINALIZADO",
+      "doc": {
+        "status": "sugestao",
+        "sugestoes": [
+          {
+            "endereco": "MACEIO QD 129 LT 71A",
+            "setor": "JARDIM PETROPOLIS"
+          }
+        ]
+      }
     },
     {
       "id": "3cdc5ab5-32d3-817d-873e-f28e3dca3772",
@@ -142,7 +193,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-11-16",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-8111-a3be-d5db3c997dc3",
@@ -153,7 +207,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-11-16",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-8186-adeb-ec710c6f3a8b",
@@ -164,7 +221,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-10-12",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-817b-8ce1-cc6cd9e8e3c9",
@@ -175,7 +235,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-10-12",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-814a-815f-c52f95ad73b2",
@@ -186,7 +249,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-8160-a8f3-d3730fc0587e",
@@ -197,7 +263,10 @@
       "status": "Projeto Finalizado",
       "previsao": "2026-10-30",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3cdc5ab5-32d3-819a-b148-d6da123e9467",
@@ -208,7 +277,10 @@
       "status": "Projeto Finalizado",
       "previsao": "2026-10-13",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3c6c5ab5-32d3-8173-9194-f7547afa3f9a",
@@ -219,7 +291,10 @@
       "status": "Projeto Finalizado",
       "previsao": "2026-11-02",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3c6c5ab5-32d3-81c2-b579-f6e54456de18",
@@ -230,7 +305,10 @@
       "status": "Projeto Finalizado",
       "previsao": "2026-11-02",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3bfc5ab5-32d3-81d1-85f5-d6cc37994775",
@@ -241,7 +319,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-10-12",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3bfc5ab5-32d3-81cf-9016-c7c4fcfee5d5",
@@ -252,7 +333,10 @@
       "status": "Projeto Finalizado",
       "previsao": "2026-10-13",
       "liberada": "Sim",
-      "obs": "Orçamento arrimo liberado"
+      "obs": "Orçamento arrimo liberado",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-8182-beeb-d3f091c753f8",
@@ -263,7 +347,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-09-30",
       "liberada": "Sim",
-      "obs": "3"
+      "obs": "3",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-81ac-a81c-fb64945aa8b4",
@@ -274,7 +361,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-09-01",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-818e-b654-c32762bdd280",
@@ -285,7 +375,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-09-01",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-8152-a8a3-c93ed180fd2e",
@@ -296,7 +389,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-09-01",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-8186-8c71-ec0012ec7f40",
@@ -307,7 +403,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-09-01",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-81cb-8819-f55951bb1732",
@@ -318,7 +417,10 @@
       "status": "Projeto Finalizado",
       "previsao": "2026-09-28",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-8180-ba47-f8e62a0f368c",
@@ -329,7 +431,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-11-02",
       "liberada": "NÃO",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-81ce-ba14-cb7fe8107758",
@@ -340,7 +445,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-10-07",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-817e-a85d-d5a5f19330a3",
@@ -351,7 +459,10 @@
       "status": "Demanda Finalizada",
       "previsao": "2026-10-07",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     },
     {
       "id": "3b4c5ab5-32d3-81d9-a63e-c729d33f056b",
@@ -362,7 +473,10 @@
       "status": "Demanda Finalizada",
       "previsao": "",
       "liberada": "Sim",
-      "obs": ""
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
     }
   ]
 }
