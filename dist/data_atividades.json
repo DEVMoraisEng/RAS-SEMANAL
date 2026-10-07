@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T14:48:08",
+  "geradoEm": "2026-10-07T15:20:02",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -131,7 +131,7 @@
     },
     {
       "id": "3f0c5ab5-32d3-81d5-a7b1-ee48c29a9f2e",
-      "nome": "INICIAR AS MELHRIAS DE ANÁLISE DE DADOS",
+      "nome": "INICIAR AS MELHORIAS DE ANÁLISE DE DADOS",
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
@@ -147,17 +147,6 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Concluído",
-      "semana": "2026-10-05",
-      "obs": "",
-      "origem": ""
-    },
-    {
-      "id": "3e2c5ab5-32d3-81bc-ba67-d7d58e7ec07c",
-      "nome": "Criar automação de leitura dos e-mails do compras",
-      "setor": "Projetos e Desenvolvimento",
-      "responsavel": "Felipe",
-      "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
       "semana": "2026-10-05",
       "obs": "",
       "origem": ""
