@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T12:53:52",
+  "geradoEm": "2026-10-07T13:40:18",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -37,17 +37,6 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "A Fazer",
-      "semana": "2026-10-05",
-      "obs": "",
-      "origem": ""
-    },
-    {
-      "id": "3e9c5ab5-32d3-81b6-9bee-c0e2081ff082",
-      "nome": "Reiterar sobre os pagamentos de última hora",
-      "setor": "Financeiro",
-      "responsavel": "Lohany",
-      "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
       "semana": "2026-10-05",
       "obs": "",
       "origem": ""
@@ -258,7 +247,7 @@
       "prioridade": "Média",
       "status": "Em Andamento",
       "semana": "2026-10-05",
-      "obs": "Aguardando retorno do banco",
+      "obs": "Em fase de testes",
       "origem": ""
     },
     {
@@ -1242,13 +1231,13 @@
     },
     {
       "id": "3b4c5ab5-32d3-8148-9b26-f1c03367e3c1",
-      "nome": "Invasão das imobiliarias - convite para o meeting",
+      "nome": "PLANEJAMENTO ESTRATEGICO ATÉ ABERTURA DE VENDAS DO CONDOMINIO RESERVA DOS IPÊS.",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-10-05",
-      "obs": "Definir fluxos de pagamento",
+      "obs": "planejar toda a ação e direção até a abertura de vendas.",
       "origem": ""
     },
     {
