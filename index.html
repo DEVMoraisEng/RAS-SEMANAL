@@ -101,6 +101,7 @@ main.wrap{padding:40px 22px 60px}
 .dtbl tr:hover td{background:#FAFCFB}
 .dtbl .c-atv{min-width:280px}
 .dtbl .c-obra-nome{min-width:240px;white-space:normal}
+.dtbl .c-mes{white-space:nowrap;color:var(--muted);font-size:12.5px}
 .dtbl tr.prioritaria td{background:#FFF6E0}
 .dtbl tr.prioritaria td:first-child{border-left:3px solid #E0A100}
 .dtbl .c-atv.done{text-decoration:line-through;color:var(--muted)}
@@ -514,7 +515,7 @@ function corStatusObra(status){
   return OBRA_STPALETTE[idx % OBRA_STPALETTE.length];
 }
 
-const VERSAO_SITE = "v7 · 07/10/2026 · aviso documentos";
+const VERSAO_SITE = "v8 · 07/10/2026 · todas as obras";
 const RAS_ATUAL = "semanal";
 
 /* ================= REGISTRO DAS RAS (compartilhado entre os 6 sites) =====
@@ -829,23 +830,29 @@ function renderObras(){
   const cur = window._obraMes || (meses.includes(mesHoje) ? mesHoje : (meses[meses.length-1]||""));
   // "aberto" = tudo exceto Demanda Finalizada · "finalizadas" = só Demanda Finalizada
   const view = window._obraView || "aberto";
-  const porMes = OBRAS.filter(o=>!cur || o.mes===cur);
-  const filtered = porMes.filter(o => view==="finalizadas"
+  // "todas" (07/10/2026) = todas as obras de todos os meses, qualquer status.
+  const todas = view==="todas";
+  const porMes = todas ? OBRAS.slice() : OBRAS.filter(o=>!cur || o.mes===cur);
+  const filtered = todas ? porMes : porMes.filter(o => view==="finalizadas"
     ? o.status===OBRA_STATUS_FINAL
     : o.status!==OBRA_STATUS_FINAL);
+  // Na aba Todas: mês mais recente primeiro, depois o endereço.
+  if(todas) filtered.sort((a,b)=> mesChave(b.mes)-mesChave(a.mes) || String(a.nome||"").localeCompare(String(b.nome||""),"pt-BR",{numeric:true}));
+  const nCol = todas ? 7 : 6;
   const cidades = [...new Set(filtered.map(o=>o.cidade).filter(Boolean))].sort();
 
   const viewSwitch = `<div class="obra-viewswitch">
     <button class="wbtn ${view==="aberto"?"on":""}" onclick="window._obraView='aberto';renderObras()">Em aberto</button>
     <button class="wbtn ${view==="finalizadas"?"on":""}" onclick="window._obraView='finalizadas';renderObras()">Finalizadas</button>
+    <button class="wbtn ${view==="todas"?"on":""}" onclick="window._obraView='todas';renderObras()">Todas</button>
   </div>`;
 
   const filter = `<div class="filters">
     <div class="left">
       <label style="font-size:12px;color:var(--muted)">Mês:</label>
-      <select onchange="window._obraMes=this.value;renderObras()">
+      ${todas ? `<span style="font-size:13px;font-weight:600;color:var(--navy)">Todos os meses</span>` : `<select onchange="window._obraMes=this.value;renderObras()">
         ${meses.map(m=>`<option ${m===cur?"selected":""}>${m}</option>`).join("")}
-      </select>
+      </select>`}
       <span style="color:var(--muted);font-size:12px">${filtered.length} obra(s)</span>${(()=>{const n=filtered.filter(o=>o.doc&&o.doc.status!=="ok").length;return n?`<span class="doc-cont">⚠ ${n} sem par em Documentos</span>`:"";})()}
     </div>
     <button class="btn-add-top" onclick="openModalObra()">+ Nova obra</button>
@@ -861,6 +868,7 @@ function renderObras(){
     const lbSel = liberadaOpcoes(lbAtual).map(v=>`<option ${v===lbAtual?"selected":""}>${escapeHtml(v)}</option>`).join("");
     return `<tr class="${ehLiberada(lbAtual)?'prioritaria':''}">
       <td class="c-obra-nome">${escapeHtml(o.nome)}${avisoDoc(o)}</td>
+      ${todas?`<td class="c-mes">${escapeHtml(o.mes||"—")}</td>`:""}
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
       <td><input type="date" value="${escapeAttr((o.previsao||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','previsao',this.value)"></td>
       <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','liberada',this.value)" title="LIBERADA P/ INÍCIO">${lbSel}</select></td>
@@ -871,15 +879,15 @@ function renderObras(){
 
   let html = viewSwitch + filter;
   if(!cidades.length){
-    const msgVazio = view==="finalizadas" ? "Nenhuma obra finalizada neste mês." : "Nenhuma obra em aberto neste mês.";
-    html += `<div class="city-board"><table class="dtbl"><tbody><tr class="empty-row"><td colspan="6">${msgVazio}</td></tr></tbody></table></div>`;
+    const msgVazio = todas ? "Nenhuma obra cadastrada." : view==="finalizadas" ? "Nenhuma obra finalizada neste mês." : "Nenhuma obra em aberto neste mês.";
+    html += `<div class="city-board"><table class="dtbl"><tbody><tr class="empty-row"><td colspan="${nCol}">${msgVazio}</td></tr></tbody></table></div>`;
   }
   cidades.forEach(cidade=>{
     const rowsCidade = filtered.filter(o=>o.cidade===cidade);
     const setores = [...new Set(rowsCidade.map(o=>o.setor).filter(Boolean))].sort();
     let body="";
     setores.forEach(setor=>{
-      body += `<tr class="setor-row"><td colspan="6">${escapeHtml(setor)}</td></tr>`;
+      body += `<tr class="setor-row"><td colspan="${nCol}">${escapeHtml(setor)}</td></tr>`;
       rowsCidade.filter(o=>o.setor===setor).forEach(o=>{ body += linhaObra(o); });
     });
     const semSetor = rowsCidade.filter(o=>!o.setor);
@@ -887,7 +895,7 @@ function renderObras(){
     html += `<div class="city-board">
       <div class="chead"><span>${cidade}</span><span class="cmeta">${rowsCidade.length} obra(s)</span></div>
       <div class="dtbl-wrap"><table class="dtbl">
-        <thead><tr><th>Obra</th><th>Status</th><th>Previsão de início</th><th>LIBERADA P/ INÍCIO</th><th>Obs</th><th></th></tr></thead>
+        <thead><tr><th>Obra</th>${todas?"<th>Mês</th>":""}<th>Status</th><th>Previsão de início</th><th>LIBERADA P/ INÍCIO</th><th>Obs</th><th></th></tr></thead>
         <tbody>${body}</tbody>
       </table></div>
     </div>`;
