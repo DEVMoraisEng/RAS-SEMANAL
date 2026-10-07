@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T14:17:04",
+  "geradoEm": "2026-10-07T14:36:13",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3f2c5ab5-32d3-817f-8c9a-f4fd91237b8f",
+      "nome": "Definir obras do Florença a iniciar",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3f2c5ab5-32d3-812d-bf12-d35c9759648c",
       "nome": "Iniciar abertura de novas SCPs",
@@ -1323,7 +1334,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-05",
       "obs": "planejar toda a ação e direção até a abertura de vendas.",
       "origem": ""

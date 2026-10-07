@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T14:17:04",
+  "geradoEm": "2026-10-07T14:36:13",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -12,6 +12,50 @@
     "NÃO"
   ],
   "obras": [
+    {
+      "id": "3f2c5ab5-32d3-81f3-b637-ce3e7c757483",
+      "nome": "PR 06 QD 07 LT 29",
+      "cidade": "Goiânia",
+      "setor": "Portal do Oriente",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-11-03",
+      "liberada": "NÃO",
+      "obs": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-8140-a062-d58d593a4b7f",
+      "nome": "PR 06 QD 07 LT 28",
+      "cidade": "Goiânia",
+      "setor": "Portal do Oriente",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "",
+      "liberada": "NÃO",
+      "obs": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-814d-9476-f5663c2630cf",
+      "nome": "PR 06 QD 07 LT 27",
+      "cidade": "Goiânia",
+      "setor": "Portal do Oriente",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "",
+      "liberada": "NÃO",
+      "obs": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-810e-b7d1-e0bd1e4c82bd",
+      "nome": "FL 27 QD 37 LT 09",
+      "cidade": "Senador Canedo",
+      "setor": "FLORENCA",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-11-03",
+      "liberada": "NÃO",
+      "obs": ""
+    },
     {
       "id": "3f2c5ab5-32d3-8163-b291-fba76e4cb206",
       "nome": "TB 19 QD 50 LT 16",
