@@ -216,19 +216,85 @@ def _achar_coluna(schema, *fragmentos):
                 return nome
     return None
 
+def _partes_end(k):
+    """'TB 19 QD 50 LT 16 A' -> ('TB 19', '50', '16 A')"""
+    t = k.split()
+    pre, qd, lt, modo = [], [], [], "pre"
+    for x in t:
+        if x == "QD": modo = "qd"; continue
+        if x == "LT": modo = "lt"; continue
+        {"pre": pre, "qd": qd, "lt": lt}[modo].append(x)
+    return " ".join(pre), " ".join(qd), " ".join(lt)
+
+def _sugerir(k, setor_ras, docs):
+    """Candidatos de DOCUMENTOS para um endereço da RAS sem par exato.
+    Só sugere o MESMO lote: LT igual e, se os dois tiverem quadra, QD igual
+    (lote vizinho nunca vira sugestão). Entre esses, ordena pela semelhança
+    do texto e dá preferência a quem está no mesmo setor."""
+    from difflib import SequenceMatcher
+    pre, qd, lt = _partes_end(k)
+    if not lt:
+        return []
+    sr = _sa(setor_ras).upper()
+    cand = []
+    for dk, d in docs.items():
+        dpre, dqd, dlt = _partes_end(dk)
+        if dlt != lt:
+            continue
+        if qd and dqd and qd != dqd:
+            continue
+        sc = SequenceMatcher(None, k, dk).ratio()
+        ds = _sa(d["setor"]).upper()
+        if sr and ds and (sr in ds or ds in sr or sr.split()[0] == ds.split()[0]):
+            sc += 0.15
+        if pre and dpre and pre.split()[0] == dpre.split()[0]:
+            sc += 0.05
+        if sc >= 0.6:
+            cand.append((sc, d))
+    cand.sort(key=lambda x: -x[0])
+    return [{"endereco": d["endereco"], "setor": d["setor"]} for _, d in cand[:2]]
+
 def sync_previsao_documentos(obras):
+    """Devolve {chave_endereco: {"status": ok|sugestao|nao_encontrado, ...}}
+    para o site mostrar o aviso — ou None se não deu para ler DOCUMENTOS."""
     if not DB_DOCS:
         print("PREVISÃO -> DOCUMENTOS: DOCUMENTOS_DB_ID vazio, pulando.")
-        return
+        return None
     try:
         schema = _req("GET", f"/databases/{DB_DOCS}").get("properties", {})
         c_tit = next((n for n, p in schema.items() if p.get("type") == "title"), None)
         c_prev = _achar_coluna(schema, "PREVISÃO DE INÍCIO DE OBRA", "PREVISAO DE INICIO DE OBRA",
                                "PREVISÃO DE INÍCIO DA OBRA", "PREVISÃO DE INÍCIO")
+        c_setor = _achar_coluna(schema, "SETOR")
         if not c_tit or not c_prev:
             print(f"PREVISÃO -> DOCUMENTOS: coluna não encontrada (título={c_tit!r} previsão={c_prev!r}).")
-            return
+            return None
         tipo = schema[c_prev]["type"]
+        if tipo not in ("date", "rich_text"):
+            print(f"PREVISÃO -> DOCUMENTOS: coluna {c_prev!r} é do tipo {tipo!r}, não sei gravar.")
+
+        # DOCUMENTOS: chave -> páginas
+        docs, paginas = {}, {}
+        for pg in query(DB_DOCS):
+            P = pg["properties"]
+            end = pval(P.get(c_tit))
+            k = chave_endereco(end)
+            if not k:
+                continue
+            docs.setdefault(k, {"endereco": end, "setor": pval(P.get(c_setor)) if c_setor else ""})
+            paginas.setdefault(k, []).append(pg)
+
+        # situação de cada obra da RAS (para o aviso no site)
+        info = {}
+        for o in obras:
+            k = chave_endereco(o.get("nome"))
+            if not k or k in info:
+                continue
+            if k in docs:
+                info[k] = {"status": "ok"}
+            else:
+                sug = _sugerir(k, o.get("setor"), docs)
+                info[k] = {"status": "sugestao", "sugestoes": sug} if sug else {"status": "nao_encontrado"}
 
         # endereço da RAS -> data (só obras com data)
         alvo, conflito = {}, set()
@@ -244,39 +310,38 @@ def sync_previsao_documentos(obras):
             print(f"  ! {k}: aparece mais de uma vez na RAS com datas diferentes — não alterado.")
             alvo.pop(k, None)
 
-        atualizadas, iguais, achadas = 0, 0, set()
-        for pg in query(DB_DOCS):
-            P = pg["properties"]
-            k = chave_endereco(pval(P.get(c_tit)))
-            if k not in alvo:
-                continue
-            achadas.add(k)
-            atual = (pval(P.get(c_prev)) or "")[:10] if tipo == "date" else pval(P.get(c_prev))
-            novo = alvo[k]
-            if tipo == "date":
-                if atual == novo:
-                    iguais += 1; continue
-                valor = {"date": {"start": novo}}
-            elif tipo == "rich_text":
-                txt = "/".join(reversed(novo.split("-")))      # dd/mm/aaaa
-                if (atual or "").strip() == txt:
-                    iguais += 1; continue
-                valor = {"rich_text": [{"type": "text", "text": {"content": txt}}]}
-            else:
-                print(f"PREVISÃO -> DOCUMENTOS: coluna {c_prev!r} é do tipo {tipo!r}, não sei gravar.")
-                return
-            _req("PATCH", f"/pages/{pg['id']}", {"properties": {c_prev: valor}})
-            atualizadas += 1
-            print(f"  ✓ {pval(P.get(c_tit))}: {atual or '(vazio)'} -> {novo}")
-            time.sleep(0.35)
-        sem_doc = sorted(set(alvo) - achadas)
-        print(f"PREVISÃO -> DOCUMENTOS: {atualizadas} atualizada(s), {iguais} já certas, "
-              f"{len(sem_doc)} obra(s) da RAS sem endereço igual em DOCUMENTOS.")
-        for k in sem_doc:
-            print(f"  · sem par em DOCUMENTOS: {k}")
+        atualizadas, iguais = 0, 0
+        if tipo in ("date", "rich_text"):
+            for k, novo in alvo.items():
+                for pg in paginas.get(k, []):
+                    P = pg["properties"]
+                    atual = pval(P.get(c_prev))
+                    if tipo == "date":
+                        if (atual or "")[:10] == novo:
+                            iguais += 1; continue
+                        valor = {"date": {"start": novo}}
+                    else:
+                        txt = "/".join(reversed(novo.split("-")))      # dd/mm/aaaa
+                        if (atual or "").strip() == txt:
+                            iguais += 1; continue
+                        valor = {"rich_text": [{"type": "text", "text": {"content": txt}}]}
+                    _req("PATCH", f"/pages/{pg['id']}", {"properties": {c_prev: valor}})
+                    atualizadas += 1
+                    print(f"  ✓ {pval(P.get(c_tit))}: {atual or '(vazio)'} -> {novo}")
+                    time.sleep(0.35)
+        n_sug = sum(1 for v in info.values() if v["status"] == "sugestao")
+        n_nao = sum(1 for v in info.values() if v["status"] == "nao_encontrado")
+        print(f"PREVISÃO -> DOCUMENTOS: {atualizadas} atualizada(s), {iguais} já certas | "
+              f"sem par: {n_sug} com sugestão, {n_nao} não encontrada(s).")
+        for k, v in sorted(info.items()):
+            if v["status"] == "sugestao":
+                print(f"  ? {k}  ->  talvez {v['sugestoes'][0]['endereco']}")
+            elif v["status"] == "nao_encontrado":
+                print(f"  · {k}: não encontrado em DOCUMENTOS")
+        return info
     except (Exception, SystemExit) as e:
         print(f"PREVISÃO -> DOCUMENTOS: AVISO, sincronização não concluída ({e}). Os JSON da RAS saíram normalmente.")
-
+        return None
 
 def main():
     if not TOKEN:
@@ -298,6 +363,11 @@ def main():
     liberada_opts = status_options(DB_OBRAS, "LIBERADA PARA INICIAR",
                                    "Liberada para iniciar", "Liberada",
                                    "Prioritária", "Prioritaria")
+    # Aviso no site: obra da RAS que não achou o endereço em DOCUMENTOS.
+    docinfo = sync_previsao_documentos(obras)
+    if docinfo is not None:
+        for o in obras:
+            o["doc"] = docinfo.get(chave_endereco(o.get("nome")), {"status": "nao_encontrado"})
     json.dump({"geradoEm": now, "statusOptions": obras_status,
                "liberadaOptions": liberada_opts, "obras": obras},
               open("dist/data_obras.json", "w", encoding="utf-8"),
@@ -305,7 +375,6 @@ def main():
     print(f"data_obras.json       -> {len(obras)} obras | status: {obras_status}")
     print(f"  liberada: {liberada_opts}")
 
-    sync_previsao_documentos(obras)
 
 if __name__ == "__main__":
     main()
