@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T14:00:40",
+  "geradoEm": "2026-10-07T14:17:04",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -13,14 +13,47 @@
   ],
   "obras": [
     {
+      "id": "3f2c5ab5-32d3-8163-b291-fba76e4cb206",
+      "nome": "TB 19 QD 50 LT 16",
+      "cidade": "Senador Canedo",
+      "setor": "Solar Ville",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-11-03",
+      "liberada": "NÃO",
+      "obs": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-81e9-8bd0-d72d6983720e",
+      "nome": "TB 19 QD 50 LT 15",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-11-03",
+      "liberada": "NÃO",
+      "obs": ""
+    },
+    {
+      "id": "3f2c5ab5-32d3-8135-8a1a-f1bd60db419b",
+      "nome": "TB 19 QD 50 LT 14",
+      "cidade": "Senador Canedo",
+      "setor": "Terrabela",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-11-03",
+      "liberada": "NÃO",
+      "obs": ""
+    },
+    {
       "id": "3cdc5ab5-32d3-810b-89b0-f35486adf935",
       "nome": "52 QD 81 LT 10",
       "cidade": "Goiânia",
       "setor": "Cond. Esmeraldas",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-10-12",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -30,7 +63,7 @@
       "setor": "Petropolis",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "previsao": "",
+      "previsao": "2026-11-03",
       "liberada": "NÃO",
       "obs": "ESTUDOS - FINALIZADO"
     },
@@ -41,7 +74,7 @@
       "setor": "Petropolis",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "previsao": "",
+      "previsao": "2026-11-03",
       "liberada": "NÃO",
       "obs": "ESTUDOS - FINALIZADO"
     },
@@ -52,7 +85,7 @@
       "setor": "Petropolis",
       "mes": "Setembro/2026",
       "status": "Nova Inclusão",
-      "previsao": "",
+      "previsao": "2026-11-03",
       "liberada": "NÃO",
       "obs": "ESTUDOS - FINALIZADO"
     },
@@ -63,7 +96,7 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
+      "previsao": "2026-11-16",
       "liberada": "NÃO",
       "obs": ""
     },
@@ -74,7 +107,7 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
+      "previsao": "2026-11-16",
       "liberada": "NÃO",
       "obs": ""
     },
@@ -85,7 +118,7 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
+      "previsao": "2026-10-12",
       "liberada": "Sim",
       "obs": ""
     },
@@ -96,7 +129,7 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
+      "previsao": "2026-10-12",
       "liberada": "Sim",
       "obs": ""
     },
@@ -107,8 +140,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "Sim",
+      "previsao": "2026-11-03",
+      "liberada": "NÃO",
       "obs": ""
     },
     {
@@ -118,7 +151,7 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "previsao": "",
+      "previsao": "2026-10-30",
       "liberada": "NÃO",
       "obs": ""
     },
@@ -129,8 +162,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-10-13",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -140,7 +173,7 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
-      "previsao": "",
+      "previsao": "2026-11-02",
       "liberada": "NÃO",
       "obs": ""
     },
@@ -151,7 +184,7 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
-      "previsao": "",
+      "previsao": "2026-11-02",
       "liberada": "NÃO",
       "obs": ""
     },
@@ -162,7 +195,7 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
+      "previsao": "2026-10-12",
       "liberada": "Sim",
       "obs": ""
     },
@@ -173,8 +206,8 @@
       "setor": "Terrabela",
       "mes": "Setembro/2026",
       "status": "Projeto Finalizado",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-10-13",
+      "liberada": "Sim",
       "obs": "Orçamento arrimo liberado"
     },
     {
@@ -184,8 +217,8 @@
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-09-30",
+      "liberada": "Sim",
       "obs": "3"
     },
     {
@@ -195,8 +228,8 @@
       "setor": "Cond. Esmeraldas",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-09-01",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -206,8 +239,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-09-01",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -217,8 +250,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-09-01",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -228,8 +261,8 @@
       "setor": "Solar Ville",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-09-01",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -239,8 +272,8 @@
       "setor": "Ravena",
       "mes": "Agosto/2026",
       "status": "Projeto Finalizado",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-09-28",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -250,7 +283,7 @@
       "setor": "Terrabela",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
+      "previsao": "2026-11-02",
       "liberada": "NÃO",
       "obs": ""
     },
@@ -261,8 +294,8 @@
       "setor": "Terrabela",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-10-07",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -272,8 +305,8 @@
       "setor": "Terrabela",
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
-      "previsao": "",
-      "liberada": "NÃO",
+      "previsao": "2026-10-07",
+      "liberada": "Sim",
       "obs": ""
     },
     {
@@ -284,7 +317,7 @@
       "mes": "Agosto/2026",
       "status": "Demanda Finalizada",
       "previsao": "",
-      "liberada": "NÃO",
+      "liberada": "Sim",
       "obs": ""
     }
   ]
