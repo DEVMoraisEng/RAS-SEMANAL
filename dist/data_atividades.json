@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-07T07:46:59",
+  "geradoEm": "2026-10-07T12:53:52",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3f2c5ab5-32d3-81d1-84e7-caa22307586c",
+      "nome": "Finalização das demandas do DECORADO",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-05",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3f0c5ab5-32d3-8120-a8d0-e69e3d75e4ba",
       "nome": "FINALIZAR OS PROJETOS EXECUTIVOS DO RESERVA DOS IPÊS",
@@ -267,8 +278,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-05",
+      "status": "Concluído",
+      "semana": "2026-09-28",
       "obs": "",
       "origem": ""
     },
@@ -344,8 +355,8 @@
       "setor": "Pós Obra",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-10-05",
+      "status": "Concluído",
+      "semana": "2026-09-28",
       "obs": "",
       "origem": ""
     },
