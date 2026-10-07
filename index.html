@@ -125,6 +125,12 @@ main.wrap{padding:40px 22px 60px}
 .c-del2{text-align:center;width:66px;white-space:nowrap}
 .c-del2 .delbtn+.delbtn{margin-left:4px}
 .editbtn:hover{background:#EEF6F5;color:var(--navy);border-color:var(--verde)}
+.doc-aviso{display:block;margin-top:5px;font-size:11.5px;line-height:1.35;color:#7A5200;background:#FFF6E0;border:1px solid #F1DDA8;border-radius:6px;padding:4px 7px;white-space:normal}
+.doc-aviso.nao{color:#9B2C22;background:#FCECEA;border-color:#F1C4BE}
+.doc-aviso b{font-weight:700}
+.doc-usar{margin-left:6px;border:1px solid #D9B65C;background:#fff;color:#7A5200;border-radius:5px;font:inherit;font-size:11px;font-weight:700;padding:1px 7px;cursor:pointer}
+.doc-usar:hover{background:#FFEFC2}
+.doc-cont{font-size:12px;color:#9B2C22;font-weight:600;margin-left:6px}
 .empty-row td{color:var(--muted);font-size:12px;text-align:center;padding:16px 0}
 
 /* ===== obras ===== */
@@ -508,7 +514,7 @@ function corStatusObra(status){
   return OBRA_STPALETTE[idx % OBRA_STPALETTE.length];
 }
 
-const VERSAO_SITE = "v6 · 07/10/2026 · editar obra";
+const VERSAO_SITE = "v7 · 07/10/2026 · aviso documentos";
 const RAS_ATUAL = "semanal";
 
 /* ================= REGISTRO DAS RAS (compartilhado entre os 6 sites) =====
@@ -840,7 +846,7 @@ function renderObras(){
       <select onchange="window._obraMes=this.value;renderObras()">
         ${meses.map(m=>`<option ${m===cur?"selected":""}>${m}</option>`).join("")}
       </select>
-      <span style="color:var(--muted);font-size:12px">${filtered.length} obra(s)</span>
+      <span style="color:var(--muted);font-size:12px">${filtered.length} obra(s)</span>${(()=>{const n=filtered.filter(o=>o.doc&&o.doc.status!=="ok").length;return n?`<span class="doc-cont">⚠ ${n} sem par em Documentos</span>`:"";})()}
     </div>
     <button class="btn-add-top" onclick="openModalObra()">+ Nova obra</button>
   </div>`;
@@ -854,7 +860,7 @@ function renderObras(){
     const lbAtual = o.liberada || "";
     const lbSel = liberadaOpcoes(lbAtual).map(v=>`<option ${v===lbAtual?"selected":""}>${escapeHtml(v)}</option>`).join("");
     return `<tr class="${ehLiberada(lbAtual)?'prioritaria':''}">
-      <td class="c-obra-nome">${escapeHtml(o.nome)}</td>
+      <td class="c-obra-nome">${escapeHtml(o.nome)}${avisoDoc(o)}</td>
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
       <td><input type="date" value="${escapeAttr((o.previsao||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','previsao',this.value)"></td>
       <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','liberada',this.value)" title="LIBERADA P/ INÍCIO">${lbSel}</select></td>
@@ -890,6 +896,30 @@ function renderObras(){
   document.getElementById("obras").innerHTML = html;
 }
 
+/* AVISO DOCUMENTOS (07/10/2026): o fetch_ras.py confere cada obra com a base
+   DOCUMENTOS pelo endereço (é por ele que a Previsão de início vai para a
+   PREVISÃO DE INÍCIO DE OBRA de lá) e grava o resultado em o.doc:
+     ok             -> achou, nada aparece;
+     sugestao       -> não achou igual, mas existe o MESMO lote escrito de outro
+                       jeito (LT e QD iguais) — mostra e oferece "Usar este";
+     nao_encontrado -> não existe nada parecido em DOCUMENTOS.
+   Sem o.doc (sincronização não rodou) também não aparece nada. */
+function avisoDoc(o){
+  const d = o.doc; if(!d || d.status==="ok") return "";
+  if(d.status==="sugestao" && d.sugestoes && d.sugestoes.length){
+    const s0 = d.sugestoes[0];
+    return `<span class="doc-aviso">⚠ Não achei este endereço em Documentos. Seria <b>${escapeHtml(s0.endereco)}</b>${s0.setor?` (${escapeHtml(s0.setor)})`:""}?<button class="doc-usar" onclick="usarSugestaoDoc('${o.id}')">Usar este</button></span>`;
+  }
+  return `<span class="doc-aviso nao">⚠ Endereço não encontrado em Documentos — a previsão de início não vai para lá. Confira se está escrito igual.</span>`;
+}
+function usarSugestaoDoc(id){
+  const o = OBRAS.find(x=>x.id===id); if(!o || !o.doc || !o.doc.sugestoes) return;
+  const novo = o.doc.sugestoes[0].endereco;
+  if(!confirm(`Renomear a obra\n\n${o.nome}\n→ ${novo}\n\nA previsão de início passa a ir para essa linha de Documentos.`)) return;
+  changeFieldObra(id, "nome", novo);
+  toast("Endereço corrigido" + (WRITE_ENDPOINT ? RasOffline.onde() : " (modo teste — só na tela)."));
+}
+
 function changeFieldObra(id, field, value){
   const o = OBRAS.find(x=>x.id===id); if(!o) return;
   const local = String(id).startsWith("local-");
@@ -898,6 +928,12 @@ function changeFieldObra(id, field, value){
     renderObras(); return;
   }
   o[field] = value;
+  // Endereço mudou: se for a sugestão de Documentos o aviso some; se for outro
+  // texto, o aviso some até a próxima atualização conferir de novo.
+  if(field==="nome" && o.doc){
+    const sug = (o.doc.sugestoes||[]).map(x=>x.endereco);
+    o.doc = sug.includes(value) ? {status:"ok"} : null;
+  }
   /* renderObras() aqui é o que faz a OBSERVAÇÃO aparecer: ela é editada num
      modal, então sem repintar a tabela a célula continuava mostrando o texto
      velho (ou "—") até recarregar a página. Nos outros campos ninguém notava,
