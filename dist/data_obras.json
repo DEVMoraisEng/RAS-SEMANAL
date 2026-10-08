@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-08T20:58:35",
+  "geradoEm": "2026-10-08T21:49:27",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -126,7 +126,7 @@
     },
     {
       "id": "3cdc5ab5-32d3-81c2-b77a-c078033018f5",
-      "nome": "MACEIO QD LT 71 C",
+      "nome": "MACEIO QD 129 LT 71C",
       "cidade": "Goiânia",
       "setor": "Petropolis",
       "mes": "Outubro/2026",
@@ -135,18 +135,12 @@
       "liberada": "NÃO",
       "obs": "ESTUDOS - FINALIZADO",
       "doc": {
-        "status": "sugestao",
-        "sugestoes": [
-          {
-            "endereco": "MACEIO QD 129 LT 71C",
-            "setor": "JARDIM PETROPOLIS"
-          }
-        ]
+        "status": "ok"
       }
     },
     {
       "id": "3cdc5ab5-32d3-8115-a83f-f3c8eac209a8",
-      "nome": "MACEIO QD LT 71 B",
+      "nome": "MACEIO QD 129 LT 71B",
       "cidade": "Goiânia",
       "setor": "Petropolis",
       "mes": "Outubro/2026",
@@ -155,18 +149,12 @@
       "liberada": "NÃO",
       "obs": "ESTUDOS - FINALIZADO",
       "doc": {
-        "status": "sugestao",
-        "sugestoes": [
-          {
-            "endereco": "MACEIO QD 129 LT 71B",
-            "setor": "JARDIM PETROPOLIS"
-          }
-        ]
+        "status": "ok"
       }
     },
     {
       "id": "3cdc5ab5-32d3-81f7-a790-dd6c639156e1",
-      "nome": "MACEIO QD LT 71 A",
+      "nome": "MACEIO QD 129 LT 71A",
       "cidade": "Goiânia",
       "setor": "Petropolis",
       "mes": "Outubro/2026",
@@ -175,13 +163,7 @@
       "liberada": "NÃO",
       "obs": "ESTUDOS - FINALIZADO",
       "doc": {
-        "status": "sugestao",
-        "sugestoes": [
-          {
-            "endereco": "MACEIO QD 129 LT 71A",
-            "setor": "JARDIM PETROPOLIS"
-          }
-        ]
+        "status": "ok"
       }
     },
     {
