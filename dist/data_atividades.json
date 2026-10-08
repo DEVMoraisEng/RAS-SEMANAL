@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-08T20:16:51",
+  "geradoEm": "2026-10-08T20:58:35",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3f3c5ab5-32d3-81e4-bb94-e6ac2ac687bc",
+      "nome": "Vistoria Cliente - Fazer online \n\nCriar no portal da morais",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-15",
+      "obs": "",
+      "origem": "Enviada de › RAS Obras › Isaac"
+    },
     {
       "id": "3f2c5ab5-32d3-817f-8c9a-f4fd91237b8f",
       "nome": "Definir obras do Florença a iniciar",
