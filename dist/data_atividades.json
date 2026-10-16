@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-16T15:53:04",
+  "geradoEm": "2026-10-16T19:03:24",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -69,7 +69,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-12",
       "obs": "",
       "origem": ""
@@ -80,7 +80,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-12",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
@@ -212,7 +212,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-10-12",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
