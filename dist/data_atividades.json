@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T07:24:36",
+  "geradoEm": "2026-10-19T10:21:31",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3fec5ab5-32d3-81a1-b72a-fbd7e5f5354e",
+      "nome": "Gerar desejo de compra para o dia 31. dia D",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3f3c5ab5-32d3-81e4-bb94-e6ac2ac687bc",
       "nome": "Vistoria Cliente - Fazer online \n\nCriar no portal da morais",
@@ -54,7 +65,7 @@
     },
     {
       "id": "3f2c5ab5-32d3-810c-9f63-e13736c89f55",
-      "nome": "Focar nas casas de Goiânia",
+      "nome": "Gestão das casas que iram entrar para vender ainda esse mês.",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
@@ -87,7 +98,7 @@
     },
     {
       "id": "3f2c5ab5-32d3-81b8-a9d8-c5467a5f1012",
-      "nome": "Retornar todos os leads da campanha",
+      "nome": "Finalizar planilha de leads ação META",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
