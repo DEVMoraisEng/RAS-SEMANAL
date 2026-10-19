@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T07:20:08",
+  "geradoEm": "2026-10-19T07:24:36",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -14,8 +14,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-15",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": "Enviada de › RAS Obras › Isaac"
     },
@@ -26,7 +26,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -37,7 +37,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
     },
@@ -48,7 +48,7 @@
       "responsavel": "Lohany",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -59,7 +59,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -92,7 +92,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
     },
@@ -103,7 +103,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -114,7 +114,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -125,7 +125,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -136,7 +136,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -147,7 +147,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -345,7 +345,7 @@
       "responsavel": "Lohany",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "Em fase de testes",
       "origem": ""
     },
@@ -664,7 +664,7 @@
       "responsavel": "Paula",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -697,7 +697,7 @@
       "responsavel": "Felipe",
       "prioridade": "Alta",
       "status": "Em Andamento",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -917,7 +917,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-12",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
