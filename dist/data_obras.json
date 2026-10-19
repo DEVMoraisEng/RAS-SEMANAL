@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T13:03:12",
+  "geradoEm": "2026-10-19T13:33:07",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -33,9 +33,9 @@
       "setor": "Portal do Oriente",
       "mes": "Outubro/2026",
       "status": "Projeto Em Andamento",
-      "previsao": "0002-11-03",
+      "previsao": "2026-11-03",
       "liberada": "NÃO",
-      "obs": "ARRUMAR O ANO",
+      "obs": "",
       "doc": {
         "status": "ok"
       }
