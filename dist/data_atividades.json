@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T10:21:31",
+  "geradoEm": "2026-10-19T13:03:12",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3fec5ab5-32d3-811e-b9e1-f03bddfafade",
+      "nome": "Levantamento e conferência dos gastos relacionados ao Decorado e aos Eventos para especificação de real e exata de cada um",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3fec5ab5-32d3-81a1-b72a-fbd7e5f5354e",
       "nome": "Gerar desejo de compra para o dia 31. dia D",
@@ -58,7 +69,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-19",
       "obs": "",
       "origem": ""
@@ -135,7 +146,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-19",
       "obs": "",
       "origem": ""
