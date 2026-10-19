@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T15:03:03",
+  "geradoEm": "2026-10-19T16:11:58",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3fec5ab5-32d3-81b2-af2f-d914356be279",
+      "nome": "CNPJ Mouras Dantas com a IS ENGENHARIA esta causando conflito nas compras e pode gerar outros transtornos",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3fec5ab5-32d3-811e-b9e1-f03bddfafade",
       "nome": "Levantamento e conferência dos gastos relacionados ao Decorado e aos Eventos para especificação de real e exata de cada um",
