@@ -870,7 +870,7 @@ function renderObras(){
       <td class="c-obra-nome">${escapeHtml(o.nome)}${avisoDoc(o)}</td>
       ${todas?`<td class="c-mes">${escapeHtml(o.mes||"—")}</td>`:""}
       <td><select class="st-select" style="background:${sb};color:${st}" onchange="changeFieldObra('${o.id}','status',this.value)">${stSel}</select></td>
-      <td><input type="date" value="${escapeAttr((o.previsao||'').slice(0,10))}" onchange="changeFieldObra('${o.id}','previsao',this.value)"></td>
+      <td><input type="date" value="${escapeAttr((o.previsao||'').slice(0,10))}" onblur="salvarPrevisao('${o.id}',this)" onkeydown="if(event.key==='Enter')this.blur()"></td>
       <td style="text-align:center"><select class="pr-select" onchange="changeFieldObra('${o.id}','liberada',this.value)" title="LIBERADA P/ INÍCIO">${lbSel}</select></td>
       <td class="c-obs"><div class="obs-cell${o.obs?'':' vazio'}" title="Clique para ver/editar" onclick="abrirObs('obra','${o.id}')">${o.obs?escapeHtml(o.obs):'—'}</div></td>
       <td class="c-del2"><button class="delbtn editbtn" title="Editar endereço, setor, cidade e mês" onclick="openModalObra('${o.id}')">✏️</button><button class="delbtn" title="Excluir obra" onclick="excluirObra('${o.id}')">🗑</button></td>
@@ -926,6 +926,23 @@ function usarSugestaoDoc(id){
   if(!confirm(`Renomear a obra\n\n${o.nome}\n→ ${novo}\n\nA previsão de início passa a ir para essa linha de Documentos.`)) return;
   changeFieldObra(id, "nome", novo);
   toast("Endereço corrigido" + (WRITE_ENDPOINT ? RasOffline.onde() : " (modo teste — só na tela)."));
+}
+
+/* 19/10/26: data de PREVISÃO só grava quando sai do campo (ou Enter). O
+   Chrome dispara "change" a cada número digitado do ano (0002, 0020...) e o
+   renderObras() redesenhava a tabela no meio da digitação — não dava para
+   escrever o ano. Ano fora de 1900–2100 (digitação pela metade) não grava. */
+function salvarPrevisao(id, el){
+  const o = OBRAS.find(x=>x.id===id); if(!o) return;
+  const v = el.value || "";
+  if(v === (o.previsao||"").slice(0,10)) return;
+  const ano = parseInt(v.slice(0,4), 10);
+  if(v && !(ano >= 1900 && ano <= 2100)){
+    toast("Ano inválido — confira a data.");
+    el.value = (o.previsao||"").slice(0,10);
+    return;
+  }
+  changeFieldObra(id, "previsao", v);
 }
 
 function changeFieldObra(id, field, value){
