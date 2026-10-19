@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T19:14:54",
+  "geradoEm": "2026-10-19T19:49:24",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -13,13 +13,55 @@
   ],
   "obras": [
     {
+      "id": "3fec5ab5-32d3-81f2-be7e-c85c4958250e",
+      "nome": "FL 27 QD 38 LT 23",
+      "cidade": "Senador Canedo",
+      "setor": "FLORENCA",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-10-30",
+      "liberada": "Sim",
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
+    },
+    {
+      "id": "3fec5ab5-32d3-81c5-bad8-d6b80d100cd3",
+      "nome": "FL 27 QD 38 LT 22",
+      "cidade": "Senador Canedo",
+      "setor": "FLORENCA",
+      "mes": "Outubro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-10-30",
+      "liberada": "Sim",
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
+    },
+    {
+      "id": "3fec5ab5-32d3-81d9-82ba-ea05df85ded4",
+      "nome": "FL 27 QD 38 LT 23",
+      "cidade": "Goiânia",
+      "setor": "FLORENCA",
+      "mes": "Novembro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-10-30",
+      "liberada": "Sim",
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
+    },
+    {
       "id": "3f2c5ab5-32d3-81f3-b637-ce3e7c757483",
       "nome": "PR 06 QD 07 LT 29",
       "cidade": "Goiânia",
       "setor": "Portal do Oriente",
       "mes": "Outubro/2026",
       "status": "Projeto Em Andamento",
-      "previsao": "2026-11-03",
+      "previsao": "2026-10-26",
       "liberada": "NÃO",
       "obs": "",
       "doc": {
@@ -33,7 +75,7 @@
       "setor": "Portal do Oriente",
       "mes": "Outubro/2026",
       "status": "Projeto Em Andamento",
-      "previsao": "2026-11-03",
+      "previsao": "2026-10-26",
       "liberada": "NÃO",
       "obs": "",
       "doc": {
@@ -47,7 +89,7 @@
       "setor": "Portal do Oriente",
       "mes": "Outubro/2026",
       "status": "Projeto Em Andamento",
-      "previsao": "2026-11-03",
+      "previsao": "2026-10-26",
       "liberada": "NÃO",
       "obs": "",
       "doc": {
@@ -61,7 +103,7 @@
       "setor": "FLORENCA",
       "mes": "Outubro/2026",
       "status": "Nova Inclusão",
-      "previsao": "2026-11-03",
+      "previsao": "2026-10-30",
       "liberada": "NÃO",
       "obs": "",
       "doc": {

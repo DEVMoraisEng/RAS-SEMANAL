@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T19:14:54",
+  "geradoEm": "2026-10-19T19:49:24",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,61 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3fec5ab5-32d3-810a-88d2-f599a758877e",
+      "nome": "Revisar contrato condomínio",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "3fec5ab5-32d3-81b6-8b72-ce054820d284",
+      "nome": "Revisar contrato condomínio",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3fec5ab5-32d3-81be-b00e-dc8b2051be4b",
+      "nome": "Analisar as propostas (tela de aprovação deve constar como obrigatório)",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
+    },
+    {
+      "id": "3fec5ab5-32d3-81bd-8fab-c9e0cc1bd143",
+      "nome": "Analisar as propostas (tela de aprovação deve constar como obrigatório)",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
+    },
+    {
+      "id": "3fec5ab5-32d3-815e-863b-c26376877267",
+      "nome": "Analisar as propostas (tela de aprovação deve constar como obrigatório)",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3fec5ab5-32d3-81b2-af2f-d914356be279",
       "nome": "CNPJ Mouras Dantas com a IS ENGENHARIA esta causando conflito nas compras e pode gerar outros transtornos",
