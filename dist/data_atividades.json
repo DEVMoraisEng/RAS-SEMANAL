@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T19:49:24",
+  "geradoEm": "2026-10-19T20:12:48",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,50 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "3fec5ab5-32d3-817c-96e9-c245cc519265",
+      "nome": "Plataforma nova (substituir Markedesk)",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
+    },
+    {
+      "id": "3fec5ab5-32d3-8158-b58c-efe4cca16e77",
+      "nome": "Plataforma nova (substituir Markedesk)",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3fec5ab5-32d3-8184-9f15-d3893056c52a",
+      "nome": "Fazer integração com contrato novo",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "3fec5ab5-32d3-81b4-9e3e-da6abe850e82",
+      "nome": "Convite para rodada de negócios",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-19",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3fec5ab5-32d3-810a-88d2-f599a758877e",
       "nome": "Revisar contrato condomínio",
@@ -432,9 +476,9 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-10-19",
-      "obs": "Em fase de testes",
+      "obs": "feito",
       "origem": ""
     },
     {
