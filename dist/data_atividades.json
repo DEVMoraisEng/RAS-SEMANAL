@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-19T16:11:58",
+  "geradoEm": "2026-10-19T19:14:54",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -47,7 +47,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-19",
       "obs": "",
       "origem": "Enviada de › RAS Obras › Isaac"
@@ -146,7 +146,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-19",
       "obs": "",
       "origem": ""
@@ -168,9 +168,9 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-19",
-      "obs": "",
+      "obs": "Aguardando revisão do Isaac (falou que vai me confirmar dia 19/10)",
       "origem": ""
     },
     {
@@ -181,7 +181,7 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-10-19",
-      "obs": "",
+      "obs": "Eu iria começar semana passada, mas o meu setor estava com algumas pendências que eu estava postergando por conta de outras demandas, então resolvi tirar a semana passada apra ajsutar algumas coisas e estou revisando essa semana, creio que na quinta consiga começar com isso",
       "origem": ""
     },
     {
