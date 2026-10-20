@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-20T13:55:53",
+  "geradoEm": "2026-10-20T18:10:43",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -186,7 +186,7 @@
     },
     {
       "id": "3f2c5ab5-32d3-810c-9f63-e13736c89f55",
-      "nome": "Gestão das casas que iram entrar para vender ainda esse mês.",
+      "nome": "Gestão das casas que irão entrar para vender ainda esse mês.",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
