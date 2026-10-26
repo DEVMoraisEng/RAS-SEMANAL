@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-26T18:26:10",
+  "geradoEm": "2026-10-26T18:53:19",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "405c5ab5-32d3-81ee-9411-df76484016a0",
+      "nome": "Criar automação para contrato de ceramica",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Suprimentos › Paula"
+    },
+    {
+      "id": "405c5ab5-32d3-81b2-be2e-e84e4134606a",
+      "nome": "Criar automação para contrato de ceramica",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "3fec5ab5-32d3-817c-96e9-c245cc519265",
       "nome": "Plataforma nova (substituir Markedesk)",
@@ -113,8 +135,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-26",
+      "status": "Concluído",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -124,7 +146,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
@@ -795,7 +817,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
