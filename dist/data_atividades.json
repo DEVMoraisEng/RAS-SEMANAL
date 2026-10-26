@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-26T05:29:50",
+  "geradoEm": "2026-10-26T07:29:51",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -14,8 +14,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
     },
@@ -25,8 +25,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -36,8 +36,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -47,8 +47,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -80,8 +80,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
     },
@@ -91,8 +91,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
     },
@@ -113,8 +113,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -124,8 +124,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -135,8 +135,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-19",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -158,7 +158,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -169,7 +169,7 @@
       "responsavel": "Júlio",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
     },
@@ -180,7 +180,7 @@
       "responsavel": "Lohany",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -191,7 +191,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -224,7 +224,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
     },
@@ -235,7 +235,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -268,7 +268,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "Aguardando revisão do Isaac (falou que vai me confirmar dia 19/10)",
       "origem": ""
     },
@@ -279,7 +279,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "Eu iria começar semana passada, mas o meu setor estava com algumas pendências que eu estava postergando por conta de outras demandas, então resolvi tirar a semana passada apra ajsutar algumas coisas e estou revisando essa semana, creio que na quinta consiga começar com isso",
       "origem": ""
     },
@@ -796,7 +796,7 @@
       "responsavel": "Paula",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
@@ -829,7 +829,7 @@
       "responsavel": "Felipe",
       "prioridade": "Alta",
       "status": "Em Andamento",
-      "semana": "2026-10-19",
+      "semana": "2026-10-26",
       "obs": "",
       "origem": ""
     },
