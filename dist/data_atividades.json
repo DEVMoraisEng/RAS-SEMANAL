@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-26T17:43:01",
+  "geradoEm": "2026-10-26T18:26:10",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -25,9 +25,9 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
-      "obs": "",
+      "obs": "fechado com Hyperflow, assinando contrato",
       "origem": ""
     },
     {
@@ -36,8 +36,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-26",
+      "status": "Concluído",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
@@ -58,7 +58,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
@@ -179,8 +179,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "status": "Concluído",
+      "semana": "2026-10-19",
       "obs": "",
       "origem": ""
     },
