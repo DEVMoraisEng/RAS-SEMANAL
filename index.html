@@ -76,6 +76,15 @@ main.wrap{padding:40px 22px 60px}
 .tbl td{padding:10px;border-top:1px solid var(--line);text-align:center;font-size:13px}
 .tbl tr:nth-child(even) td{background:#F7FBFA}
 .tbl tr.total td{background:var(--petroleo);color:#fff;font-weight:700}
+/* 27/10/26: colunas do histórico (todos os meses) na tabela por departamento */
+.tbl-rol{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
+.tbl-rol .tbl{min-width:860px}
+.tbl th.hist{background:#1B5173;border-left:2px solid rgba(255,255,255,.35)}
+.tbl th .hsub{font-size:9.5px;font-weight:600;letter-spacing:.2px;text-transform:none;opacity:.8}
+.tbl td.hist{background:#EEF7F6;font-weight:700;color:var(--navy)}
+.tbl tr:nth-child(even) td.hist{background:#E3F1EF}
+.tbl td.hist:nth-last-child(2){border-left:2px solid var(--line)}
+.tbl tr.total td.hist{background:#2A285F;color:#fff}
 .bar{height:8px;border-radius:6px;background:#EBEFF1;overflow:hidden;display:inline-block;width:70px;vertical-align:middle;margin-right:8px}
 .bar>span{display:block;height:100%;background:var(--verde)}
 
@@ -723,6 +732,20 @@ function renderRelatorio(){
     <div class="kpi k5 small"><div class="lab">% conclusão</div><div class="val">${pct}%</div></div>
   </div>${skylineSVG()}</div>`;
 
+  /* 27/10/26: histórico — total de atividades do departamento em TODOS os meses
+     (todas as semanas da base; o rollover só muda a semana, então cada
+     atividade conta uma vez) e a média por mês. O período vai do primeiro mês
+     com atividade na RAS até o mês atual, igual para todos os departamentos. */
+  const mesesHist = (()=>{ const ms=ATIV.map(a=>String(a.semana||"").slice(0,7)).filter(m=>/^\d{4}-\d{2}$/.test(m)).sort();
+    const hoje=new Date(), fim=hoje.getFullYear()*12+hoje.getMonth();
+    if(!ms.length) return {n:1,ini:null};
+    const [y,m]=ms[0].split("-").map(Number), ini=y*12+(m-1);
+    return {n:Math.max(1,fim-ini+1),ini:ms[0]}; })();
+  const MES_AB=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+  const iniTxt = mesesHist.ini ? MES_AB[+mesesHist.ini.slice(5,7)-1]+"/"+mesesHist.ini.slice(0,4) : "";
+  const fmtMedia = v => (Math.round(v*10)/10).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1});
+  let tHist=0;
+
   let body="";
   let tAb=0,tEa=0,tAlt=0,tCo=0,tTo=0;
   DEPARTAMENTOS.forEach(s=>{
@@ -732,17 +755,21 @@ function renderRelatorio(){
     const alt = r.filter(a=>a.prioridade==="Alta" && OPEN.includes(a.status)).length;
     const co2 = r.filter(a=>a.status==="Concluído").length;
     const to = ab+co2; const p = to?Math.round(co2/to*100):0;
-    tAb+=ab;tEa+=ea2;tAlt+=alt;tCo+=co2;tTo+=to;
+    const hist = ATIV.filter(a=>a.setor===s).length;
+    tAb+=ab;tEa+=ea2;tAlt+=alt;tCo+=co2;tTo+=to;tHist+=hist;
     body += `<tr><td>${s}</td><td>${ab}</td><td>${ea2}</td><td>${alt}</td><td>${co2}</td><td>${to}</td>
-      <td><span class="bar"><span style="width:${p}%"></span></span>${p}%</td></tr>`;
+      <td><span class="bar"><span style="width:${p}%"></span></span>${p}%</td>
+      <td class="hist">${hist}</td><td class="hist">${fmtMedia(hist/mesesHist.n)}</td></tr>`;
   });
   const tp = tTo?Math.round(tCo/tTo*100):0;
   const table = `<div class="sec-title">Por departamento · semana atual</div>
-    <table class="tbl"><thead><tr>
+    <div class="tbl-rol"><table class="tbl"><thead><tr>
       <th>Departamento</th><th>Em aberto</th><th>Em andamento</th><th>Alta em aberto</th><th>Concluídas</th><th>Total</th><th>% concluído</th>
+      <th class="hist" title="Todas as atividades do departamento, de todas as semanas">Total geral<br><span class="hsub">todos os meses</span></th>
+      <th class="hist" title="Total geral ÷ meses desde ${iniTxt}">Média / mês<br><span class="hsub">${mesesHist.n} ${mesesHist.n===1?"mês":"meses"}${iniTxt?" desde "+iniTxt:""}</span></th>
     </tr></thead><tbody>${body}
-    <tr class="total"><td>Total</td><td>${tAb}</td><td>${tEa}</td><td>${tAlt}</td><td>${tCo}</td><td>${tTo}</td><td>${tp}%</td></tr>
-    </tbody></table>`;
+    <tr class="total"><td>Total</td><td>${tAb}</td><td>${tEa}</td><td>${tAlt}</td><td>${tCo}</td><td>${tTo}</td><td>${tp}%</td><td class="hist">${tHist}</td><td class="hist">${fmtMedia(tHist/mesesHist.n)}</td></tr>
+    </tbody></table></div>`;
 
   /* ---------- SEMANA ANTERIOR: só as concluídas ---------- */
   const concAnt = [];
