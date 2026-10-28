@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-28T18:23:21",
+  "geradoEm": "2026-10-28T18:39:27",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -103,7 +103,7 @@
       "setor": "FLORENCA",
       "mes": "Outubro/2026",
       "status": "Nova Inclusão",
-      "previsao": "2026-10-30",
+      "previsao": "2026-11-15",
       "liberada": "Sim",
       "obs": "",
       "doc": {

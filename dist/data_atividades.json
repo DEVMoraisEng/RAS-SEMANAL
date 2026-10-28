@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-28T18:23:21",
+  "geradoEm": "2026-10-28T18:39:27",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,50 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "407c5ab5-32d3-811f-85ac-c61463675fcb",
+      "nome": "Revisar os faturamentos PF 2026",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "407c5ab5-32d3-810a-a134-eb16ddeaa3be",
+      "nome": "Resolver com o Isaac sobre a infraestrutura do Stand De Vendas (agua, esgoto e energia)",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "407c5ab5-32d3-8134-8595-c6f5f52d774e",
+      "nome": "Conferir onde colocar no contrato assinaturas intermediárias para atender aos pontos críticos",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "407c5ab5-32d3-8172-882c-deb2483bd3e3",
+      "nome": "Conferir se o sistema esta gerando o contrato corretamente",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "405c5ab5-32d3-81ee-9411-df76484016a0",
       "nome": "Criar automação para contrato de ceramica",
@@ -113,7 +157,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
@@ -179,7 +223,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
@@ -190,7 +234,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
@@ -256,7 +300,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
