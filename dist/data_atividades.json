@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-28T18:39:27",
+  "geradoEm": "2026-10-28T18:55:15",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "407c5ab5-32d3-8173-a0f7-e45c2c22cc71",
+      "nome": "Revisar as pendências das pastas que subiram",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "407c5ab5-32d3-811f-85ac-c61463675fcb",
       "nome": "Revisar os faturamentos PF 2026",
@@ -113,7 +124,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
@@ -146,7 +157,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
@@ -201,7 +212,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
@@ -289,7 +300,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
