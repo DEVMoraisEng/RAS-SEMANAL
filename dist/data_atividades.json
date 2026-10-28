@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-28T18:55:15",
+  "geradoEm": "2026-10-28T19:24:15",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,39 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "407c5ab5-32d3-8127-8833-cad5bc3a62d9",
+      "nome": "Organizar evento Dia D -  60 pessoas",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "407c5ab5-32d3-815b-a2b4-f90b75ccaa2c",
+      "nome": "Dar uma geral na aba de auditoria financeira do Portal",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "407c5ab5-32d3-8121-b0e9-f4defca87c3d",
+      "nome": "Atualizar os campos de observações de todos os campos pendentes nas Propostas Recebidas",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-10-26",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "407c5ab5-32d3-8173-a0f7-e45c2c22cc71",
       "nome": "Revisar as pendências das pastas que subiram",
@@ -80,7 +113,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Em Andamento",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
@@ -135,7 +168,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
