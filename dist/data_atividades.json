@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-28T14:34:53",
+  "geradoEm": "2026-10-28T18:23:21",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -65,7 +65,7 @@
     },
     {
       "id": "3fec5ab5-32d3-81b4-9e3e-da6abe850e82",
-      "nome": "Convite para rodada de negócios",
+      "nome": "PRÉ VENDAS EM ANDAMENTO",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
@@ -91,7 +91,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
@@ -212,7 +212,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-10-26",
       "obs": "",
       "origem": ""
