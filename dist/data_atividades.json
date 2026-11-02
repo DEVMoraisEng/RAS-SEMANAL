@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-02T08:33:38",
+  "geradoEm": "2026-11-02T08:58:18",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -14,8 +14,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -25,8 +25,8 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -36,8 +36,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -47,8 +47,8 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -58,8 +58,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -69,8 +69,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -80,8 +80,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -91,8 +91,8 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -102,8 +102,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
-      "semana": "2026-10-26",
+      "status": "Continuidade da Semana Anterior",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Suprimentos › Paula"
     },
@@ -114,7 +114,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -125,7 +125,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
     },
@@ -136,7 +136,7 @@
       "responsavel": "Lohany",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "fechado com Hyperflow, assinando contrato",
       "origem": ""
     },
@@ -235,7 +235,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -246,7 +246,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -334,7 +334,7 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
     },
@@ -345,7 +345,7 @@
       "responsavel": "João Vitor",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -389,7 +389,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "Eu iria começar semana passada, mas o meu setor estava com algumas pendências que eu estava postergando por conta de outras demandas, então resolvi tirar a semana passada apra ajsutar algumas coisas e estou revisando essa semana, creio que na quinta consiga começar com isso",
       "origem": ""
     },
@@ -906,7 +906,7 @@
       "responsavel": "Paula",
       "prioridade": "Alta",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -939,7 +939,7 @@
       "responsavel": "Felipe",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-10-26",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
