@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-03T16:39:57",
+  "geradoEm": "2026-11-03T18:50:05",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -9,12 +9,34 @@
   ],
   "atividades": [
     {
+      "id": "40dc5ab5-32d3-81d6-853d-efb2854d3453",
+      "nome": "Informativo: Iremos visitar o estoque da TH DISTRIBUIDORA para ver melhor sobre a logística de armazenamento, controle e separação de insumos",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "40dc5ab5-32d3-8166-b0e6-ed70312ceb09",
+      "nome": "Autorização para comprar o módulo de suprimentos quando começar o estoque da obra",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
+    {
       "id": "407c5ab5-32d3-8127-8833-cad5bc3a62d9",
       "nome": "Organizar evento Dia D -  60 pessoas",
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-02",
       "obs": "",
       "origem": ""
