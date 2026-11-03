@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-03T19:21:13",
+  "geradoEm": "2026-11-03T19:39:34",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,50 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "40dc5ab5-32d3-8119-a8af-dbe513b4d61e",
+      "nome": "Analisar como comporta a distribuição de estoque entre obras quando acontece divisão de uma OC entre obras e relacionada a custos",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "40dc5ab5-32d3-8190-9e50-f1f1f53f6088",
+      "nome": "PLS Caixa",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "40dc5ab5-32d3-81e9-a320-d01d3459deb2",
+      "nome": "Vale das Brisas - Drenagem",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "40dc5ab5-32d3-81fd-b547-d041b3ce5b45",
+      "nome": "CRM",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "40dc5ab5-32d3-8181-9eb1-f4c11f25aaf6",
       "nome": "Prevenção de golpes\n\nemail, whatsapp, boletos",
@@ -179,7 +223,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-02",
       "obs": "fechado com Hyperflow, assinando contrato",
       "origem": ""
