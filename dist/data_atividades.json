@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-03T19:55:06",
+  "geradoEm": "2026-11-03T21:19:58",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "40dc5ab5-32d3-81d1-9db7-e89c3fd72d45",
+      "nome": "Portal para corretores comentarem sobre os Leads repassados",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "40dc5ab5-32d3-812a-a11d-cc74210a66c2",
       "nome": "Definir o canteiro de obras",
