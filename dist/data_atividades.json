@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-03T19:39:34",
+  "geradoEm": "2026-11-03T19:55:06",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,61 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "40dc5ab5-32d3-812a-a11d-cc74210a66c2",
+      "nome": "Definir o canteiro de obras",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
+    },
+    {
+      "id": "40dc5ab5-32d3-81ad-ae35-c4a4d65eb768",
+      "nome": "Definir o canteiro de obras",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
+    },
+    {
+      "id": "40dc5ab5-32d3-8109-bdbd-f0ff78e384b7",
+      "nome": "Definir o canteiro de obras",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "40dc5ab5-32d3-81b2-a40a-e76033e517bc",
+      "nome": "Reforçar convite café da manhã sábado 07/11",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "40dc5ab5-32d3-81a8-9a5b-d7f74dad4ca6",
+      "nome": "Organizar café da manhã sábado 07/11 - Reserva dos Ipês",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "40dc5ab5-32d3-8119-a8af-dbe513b4d61e",
       "nome": "Analisar como comporta a distribuição de estoque entre obras quando acontece divisão de uma OC entre obras e relacionada a custos",
