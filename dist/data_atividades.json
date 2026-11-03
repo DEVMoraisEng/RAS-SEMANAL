@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-03T18:50:05",
+  "geradoEm": "2026-11-03T19:21:13",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "40dc5ab5-32d3-8181-9eb1-f4c11f25aaf6",
+      "nome": "Prevenção de golpes\n\nemail, whatsapp, boletos",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
+    },
+    {
+      "id": "40dc5ab5-32d3-8137-9752-ce464179781e",
+      "nome": "Prevenção de golpes\n\nemail, whatsapp, boletos",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Alta",
+      "status": "A Fazer",
+      "semana": "2026-11-02",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "40dc5ab5-32d3-81d6-853d-efb2854d3453",
       "nome": "Informativo: Iremos visitar o estoque da TH DISTRIBUIDORA para ver melhor sobre a logística de armazenamento, controle e separação de insumos",
@@ -102,7 +124,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-02",
       "obs": "",
       "origem": ""
@@ -113,7 +135,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-02",
       "obs": "",
       "origem": ""
