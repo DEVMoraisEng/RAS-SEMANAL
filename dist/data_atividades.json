@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-09T13:59:38",
+  "geradoEm": "2026-11-09T14:32:51",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,39 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "413c5ab5-32d3-8189-8e07-e9569a0923bb",
+      "nome": "Reunião definição de canteiro Reserva dos Ipes - 12/11 as 14h",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "413c5ab5-32d3-8160-b40c-feceda013343",
+      "nome": "Reunião definição de canteiro Reserva dos Ipes - 12/11 as 14h",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "413c5ab5-32d3-81e2-8f3b-c71e39b42c5f",
+      "nome": "Reunião definição de canteiro Reserva dos Ipes - 12/11 as 14h",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "413c5ab5-32d3-8192-9b46-eb68bf5794d9",
       "nome": "Sugestão de horário fixo reserva para a RAS",
@@ -65,7 +98,7 @@
     },
     {
       "id": "40dc5ab5-32d3-81b2-a40a-e76033e517bc",
-      "nome": "Reforçar convite café da manhã sábado 07/11",
+      "nome": "Estrategia para finalizar demanda miníma /",
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
@@ -135,7 +168,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
@@ -201,7 +234,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": ""
@@ -212,7 +245,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": ""
@@ -223,7 +256,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-09",
       "obs": "",
       "origem": ""
@@ -234,7 +267,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-09",
       "obs": "",
       "origem": ""
@@ -410,7 +443,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": ""
