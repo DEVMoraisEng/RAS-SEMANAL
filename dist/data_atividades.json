@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-09T15:10:25",
+  "geradoEm": "2026-11-09T15:26:35",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,61 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "413c5ab5-32d3-81f0-b244-c13f0249f47e",
+      "nome": "Arrumar analise do Bombeiros do Vale das Brisas",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "413c5ab5-32d3-817f-980a-e0916508170b",
+      "nome": "Revisar os ajustes que o Felipe fez no site",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
+    },
+    {
+      "id": "413c5ab5-32d3-8184-aba0-c932f69341fc",
+      "nome": "Revisar os ajustes que o Felipe fez no site",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
+    },
+    {
+      "id": "413c5ab5-32d3-81d3-b7a3-db34079002db",
+      "nome": "Revisar os ajustes que o Felipe fez no site",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "413c5ab5-32d3-8179-a72a-e6fd46dab0f3",
+      "nome": "Reforçar a divulgação das casas de rua - foco em Goiânia (Acrópole e Marques de Abreu)",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "413c5ab5-32d3-819e-a3cb-f8688c25d855",
       "nome": "Criar divulgação aproveitando da BLACK FRIDAY",
@@ -102,7 +157,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": ""
@@ -124,7 +179,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
@@ -135,7 +190,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Projetos e Desenvolvimento › Felipe"
@@ -146,7 +201,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": ""
@@ -377,7 +432,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-09",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
