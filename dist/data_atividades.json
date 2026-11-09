@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-09T14:32:51",
+  "geradoEm": "2026-11-09T15:10:25",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,61 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "413c5ab5-32d3-819e-a3cb-f8688c25d855",
+      "nome": "Criar divulgação aproveitando da BLACK FRIDAY",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "413c5ab5-32d3-81ba-94b7-e29b141cf285",
+      "nome": "Reformular tabela de vendas Reserva dos Ipês - 09/11",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Comercial › Hudson"
+    },
+    {
+      "id": "413c5ab5-32d3-815f-aa51-f87ff40bcfad",
+      "nome": "Reformular tabela de vendas Reserva dos Ipês - 09/11",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "413c5ab5-32d3-81a7-a7d6-f00328c61fb0",
+      "nome": "Cobrar relação de documentos de todas as vendas do Reserva - AUDICRED e AMAZONAS",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "Alinhar também com a Juliana",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › Júlio"
+    },
+    {
+      "id": "413c5ab5-32d3-81ea-97d0-ddba8cd7bae7",
+      "nome": "Cobrar relação de documentos de todas as vendas do Reserva - AUDICRED e AMAZONAS",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "Alinhar também com a Juliana",
+      "origem": ""
+    },
     {
       "id": "413c5ab5-32d3-8189-8e07-e9569a0923bb",
       "nome": "Reunião definição de canteiro Reserva dos Ipes - 12/11 as 14h",
@@ -175,7 +230,7 @@
     },
     {
       "id": "40dc5ab5-32d3-8137-9752-ce464179781e",
-      "nome": "Prevenção de golpes\n\nemail, whatsapp, boletos",
+      "nome": "Prevenção de golpes email, whatsapp, boletos",
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Alta",
