@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-09T13:28:59",
+  "geradoEm": "2026-11-09T13:59:38",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "413c5ab5-32d3-8192-9b46-eb68bf5794d9",
+      "nome": "Sugestão de horário fixo reserva para a RAS",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-09",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "40dc5ab5-32d3-81d1-9db7-e89c3fd72d45",
       "nome": "Portal para corretores comentarem sobre os Leads repassados",
@@ -69,8 +80,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-09",
+      "status": "Concluído",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
@@ -389,7 +400,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-11-09",
+      "semana": "2026-11-02",
       "obs": "",
       "origem": ""
     },
