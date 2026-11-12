@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-12T13:21:05",
+  "geradoEm": "2026-11-12T21:10:27",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -18,7 +18,7 @@
       "cidade": "Senador Canedo",
       "setor": "FLORENCA",
       "mes": "Novembro/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "previsao": "2026-10-30",
       "liberada": "Sim",
       "obs": "",
@@ -32,7 +32,7 @@
       "cidade": "Senador Canedo",
       "setor": "FLORENCA",
       "mes": "Novembro/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "previsao": "2026-10-30",
       "liberada": "Sim",
       "obs": "",
@@ -88,7 +88,7 @@
       "cidade": "Senador Canedo",
       "setor": "FLORENCA",
       "mes": "Novembro/2026",
-      "status": "Nova Inclusão",
+      "status": "Projeto Finalizado",
       "previsao": "2026-11-15",
       "liberada": "Sim",
       "obs": "",
