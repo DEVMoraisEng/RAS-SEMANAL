@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T18:10:59",
+  "geradoEm": "2026-11-16T18:27:14",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -135,7 +135,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "Atualização da automação e acompanhamento.\nFoi criado 3 ícones na aba de controle de contas e diariamente a automação atualiza e coloca a observação. \n\nOs ícones são ref a: Alerta (olhar a observação qual é o alerta); Lançado (a fatura daquele mês já foi lançada no mais controle); Aguardando fatura do mês (robo consulta mas ainda não tem fatura)",
       "origem": ""
@@ -179,7 +179,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
