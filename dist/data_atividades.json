@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T13:35:27",
+  "geradoEm": "2026-11-16T13:53:49",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,39 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "41ac5ab5-32d3-811e-9d2b-ea7afdd56bd0",
+      "nome": "Automação no email do compras",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "41ac5ab5-32d3-81ac-ad4e-dc44101021de",
+      "nome": "Automação nas solicitações de lançamento",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "41ac5ab5-32d3-811e-af7d-d03e78368e1f",
+      "nome": "Atualizações nas abas do condomínio",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "Em Andamento",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "41ac5ab5-32d3-819c-b66a-f1418db4c70a",
       "nome": "SANESC e Equatorial",
@@ -296,13 +329,13 @@
     },
     {
       "id": "40dc5ab5-32d3-8137-9752-ce464179781e",
-      "nome": "Prevenção de golpes email, whatsapp, boletos",
+      "nome": "Prevenção de golpes email, whatsapp, boletos - Aba financeiro no portal",
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Alta",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-11-16",
-      "obs": "Vou criar uma aba de financeiro dentro do portal onde ele vai atualizar diariamente analisando TODOS lançamentos financeiros que foram criados no dia, e sempre vai analisar os pagamentos anteriores daquele fornecedor e acusar se tiver algo diferente (CNPJ, chave pix, boletos e etc)",
+      "obs": "Vou criar uma aba de financeiro dentro do portal onde ele vai atualizar diariamente analisando TODOS lançamentos financeiros que foram criados no dia, e sempre vai analisar os pagamentos anteriores daquele fornecedor e acusar se tiver algo diferente (CNPJ, chave pix, boletos e etc)\n\nAlém disso, vou colocar para conferir as categorias também.",
       "origem": ""
     },
     {
@@ -346,7 +379,7 @@
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
       "semana": "2026-11-16",
-      "obs": "Semana passada dei uma olhada e ajustei vários itens.\n\nCategorias novas criadas:\n-",
+      "obs": "Semana passada dei uma olhada e ajustei vários itens.\n\nCategorias novas criadas:\n- Eventos de vendas e relacionamento com corretores (Tudo que for relacionado a Dia D, café da manhã, visita a imobiliárias e etc)\n- Imobilizado - Stand de vendas (tudo que for para stand de vendas)\n- Mobiliário e decoração (unidade decorada) - tudo que for ref as coisas do decorado que não são comum na casa padrão\n\nCategorias renomeadas:\n- Conta de energia → Energia de obra / unidade (passou para Custos de Obra)\n- Conta de água → Água de obra / unidade (passou para Custos de Obra)\n- Fatura de Água → Fatura de Água (Escritório)\n- Uso do solo → Taxa de Uso do Solo (Obra)\n- Conta de internet → Internet de obra\n\nTodos títulos das categorias citadas acima foram corrigidos no mais controle",
       "origem": ""
     },
     {
