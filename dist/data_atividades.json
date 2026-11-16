@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T18:43:14",
+  "geradoEm": "2026-11-16T20:16:37",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "41ac5ab5-32d3-81e7-8866-dcd03974adf4",
+      "nome": "Mostrar sobre as transferências dos clientes e como a Juliana acompanha",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "41ac5ab5-32d3-81c0-9656-f049b7ff8421",
       "nome": "Conferir sobre pagamento de extra calçada: apenas depois de 45 dias",
