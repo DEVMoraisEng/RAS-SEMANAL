@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T13:53:49",
+  "geradoEm": "2026-11-16T14:59:51",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "41ac5ab5-32d3-816a-b9c9-f92a836ae040",
+      "nome": "Reunir com empresas para entender o fluxo de atendimento com ferramentas",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "41ac5ab5-32d3-81c5-a91e-e802130469c6",
+      "nome": "Dar baixa nas mensagens em aberto no Hyperflow e criar filtros",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "41ac5ab5-32d3-811e-9d2b-ea7afdd56bd0",
       "nome": "Automação no email do compras",
@@ -102,7 +124,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -113,7 +135,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -136,8 +158,8 @@
       "responsavel": "Hudson",
       "prioridade": "Média",
       "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-16",
-      "obs": "",
+      "semana": "2026-11-23",
+      "obs": "Apôs demanda mínima",
       "origem": ""
     },
     {
@@ -146,7 +168,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "Alinhar também com a Juliana",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › Júlio"
@@ -256,7 +278,7 @@
       "setor": "Comercial",
       "responsavel": "Hudson",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
