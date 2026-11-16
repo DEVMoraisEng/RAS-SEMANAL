@@ -1019,7 +1019,58 @@ function renderFoot(){
     `Fonte: ${src}. ` + (WRITE_ENDPOINT? "Botão de criar conectado ao Notion." : "Modo teste: criações/edições aparecem só na tela até conectar o endpoint de escrita.") + ` · ${VERSAO_SITE}`;
 }
 
+/* ============ 16/11/2026 (dono, item 12) — COPARTICIPAÇÃO EM ESPELHO ============
+   A coparticipação cria UMA CÓPIA da atividade para cada participante (cada uma
+   com o seu setor/responsável e o carimbo "Coparticipacao › RAS › setor de
+   origem" na coluna Origem). Antes, mexer numa cópia não mexia nas outras.
+   Agora qualquer edição (status, concluir, semana/data, prioridade, nome,
+   observações) feita em uma delas vai para TODAS as cópias da mesma
+   atividade. Só SETOR e RESPONSÁVEL continuam de cada cópia — são eles que
+   dizem de quem é cada uma.
+   Grupo = mesmo nome (as cópias andam de semana sozinhas) + pelo menos uma cópia com o carimbo de
+   coparticipação; entra a cópia original (a do setor de origem do carimbo) e
+   todas as cópias carimbadas. */
+const COPART_CAMPOS_PROPRIOS = ["setor", "responsavel"];
+function _cpNorm(s){ return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toUpperCase().replace(/\s+/g," ").trim(); }
+function _cpChave(a){ return _cpNorm(a.nome); }
+function _cpEhCopia(a){ return _cpNorm(a.origem).indexOf("COPARTICIPA") === 0; }
+function _cpSetorOrigem(a){ return _cpNorm(String(a.origem||"").split("›")[2] || ""); }
+function copartIrmas(a){
+  if(!a) return [];
+  const k = _cpChave(a);
+  const grupo = ATIV.filter(x => _cpChave(x) === k);
+  if(grupo.length < 2) return [];
+  const copias = grupo.filter(_cpEhCopia);
+  if(!copias.length) return [];
+  const origens = copias.map(_cpSetorOrigem).filter(Boolean);
+  const membros = grupo.filter(x => _cpEhCopia(x) || origens.indexOf(_cpNorm(x.setor)) >= 0);
+  if(membros.indexOf(a) < 0) return [];
+  /* atividade que se repete (mesmo nome em semanas diferentes no mesmo quadro):
+     de cada setor/responsável fica só a cópia de semana mais perto desta */
+  const dist = x => Math.abs(new Date(String(x.semana||"2000-01-01").slice(0,10)) - new Date(String(a.semana||"2000-01-01").slice(0,10)));
+  const porQuadro = {};
+  membros.forEach(x => {
+    if(x === a) return;
+    const q = _cpNorm(x.setor) + "|" + _cpNorm(x.responsavel);
+    if(q === _cpNorm(a.setor) + "|" + _cpNorm(a.responsavel)) return;
+    if(!porQuadro[q] || dist(x) < dist(porQuadro[q])) porQuadro[q] = x;
+  });
+  return Object.keys(porQuadro).map(q => porQuadro[q]);
+}
 function changeField(id, field, value){
+  const a = ATIV.find(x=>x.id===id);
+  const irmas = (a && COPART_CAMPOS_PROPRIOS.indexOf(field) < 0) ? copartIrmas(a) : [];
+  _changeFieldUma(id, field, value);
+  let n = 0;
+  irmas.forEach(x => {
+    const atual = x[field] == null ? "" : String(x[field]);
+    if(atual === String(value == null ? "" : value)) return;
+    _changeFieldUma(x.id, field, value); n++;
+  });
+  if(n) toast("Alterado também " + (n === 1 ? "na outra cópia" : "nas outras " + n + " cópias") + " da coparticipação.");
+}
+
+function _changeFieldUma(id, field, value){
   const a = ATIV.find(x=>x.id===id); if(!a) return;
   /* OFFLINE (21/09/2026) — atividade criada neste aparelho ("local-..."):
      enquanto a criação ainda está na fila, a edição entra NELA (a atividade
