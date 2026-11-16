@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T17:47:22",
+  "geradoEm": "2026-11-16T18:10:59",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "41ac5ab5-32d3-81c0-9656-f049b7ff8421",
+      "nome": "Conferir sobre pagamento de extra calçada: apenas depois de 45 dias",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "41ac5ab5-32d3-81f5-8187-f1a8f6cb2f12",
       "nome": "Viabilidade area do Paraíso",
