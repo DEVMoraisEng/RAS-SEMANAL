@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T18:27:14",
+  "geradoEm": "2026-11-16T18:43:14",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -157,8 +157,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-16",
+      "status": "Em Andamento",
+      "semana": "2026-11-23",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
     },
@@ -256,7 +256,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
@@ -300,7 +300,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -421,7 +421,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Alta",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-16",
       "obs": "Vou criar uma aba de financeiro dentro do portal onde ele vai atualizar diariamente analisando TODOS lançamentos financeiros que foram criados no dia, e sempre vai analisar os pagamentos anteriores daquele fornecedor e acusar se tiver algo diferente (CNPJ, chave pix, boletos e etc)\n\nAlém disso, vou colocar para conferir as categorias também.",
       "origem": ""
@@ -465,7 +465,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-16",
       "obs": "Semana passada dei uma olhada e ajustei vários itens.\n\nCategorias novas criadas:\n- Eventos de vendas e relacionamento com corretores (Tudo que for relacionado a Dia D, café da manhã, visita a imobiliárias e etc)\n- Imobilizado - Stand de vendas (tudo que for para stand de vendas)\n- Mobiliário e decoração (unidade decorada) - tudo que for ref as coisas do decorado que não são comum na casa padrão\n\nCategorias renomeadas:\n- Conta de energia → Energia de obra / unidade (passou para Custos de Obra)\n- Conta de água → Água de obra / unidade (passou para Custos de Obra)\n- Fatura de Água → Fatura de Água (Escritório)\n- Uso do solo → Taxa de Uso do Solo (Obra)\n- Conta de internet → Internet de obra\n\nTodos títulos das categorias citadas acima foram corrigidos no mais controle",
       "origem": ""
