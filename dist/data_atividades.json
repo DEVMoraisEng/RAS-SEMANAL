@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T17:32:56",
+  "geradoEm": "2026-11-16T17:47:22",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,61 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "41ac5ab5-32d3-81f5-8187-f1a8f6cb2f12",
+      "nome": "Viabilidade area do Paraíso",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "41ac5ab5-32d3-813e-9bb2-d25bec69009c",
+      "nome": "Reunir com empresas para entender o fluxo de atendimento com ferramentas",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "41ac5ab5-32d3-8107-aa08-df55cd32c091",
+      "nome": "Estruturar o fluxo de caixa",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › Júlio"
+    },
+    {
+      "id": "41ac5ab5-32d3-8150-abde-cbcca2cd78eb",
+      "nome": "Estruturar o fluxo de caixa",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › Júlio"
+    },
+    {
+      "id": "41ac5ab5-32d3-8185-b5a9-cc35da46a921",
+      "nome": "Estruturar o fluxo de caixa",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "41ac5ab5-32d3-816a-b9c9-f92a836ae040",
       "nome": "Reunir com empresas para entender o fluxo de atendimento com ferramentas",
@@ -179,7 +234,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "Alinhar também com a Juliana",
       "origem": ""
@@ -197,7 +252,7 @@
     },
     {
       "id": "413c5ab5-32d3-8160-b40c-feceda013343",
-      "nome": "Reunião definição de canteiro Reserva dos Ipes - 12/11 as 14h",
+      "nome": "Reunião definição de canteiro Reserva dos Ipes - 17/11 as 14h",
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
@@ -443,7 +498,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Alta",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -718,7 +773,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
