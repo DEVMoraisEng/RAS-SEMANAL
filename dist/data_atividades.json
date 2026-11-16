@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T09:06:06",
+  "geradoEm": "2026-11-16T12:45:56",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -234,7 +234,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -300,8 +300,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-16",
+      "status": "Concluído",
+      "semana": "2026-11-09",
       "obs": "",
       "origem": ""
     },
@@ -311,7 +311,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -543,7 +543,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-11-16",
+      "semana": "2026-11-09",
       "obs": "",
       "origem": ""
     },
