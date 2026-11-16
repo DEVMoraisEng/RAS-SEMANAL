@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-16T14:59:51",
+  "geradoEm": "2026-11-16T17:32:56",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -102,7 +102,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-16",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
@@ -146,7 +146,7 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-16",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Comercial › Hudson"
@@ -208,7 +208,7 @@
     },
     {
       "id": "413c5ab5-32d3-81e2-8f3b-c71e39b42c5f",
-      "nome": "Reunião definição de canteiro Reserva dos Ipes - 12/11 as 14h",
+      "nome": "Reunião definição de canteiro Reserva dos Ipes - 17/11 as 14h",
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
