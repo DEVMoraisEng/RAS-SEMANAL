@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-17T09:47:50",
+  "geradoEm": "2026-11-17T18:39:24",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -553,7 +553,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Suprimentos › Paula"
@@ -564,7 +564,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -1389,7 +1389,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
