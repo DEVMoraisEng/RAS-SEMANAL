@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-19T17:46:03",
+  "geradoEm": "2026-11-19T18:08:25",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "41dc5ab5-32d3-81e9-86f3-c11a042a0da9",
+      "nome": "Implementar correção de projetos de forma automática",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "41dc5ab5-32d3-8140-9e58-fd46d305ccfd",
+      "nome": "Acompanahr e fazer melhorias na aba de orçamento automatico",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-16",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "41ac5ab5-32d3-81e7-8866-dcd03974adf4",
       "nome": "Mostrar sobre as transferências dos clientes e como a Juliana acompanha",
@@ -58,7 +80,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › Júlio"
@@ -69,7 +91,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › Júlio"
@@ -80,7 +102,7 @@
       "setor": "Diretoria",
       "responsavel": "Júlio",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -410,7 +432,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "",
       "origem": ""
@@ -839,7 +861,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-16",
       "obs": "Eu iria começar semana passada, mas o meu setor estava com algumas pendências que eu estava postergando por conta de outras demandas, então resolvi tirar a semana passada apra ajsutar algumas coisas e estou revisando essa semana, creio que na quinta consiga começar com isso",
       "origem": ""
