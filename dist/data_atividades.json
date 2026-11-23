@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-23T12:57:04",
+  "geradoEm": "2026-11-23T13:25:44",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,17 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "421c5ab5-32d3-81a0-aa9b-f8de734af769",
+      "nome": "Fazer o projeto de canteiro do Reserva do Ipês e correções na área de lazer e distribuição de água",
+      "setor": "Projetos e Desenvolvimento",
+      "responsavel": "Felipe",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "421c5ab5-32d3-815e-a700-cc433af94c50",
       "nome": "Conferir sobre a posição do Conteiner X Tenda",
@@ -36,7 +47,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
@@ -54,7 +65,7 @@
     },
     {
       "id": "41dc5ab5-32d3-8140-9e58-fd46d305ccfd",
-      "nome": "Acompanahr e fazer melhorias na aba de orçamento automatico",
+      "nome": "Acompanhar e fazer melhorias na aba de orçamento automatico",
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
