@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-23T15:10:19",
+  "geradoEm": "2026-11-23T15:26:30",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "421c5ab5-32d3-8100-9749-fda15f585b1f",
+      "nome": "Organizar cafe da manha 28/11 no decorado",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "421c5ab5-32d3-81d0-9395-c8bb5d618163",
+      "nome": "Agendar café da manha no sábado - 28/11",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "421c5ab5-32d3-8163-b2d8-ee9c15c73da1",
       "nome": "Tentar mover a tenda um pouco para cobrir todo o conteiner",
@@ -124,7 +146,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
@@ -146,7 +168,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
@@ -157,7 +179,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "A Fazer",
+      "status": "Concluído",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
@@ -179,8 +201,8 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-23",
+      "status": "Em Andamento",
+      "semana": "2026-11-30",
       "obs": "",
       "origem": ""
     },
@@ -190,7 +212,7 @@
       "setor": "Projetos e Desenvolvimento",
       "responsavel": "Felipe",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "Em Andamento",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
