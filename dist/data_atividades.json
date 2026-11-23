@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-23T15:28:01",
+  "geradoEm": "2026-11-23T17:19:06",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -124,7 +124,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Baixa",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
