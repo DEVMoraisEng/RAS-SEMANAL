@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-23T14:19:07",
+  "geradoEm": "2026-11-23T14:35:26",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,83 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "421c5ab5-32d3-8132-9f60-c55b77a6422e",
+      "nome": "Preencher formulário da Naue",
+      "setor": "Diretoria",
+      "responsavel": "Júlio",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Financeiro › Lohany"
+    },
+    {
+      "id": "421c5ab5-32d3-8146-a59b-f6ecd311b088",
+      "nome": "Preencher formulário da Naue",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Alta",
+      "status": "Em Andamento",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "421c5ab5-32d3-8157-a809-fb915a94ca1c",
+      "nome": "Preencher formulários Nauê",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "421c5ab5-32d3-81e0-ace3-ee40ac309233",
+      "nome": "Preencher formulários Nauê",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "421c5ab5-32d3-810c-bd36-e34f7cc555bb",
+      "nome": "Preencher formulários Nauê",
+      "setor": "Comercial",
+      "responsavel": "Hudson",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
+    },
+    {
+      "id": "421c5ab5-32d3-813b-ad94-d24e2b4c9800",
+      "nome": "Preencher formulários Nauê",
+      "setor": "Diretoria",
+      "responsavel": "João Vitor",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "421c5ab5-32d3-814e-8c18-e3a03301f54e",
+      "nome": "Automação contrato - Casas de Rua",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Baixa",
+      "status": "Em Andamento",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "421c5ab5-32d3-819e-9ada-f88e00021deb",
       "nome": "Resolver com SEINFRA e Ministério Publico sobre da drenagem do Vale das Brisas",
@@ -223,7 +300,7 @@
       "setor": "Financeiro",
       "responsavel": "Lohany",
       "prioridade": "Média",
-      "status": "Em Andamento",
+      "status": "Concluído",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
