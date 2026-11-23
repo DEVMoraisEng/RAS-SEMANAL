@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-23T14:54:22",
+  "geradoEm": "2026-11-23T15:10:19",
   "statusOptions": [
     "Projeto Em Andamento",
     "Projeto Finalizado",
@@ -12,6 +12,40 @@
     "NÃO"
   ],
   "obras": [
+    {
+      "id": "421c5ab5-32d3-811a-91be-df1bfec21f45",
+      "nome": "FL 27 QD 38 LT 15",
+      "cidade": "Senador Canedo",
+      "setor": "FLORENCA",
+      "mes": "Novembro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2027-01-04",
+      "liberada": "NÃO",
+      "obs": "",
+      "doc": {
+        "status": "ok"
+      }
+    },
+    {
+      "id": "421c5ab5-32d3-8163-b89e-d4886d5cfc01",
+      "nome": "FL 27 QD 38 LT 12",
+      "cidade": "Senador Canedo",
+      "setor": "FLORENCA",
+      "mes": "Dezembro/2026",
+      "status": "Nova Inclusão",
+      "previsao": "2026-12-01",
+      "liberada": "Sim",
+      "obs": "",
+      "doc": {
+        "status": "sugestao",
+        "sugestoes": [
+          {
+            "endereco": "FL 29 QD 38 LT 12",
+            "setor": "FLORENÇA"
+          }
+        ]
+      }
+    },
     {
       "id": "3fec5ab5-32d3-81f2-be7e-c85c4958250e",
       "nome": "FL 27 QD 38 LT 23",

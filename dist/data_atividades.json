@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-23T14:54:22",
+  "geradoEm": "2026-11-23T15:10:19",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,28 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "421c5ab5-32d3-8163-b2d8-ee9c15c73da1",
+      "nome": "Tentar mover a tenda um pouco para cobrir todo o conteiner",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "421c5ab5-32d3-8159-97a8-c83757a39171",
+      "nome": "Verificar reservar casas de rua - processo em si",
+      "setor": "Financeiro",
+      "responsavel": "Lohany",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "421c5ab5-32d3-81ee-82b5-ed7214f73b15",
       "nome": "Gerar conteúdo com a Grifo para os patrocinados",
