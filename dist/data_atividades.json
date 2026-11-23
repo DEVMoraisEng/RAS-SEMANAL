@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-11-23T10:24:20",
+  "geradoEm": "2026-11-23T12:57:04",
   "statusOptions": [
     "Continuidade da Semana Anterior",
     "A Fazer",
@@ -8,6 +8,39 @@
     "Pendente"
   ],
   "atividades": [
+    {
+      "id": "421c5ab5-32d3-815e-a700-cc433af94c50",
+      "nome": "Conferir sobre a posição do Conteiner X Tenda",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "421c5ab5-32d3-81b6-a8f8-c044a4ef5d6e",
+      "nome": "Ver sobre a gestão do Stand de vendas",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
+    {
+      "id": "421c5ab5-32d3-81ca-9a3e-fdaea94bd1b3",
+      "nome": "Conferir sobre pagamento de extra calçada: apenas depois de 45 dias",
+      "setor": "Suprimentos",
+      "responsavel": "Paula",
+      "prioridade": "Média",
+      "status": "A Fazer",
+      "semana": "2026-11-23",
+      "obs": "",
+      "origem": ""
+    },
     {
       "id": "41dc5ab5-32d3-81e9-86f3-c11a042a0da9",
       "nome": "Implementar correção de projetos de forma automática",
@@ -36,7 +69,7 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
+      "status": "A Fazer",
       "semana": "2026-11-23",
       "obs": "",
       "origem": ""
@@ -47,8 +80,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-23",
+      "status": "Concluído",
+      "semana": "2026-11-16",
       "obs": "",
       "origem": ""
     },
@@ -300,8 +333,8 @@
       "setor": "Suprimentos",
       "responsavel": "Paula",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-23",
+      "status": "Concluído",
+      "semana": "2026-11-16",
       "obs": "",
       "origem": "Coparticipacao › RAS Líderes › Diretoria › João Vitor"
     },
@@ -311,8 +344,8 @@
       "setor": "Diretoria",
       "responsavel": "João Vitor",
       "prioridade": "Média",
-      "status": "Continuidade da Semana Anterior",
-      "semana": "2026-11-23",
+      "status": "Concluído",
+      "semana": "2026-11-16",
       "obs": "",
       "origem": ""
     },
@@ -708,7 +741,7 @@
       "responsavel": "Paula",
       "prioridade": "Média",
       "status": "Em Andamento",
-      "semana": "2026-11-23",
+      "semana": "2026-11-16",
       "obs": "",
       "origem": ""
     },
